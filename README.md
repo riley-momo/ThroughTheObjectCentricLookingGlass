@@ -55,7 +55,7 @@ python ocel_to_datalog.py LOG.duckdb --out DIR --identity TYPE \
 This writes `DIR/<name>.dl` (the Datalog program) and `DIR/facts/*.facts`
 (the log encoded as Soufflé input relations). Re-running the script only
 regenerates the facts/program — the Datalog rules themselves are a fixed
-template (see `TEMPLATE` in [ocel_to_datalog.py](ocel_to_datalog.py)).
+template (see `TEMPLATE` in [ocel_to_datalog.py](ocel_to_datalog.py)). This template corresponds to the axiom schema of the mereotopology with the foundational mereotoplogy axioms pre-pended. 
 
 ## Examples
 
