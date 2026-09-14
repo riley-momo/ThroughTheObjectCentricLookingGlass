@@ -1,0 +1,8 @@
+%% Determinate co-participation at a declared pair puts the event in
+%% a single whole: the two objects generate the same one.  [(Fuse).]
+formulas(goals).
+  all x all y all z
+    ((ib(x) & ib(y) & decl(x,y) & event(z)
+      & participates(x,z) & participates(y,z) & det(x,z) & det(y,z))
+        -> (sg(x) = sg(y) & part(z,sg(x)))).
+end_of_list.

@@ -1,0 +1,7 @@
+%% Overlap without summation. Distinct wholes have no sum; equivalently,
+%% if sigma(x) and sigma(y) have a sum then they are the same whole.
+%% DEPENDS ON THE flatness ASSUMPTION IN axioms.in.
+formulas(goals).
+  all x all y all z
+    ((ib(x) & ib(y) & sum(sg(x),sg(y),z)) -> sg(x) = sg(y)).
+end_of_list.

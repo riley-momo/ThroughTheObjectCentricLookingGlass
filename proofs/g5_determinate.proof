@@ -1,0 +1,42 @@
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 1942787 was started by riley on riley-linux-desktop,
+Mon Sep 14 15:36:19 2026
+The command was "/home/riley/Documents/Prover9-Mace4-GUI-1.0.0/src/bin/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.00 (+ 0.00) seconds.
+% Length of proof is 21.
+% Level of proof is 6.
+% Maximum clause weight is 17.000.
+% Given clauses 33.
+
+
+12 (all x all y (ib(x) & event(y) -> (part(y,sg(x)) <-> (exists z (ib(z) & sg(z) = sg(x) & participates(z,y)))))) # label(non_clause).  [assumption].
+13 (all x all y all z (ib(x) & ib(y) & decl(x,y) & participates(x,z) & participates(y,z) & det(x,z) & det(y,z) -> sg(x) = sg(y))) # label(non_clause).  [assumption].
+16 (all x all y all z (ib(x) & ib(y) & decl(x,y) & event(z) & participates(x,z) & participates(y,z) & det(x,z) & det(y,z) -> sg(x) = sg(y) & part(z,sg(x)))) # label(non_clause) # label(goal).  [goal].
+22 event(c3).  [deny(16)].
+26 -ib(x) | -event(y) | part(y,sg(x)) | -ib(z) | sg(z) != sg(x) | -participates(z,y).  [clausify(12)].
+27 decl(c1,c2).  [deny(16)].
+28 -ib(x) | -ib(y) | -decl(x,y) | -participates(x,z) | -participates(y,z) | -det(x,z) | -det(y,z) | sg(y) = sg(x).  [clausify(13)].
+43 ib(c1).  [deny(16)].
+44 ib(c2).  [deny(16)].
+45 participates(c1,c3).  [deny(16)].
+46 participates(c2,c3).  [deny(16)].
+47 det(c1,c3).  [deny(16)].
+48 det(c2,c3).  [deny(16)].
+49 sg(c2) != sg(c1) | -part(c3,sg(c1)).  [deny(16)].
+57 -ib(x) | part(c3,sg(x)) | -ib(y) | sg(y) != sg(x) | -participates(y,c3).  [resolve(22,a,26,b)].
+58 -ib(c1) | -ib(c2) | -participates(c1,x) | -participates(c2,x) | -det(c1,x) | -det(c2,x) | sg(c2) = sg(c1).  [resolve(27,a,28,c)].
+59 -participates(c1,x) | -participates(c2,x) | -det(c1,x) | -det(c2,x) | sg(c2) = sg(c1).  [copy(58),unit_del(a,43),unit_del(b,44)].
+62 -ib(x) | part(c3,sg(x)) | -participates(x,c3).  [factor(57,a,c),xx(c)].
+66 sg(c2) = sg(c1).  [resolve(59,d,48,a),unit_del(a,45),unit_del(b,46),unit_del(c,47)].
+67 -part(c3,sg(c1)).  [back_rewrite(49),rewrite([66(2)]),xx(a)].
+68 $F.  [resolve(62,c,46,a),rewrite([66(5)]),unit_del(a,44),unit_del(b,67)].
+
+============================== end of proof ==========================

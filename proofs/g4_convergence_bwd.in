@@ -1,0 +1,10 @@
+%% Convergence, backward. An event in two distinct wholes has two
+%% identity-bearing participants generating different wholes.
+%% [From (Sum(T)) applied to each whole.]
+formulas(goals).
+  all x all y all z
+    ((ib(x) & ib(y) & event(z) & part(z,sg(x)) & part(z,sg(y))
+      & sg(x) != sg(y))
+        -> exists u exists v (ib(u) & ib(v) & participates(u,z)
+                              & participates(v,z) & sg(u) != sg(v))).
+end_of_list.

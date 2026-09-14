@@ -1,0 +1,35 @@
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 1945130 was started by riley on riley-linux-desktop,
+Mon Sep 14 15:37:04 2026
+The command was "/home/riley/Documents/Prover9-Mace4-GUI-1.0.0/src/bin/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.00 (+ 0.00) seconds.
+% Length of proof is 14.
+% Level of proof is 4.
+% Maximum clause weight is 9.000.
+% Given clauses 32.
+
+
+5 (all x conn(x,x)) # label(non_clause).  [assumption].
+6 (all x all y (conn(x,y) -> conn(y,x))) # label(non_clause).  [assumption].
+7 (all x all y (part(x,y) -> (all z (conn(z,x) -> conn(z,y))))) # label(non_clause).  [assumption].
+16 (all x all y all z (ib(x) & ib(y) & event(z) & part(z,sg(x)) & part(z,sg(y)) -> conn(sg(x),sg(y)))) # label(non_clause) # label(goal).  [goal].
+30 conn(x,x).  [clausify(5)].
+31 -conn(x,y) | conn(y,x).  [clausify(6)].
+32 -part(x,y) | -conn(z,x) | conn(z,y).  [clausify(7)].
+43 part(c3,sg(c1)).  [deny(16)].
+44 part(c3,sg(c2)).  [deny(16)].
+45 -conn(sg(c1),sg(c2)).  [deny(16)].
+57 -part(x,y) | conn(x,y).  [resolve(32,b,30,a)].
+69 -conn(sg(c1),c3).  [ur(32,a,44,a,c,45,a)].
+86 conn(c3,sg(c1)).  [resolve(57,a,43,a)].
+94 $F.  [ur(31,b,69,a),unit_del(a,86)].
+
+============================== end of proof ==========================

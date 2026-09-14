@@ -1,0 +1,55 @@
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 1947491 was started by riley on riley-linux-desktop,
+Mon Sep 14 15:37:48 2026
+The command was "/home/riley/Documents/Prover9-Mace4-GUI-1.0.0/src/bin/prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.00 (+ 0.00) seconds.
+% Length of proof is 34.
+% Level of proof is 9.
+% Maximum clause weight is 19.000.
+% Given clauses 86.
+
+
+1 (all x part(x,x)) # label(non_clause).  [assumption].
+3 (all x all y all z (part(x,y) & part(y,z) -> part(x,z))) # label(non_clause).  [assumption].
+4 (all x (cplx(x) <-> (exists y (part(y,x) & y != x)))) # label(non_clause).  [assumption].
+8 (all x all y all z (sum(x,y,z) -> part(x,z) & part(y,z))) # label(non_clause).  [assumption].
+14 (all x (cplx(x) -> (exists y (ib(y) & x = sg(y))))) # label(non_clause).  [assumption].
+15 (all x all y (ib(x) & ib(y) & part(sg(x),sg(y)) -> sg(x) = sg(y))) # label(non_clause).  [assumption].
+16 (all x all y all z (ib(x) & ib(y) & sum(sg(x),sg(y),z) -> sg(x) = sg(y))) # label(non_clause) # label(goal).  [goal].
+17 cplx(x) | -part(y,x) | y = x.  [clausify(4)].
+20 -cplx(x) | ib(f3(x)).  [clausify(14)].
+21 -cplx(x) | sg(f3(x)) = x.  [clausify(14)].
+22 part(x,x).  [clausify(1)].
+24 -part(x,y) | -part(y,z) | part(x,z).  [clausify(3)].
+28 -sum(x,y,z) | part(x,z).  [clausify(8)].
+29 -sum(x,y,z) | part(y,z).  [clausify(8)].
+35 -ib(x) | -ib(y) | -part(sg(x),sg(y)) | sg(y) = sg(x).  [clausify(15)].
+36 ib(c1).  [deny(16)].
+37 ib(c2).  [deny(16)].
+38 sum(sg(c1),sg(c2),c3).  [deny(16)].
+39 sg(c2) != sg(c1).  [deny(16)].
+42 ib(f3(x)) | -part(y,x) | y = x.  [resolve(20,a,17,a)].
+43 sg(f3(x)) = x | -part(y,x) | y = x.  [resolve(21,a,17,a)].
+52 part(sg(c2),c3).  [resolve(38,a,29,a)].
+53 part(sg(c1),c3).  [resolve(38,a,28,a)].
+54 -part(sg(c1),sg(c2)).  [ur(35,a,36,a,b,37,a,d,39,a)].
+55 -part(sg(c2),sg(c1)).  [ur(35,a,37,a,b,36,a,d,39,a(flip))].
+61 sg(f3(c3)) = c3 | sg(c2) = c3.  [resolve(52,a,43,b)].
+62 ib(f3(c3)) | sg(c2) = c3.  [resolve(52,a,42,b)].
+68 -part(c3,sg(c1)).  [ur(24,a,52,a,c,55,a)].
+91 sg(c2) = c3 | -ib(x) | -ib(f3(c3)) | -part(sg(x),c3) | sg(f3(c3)) = sg(x).  [para(61(a,1),35(c,2))].
+110 sg(c2) = c3 | -ib(f3(c3)) | sg(f3(c3)) = sg(c1).  [resolve(91,d,53,a),unit_del(b,36)].
+113 sg(c2) = c3 | sg(f3(c3)) = sg(c1).  [resolve(110,b,62,a),merge(c)].
+116 sg(c2) = c3 | sg(c1) = c3.  [para(113(b,1),61(a,1)),merge(c)].
+120 sg(c1) = c3.  [para(116(a,1),54(a,2)),unit_del(b,53)].
+123 $F.  [back_rewrite(68),rewrite([120(3)]),unit_del(a,22)].
+
+============================== end of proof ==========================
