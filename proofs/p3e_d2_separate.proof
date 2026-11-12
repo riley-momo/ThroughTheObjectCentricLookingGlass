@@ -1,0 +1,74 @@
+%%%%%%%%%% p3e_d2_separate: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168932 was started by riley on aurora,
+Wed Nov 11 12:09:31 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.03 (+ 0.00) seconds.
+% Length of proof is 52.
+% Level of proof is 9.
+% Maximum clause weight is 18.000.
+% Given clauses 290.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+34 (all e (event(e) <-> e = e1 | e = e2)) # label(non_clause).  [assumption].
+35 (all x (participates(x,e1) -> x = a | x = b)) # label(non_clause).  [assumption].
+36 (all x (participates(x,e2) -> x = b | x = c)) # label(non_clause).  [assumption].
+40 (all t (ibt(d2,t) <-> t = ta | t = tc)) # label(non_clause).  [assumption].
+44 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (sim(d,o2,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+45 (all x all y (sim(d2,x,y) -> x = y)) # label(non_clause).  [assumption].
+46 -(exists x (ib(d2,x) & part(e1,sg(d2,x)) & part(e2,sg(d2,x)))) # label(non_clause) # label(goal).  [goal].
+62 event(x) | e1 != x.  [clausify(34)].
+69 event(x) | e2 != x.  [clausify(34)].
+70 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | sim(x,f19(x,y,z),y).  [clausify(44)].
+71 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | participates(f19(x,y,z),z).  [clausify(44)].
+140 -ib(x,y) | ibt(x,ty(y)).  [clausify(17)].
+160 -participates(x,e1) | a = x | b = x.  [clausify(35)].
+161 -participates(x,e2) | b = x | c = x.  [clausify(36)].
+162 ty(a) = ta.  [assumption].
+163 ta = ty(a).  [copy(162),flip(a)].
+164 ty(b) = tb.  [assumption].
+165 tb = ty(b).  [copy(164),flip(a)].
+166 ty(c) = tc.  [assumption].
+167 tc = ty(c).  [copy(166),flip(a)].
+168 ta != tb.  [assumption].
+169 ty(a) != ty(b).  [copy(168),rewrite([163(1),165(3)])].
+170 ta != tc.  [assumption].
+171 ty(c) != ty(a).  [copy(170),rewrite([163(1),167(3)]),flip(a)].
+172 tb != tc.  [assumption].
+173 ty(c) != ty(b).  [copy(172),rewrite([165(1),167(3)]),flip(a)].
+196 -ibt(d2,x) | ta = x | tc = x.  [clausify(40)].
+197 -ibt(d2,x) | ty(a) = x | ty(c) = x.  [copy(196),rewrite([163(3),167(6)])].
+206 -sim(d2,x,y) | y = x.  [clausify(45)].
+207 ib(d2,c1).  [deny(46)].
+208 part(e1,sg(d2,c1)).  [deny(46)].
+209 part(e2,sg(d2,c1)).  [deny(46)].
+236 -ib(x,y) | -part(z,sg(x,y)) | sim(x,f19(x,y,z),y) | e1 != z.  [resolve(70,b,62,a)].
+237 -ib(x,y) | -part(z,sg(x,y)) | sim(x,f19(x,y,z),y) | e2 != z.  [resolve(70,b,69,a)].
+238 -ib(x,y) | -part(z,sg(x,y)) | participates(f19(x,y,z),z) | e1 != z.  [resolve(71,b,62,a)].
+239 -ib(x,y) | -part(z,sg(x,y)) | participates(f19(x,y,z),z) | e2 != z.  [resolve(71,b,69,a)].
+382 ibt(d2,ty(c1)).  [resolve(207,a,140,a)].
+422 sim(d2,f19(d2,c1,e1),c1).  [resolve(236,b,208,a),xx(c),unit_del(a,207)].
+424 sim(d2,f19(d2,c1,e2),c1).  [resolve(237,b,209,a),xx(c),unit_del(a,207)].
+427 participates(f19(d2,c1,e1),e1).  [resolve(238,b,208,a),xx(c),unit_del(a,207)].
+429 participates(f19(d2,c1,e2),e2).  [resolve(239,b,209,a),xx(c),unit_del(a,207)].
+630 f19(d2,c1,e1) = a | f19(d2,c1,e1) = b.  [resolve(427,a,160,a),flip(a),flip(b)].
+645 f19(d2,c1,e2) = b | f19(d2,c1,e2) = c.  [resolve(429,a,161,a),flip(a),flip(b)].
+668 f19(d2,c1,e1) = c1.  [resolve(422,a,206,a),flip(a)].
+671 c1 = a | c1 = b.  [back_rewrite(630),rewrite([668(4),668(7)])].
+712 f19(d2,c1,e2) = c1.  [resolve(424,a,206,a),flip(a)].
+716 c1 = b | c1 = c.  [back_rewrite(645),rewrite([712(4),712(7)])].
+742 c1 = b | c = a.  [para(716(b,1),671(a,1)),merge(c)].
+775 c = a | ibt(d2,ty(b)).  [para(742(a,1),382(a,2,1))].
+963 c = a.  [resolve(775,b,197,a),unit_del(b,169),unit_del(c,173)].
+985 $F.  [back_rewrite(171),rewrite([963(1)]),xx(a)].
+
+============================== end of proof ==========================

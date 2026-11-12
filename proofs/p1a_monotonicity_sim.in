@@ -1,0 +1,15 @@
+%% Proposition 1 (Monotonicity), first part.  If D below D' then ~_D is
+%% contained in ~_D'.   [Every (Fuse) instance of D is one of D', with the
+%% same determinacy conditions; Least_sim for D with P := ~_D'.]
+formulas(assumptions).
+  % Least_sim(d)[ sim(d2,x,y) ]
+  all d all d2 (( (all x (ib(d,x) -> sim(d2,x,x))) &
+                  (all x all y (sim(d2,x,y) -> sim(d2,y,x))) &
+                  (all x all y all z (sim(d2,x,y) & sim(d2,y,z) -> sim(d2,x,z))) &
+                  (all x all y (fp(d,x,y) -> sim(d2,x,y))) )
+               -> (all x all y (sim(d,x,y) -> sim(d2,x,y)))).
+end_of_list.
+%% CITES: p1_lemma_objects p1_lemma_fuse_instances
+formulas(goals).
+  all d all d2 (leq(d,d2) -> (all x all y (sim(d,x,y) -> sim(d2,x,y)))).
+end_of_list.

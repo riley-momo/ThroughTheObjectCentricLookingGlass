@@ -1,0 +1,46 @@
+%%%%%%%%%% c1a_below_intended: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168542 was started by riley on aurora,
+Wed Nov 11 12:08:46 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.01 (+ 0.00) seconds.
+% Length of proof is 24.
+% Level of proof is 6.
+% Maximum clause weight is 29.000.
+% Given clauses 160.
+
+
+30 (all d all d2 (leq(d,d2) <-> (all t (ibt(d,t) -> ibt(d2,t))) & (all t1 all t2 (decl(d,t1,t2) -> decl(d2,t1,t2))) & (all t1 all t2 all a (decla(d,t1,t2,a) -> decla(d2,t1,t2,a))) & (nodet(d) -> nodet(d2)))) # label(non_clause).  [assumption].
+35 (all t (ibt(ds,t) <-> t = ta | t = tb)) # label(non_clause).  [assumption].
+38 (all t (ibt(dd,t) <-> t = ta)) # label(non_clause).  [assumption].
+39 (all t1 all t2 -decl(dd,t1,t2)) # label(non_clause).  [assumption].
+40 (all t1 all t2 all p -decla(dd,t1,t2,p)) # label(non_clause).  [assumption].
+41 leq(dd,ds) # label(non_clause) # label(goal).  [goal].
+130 leq(x,y) | ibt(x,f8(x,y)) | decl(x,f9(x,y),f10(x,y)) | decla(x,f11(x,y),f12(x,y),f13(x,y)) | nodet(x).  [clausify(30)].
+138 leq(x,y) | -ibt(y,f8(x,y)) | decl(x,f9(x,y),f10(x,y)) | decla(x,f11(x,y),f12(x,y),f13(x,y)) | nodet(x).  [clausify(30)].
+150 ty(a) = ta.  [assumption].
+151 ta = ty(a).  [copy(150),flip(a)].
+158 ibt(ds,x) | ta != x.  [clausify(35)].
+159 ibt(ds,x) | ty(a) != x.  [copy(158),rewrite([151(3)])].
+170 -ibt(dd,x) | ta = x.  [clausify(38)].
+171 -ibt(dd,x) | ty(a) = x.  [copy(170),rewrite([151(3)])].
+174 -decl(dd,x,y).  [clausify(39)].
+175 -decla(dd,x,y,z).  [clausify(40)].
+176 -nodet(dd).  [assumption].
+177 -leq(dd,ds).  [deny(41)].
+273 ibt(ds,ty(a)).  [resolve(159,b,151,a(flip)),rewrite([151(2)])].
+279 leq(dd,x) | ibt(dd,f8(dd,x)).  [resolve(175,a,130,d),unit_del(c,174),unit_del(d,176)].
+312 ibt(dd,f8(dd,ds)).  [resolve(279,a,177,a)].
+314 ty(a) = f8(dd,ds).  [resolve(312,a,171,a)].
+318 ibt(ds,f8(dd,ds)).  [back_rewrite(273),rewrite([314(3)])].
+328 $F.  [resolve(318,a,138,b),unit_del(a,177),unit_del(b,174),unit_del(c,175),unit_del(d,176)].
+
+============================== end of proof ==========================

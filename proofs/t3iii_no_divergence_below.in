@@ -1,0 +1,6 @@
+%% Theorem 3, (iii).  If D below D*, D does not diverge from D*.
+%% [Proposition 1 with D' = D*.]
+%% CITES: p1a_monotonicity_sim
+formulas(goals).
+  all d all ds (leq(d,ds) -> -diverges(d,ds)).
+end_of_list.

@@ -1,0 +1,7 @@
+%% Lemma 1, second part.  part(e, sigma(o))  iff  e in E[[o]_D], i.e. some
+%% member of o's ~_D-class participates in e.   [(Sum(T)) + Lemma 1 first part.]
+%% CITES: l1a_sim_to_sigma l1a_sigma_to_sim
+formulas(goals).
+  all d all o all e ((ib(d,o) & event(e)) ->
+     (part(e,sg(d,o)) <-> (exists o2 (sim(d,o2,o) & participates(o2,e))))).
+end_of_list.

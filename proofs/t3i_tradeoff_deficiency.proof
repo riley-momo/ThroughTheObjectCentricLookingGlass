@@ -1,0 +1,42 @@
+%%%%%%%%%% t3i_tradeoff_deficiency: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168536 was started by riley on aurora,
+Wed Nov 11 12:08:46 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.01 (+ 0.00) seconds.
+% Length of proof is 20.
+% Level of proof is 5.
+% Maximum clause weight is 10.000.
+% Given clauses 175.
+
+
+30 (all d all d2 (leq(d,d2) <-> (all t (ibt(d,t) -> ibt(d2,t))) & (all t1 all t2 (decl(d,t1,t2) -> decl(d2,t1,t2))) & (all t1 all t2 all a (decla(d,t1,t2,a) -> decla(d2,t1,t2,a))) & (nodet(d) -> nodet(d2)))) # label(non_clause).  [assumption].
+34 (all d all e (event(e) -> (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x))))))) # label(non_clause).  [assumption].
+35 (all d all d2 all e (leq(d,d2) & event(e) & deficient(d2,e) -> deficient(d,e))) # label(non_clause) # label(goal).  [goal].
+72 event(c3).  [deny(35)].
+77 -event(x) | -deficient(y,x) | -participates(z,x) | -ibt(y,ty(z)).  [clausify(34)].
+78 -event(x) | deficient(y,x) | participates(f19(y,x),x).  [clausify(34)].
+79 -event(x) | deficient(y,x) | ibt(y,ty(f19(y,x))).  [clausify(34)].
+88 -leq(x,y) | -ibt(x,z) | ibt(y,z).  [clausify(30)].
+107 leq(c1,c2).  [deny(35)].
+153 deficient(c2,c3).  [deny(35)].
+154 -deficient(c1,c3).  [deny(35)].
+183 -deficient(x,c3) | -participates(y,c3) | -ibt(x,ty(y)).  [resolve(72,a,77,a)].
+184 deficient(x,c3) | participates(f19(x,c3),c3).  [resolve(72,a,78,a)].
+185 deficient(x,c3) | ibt(x,ty(f19(x,c3))).  [resolve(72,a,79,a)].
+266 -ibt(c1,x) | ibt(c2,x).  [resolve(107,a,88,a)].
+314 -participates(x,c3) | -ibt(c2,ty(x)).  [resolve(183,a,153,a)].
+318 participates(f19(c1,c3),c3).  [resolve(184,a,154,a)].
+321 ibt(c1,ty(f19(c1,c3))).  [resolve(185,a,154,a)].
+345 -ibt(c2,ty(f19(c1,c3))).  [resolve(318,a,314,a)].
+356 $F.  [resolve(321,a,266,a),unit_del(a,345)].
+
+============================== end of proof ==========================

@@ -1,0 +1,60 @@
+%%%%%%%%%% t1b_deficiency_only_B: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168384 was started by riley on aurora,
+Wed Nov 11 12:08:25 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.62 (+ 0.02) seconds.
+% Length of proof is 38.
+% Level of proof is 14.
+% Maximum clause weight is 18.000.
+% Given clauses 1870.
+
+
+34 (all d all e (event(e) -> (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x))))))) # label(non_clause).  [assumption].
+35 (all d all d2 ((all t (ibt(d,t) <-> ibt(d2,t))) -> (all e (event(e) -> (deficient(d,e) <-> deficient(d2,e)))))) # label(non_clause) # label(goal).  [goal].
+72 event(c3).  [deny(35)].
+77 -event(x) | -deficient(y,x) | -participates(z,x) | -ibt(y,ty(z)).  [clausify(34)].
+78 -event(x) | deficient(y,x) | participates(f19(y,x),x).  [clausify(34)].
+79 -event(x) | deficient(y,x) | ibt(y,ty(f19(y,x))).  [clausify(34)].
+207 -ibt(c1,x) | ibt(c2,x).  [deny(35)].
+208 ibt(c1,x) | -ibt(c2,x).  [deny(35)].
+209 deficient(c1,c3) | deficient(c2,c3).  [deny(35)].
+210 -deficient(c1,c3) | -deficient(c2,c3).  [deny(35)].
+232 -deficient(x,c3) | -participates(y,c3) | -ibt(x,ty(y)).  [resolve(72,a,77,a)].
+233 deficient(x,c3) | participates(f19(x,c3),c3).  [resolve(72,a,78,a)].
+234 deficient(x,c3) | ibt(x,ty(f19(x,c3))).  [resolve(72,a,79,a)].
+2253 -participates(x,c3) | -ibt(c2,ty(x)) | deficient(c1,c3).  [resolve(232,a,209,b)].
+2256 participates(f19(x,c3),c3) | -participates(y,c3) | -ibt(x,ty(y)).  [resolve(233,a,232,a)].
+2257 participates(f19(c2,c3),c3) | -deficient(c1,c3).  [resolve(233,a,210,b)].
+2259 ibt(x,ty(f19(x,c3))) | -participates(y,c3) | -ibt(x,ty(y)).  [resolve(234,a,232,a)].
+2260 ibt(c2,ty(f19(c2,c3))) | -deficient(c1,c3).  [resolve(234,a,210,b)].
+2286 participates(f19(c2,c3),c3) | ibt(c1,ty(f19(c1,c3))).  [resolve(2257,b,234,a)].
+2287 participates(f19(c2,c3),c3) | participates(f19(c1,c3),c3).  [resolve(2257,b,233,a)].
+2290 ibt(c2,ty(f19(c2,c3))) | ibt(c1,ty(f19(c1,c3))).  [resolve(2260,b,234,a)].
+2291 ibt(c2,ty(f19(c2,c3))) | participates(f19(c1,c3),c3).  [resolve(2260,b,233,a)].
+2420 participates(f19(x,c3),c3) | -ibt(x,ty(f19(c2,c3))) | participates(f19(c1,c3),c3).  [resolve(2256,b,2287,a)].
+2422 participates(f19(c1,c3),c3) | -ibt(c1,ty(f19(c2,c3))).  [factor(2420,a,c)].
+2480 ibt(c1,ty(f19(c1,c3))) | ibt(c1,ty(f19(c2,c3))).  [resolve(2290,a,208,b)].
+2619 ibt(x,ty(f19(x,c3))) | -ibt(x,ty(f19(c1,c3))) | ibt(c2,ty(f19(c2,c3))).  [resolve(2259,b,2291,b)].
+2621 ibt(x,ty(f19(x,c3))) | -ibt(x,ty(f19(c2,c3))) | ibt(c1,ty(f19(c1,c3))).  [resolve(2259,b,2286,a)].
+2622 ibt(c2,ty(f19(c2,c3))) | -ibt(c2,ty(f19(c1,c3))).  [factor(2619,a,c)].
+2623 ibt(c1,ty(f19(c1,c3))) | -ibt(c1,ty(f19(c2,c3))).  [factor(2621,a,c)].
+2701 ibt(c1,ty(f19(c1,c3))).  [resolve(2623,b,2480,b),merge(b)].
+2719 ibt(c2,ty(f19(c1,c3))).  [resolve(2701,a,207,a)].
+2721 ibt(c2,ty(f19(c2,c3))).  [back_unit_del(2622),unit_del(b,2719)].
+2747 ibt(c1,ty(f19(c2,c3))).  [resolve(2721,a,208,b)].
+2748 participates(f19(c1,c3),c3).  [back_unit_del(2422),unit_del(b,2747)].
+2753 deficient(c1,c3).  [resolve(2748,a,2253,a),unit_del(a,2719)].
+2760 participates(f19(c2,c3),c3).  [back_unit_del(2257),unit_del(b,2753)].
+2775 -participates(x,c3) | -ibt(c1,ty(x)).  [resolve(2753,a,232,a)].
+2816 $F.  [resolve(2775,a,2760,a),unit_del(a,2747)].
+
+============================== end of proof ==========================

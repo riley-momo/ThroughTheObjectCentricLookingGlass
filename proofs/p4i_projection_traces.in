@@ -1,0 +1,9 @@
+%% Proposition 4 (i).  ev(sigma_G) is the union over o in G of
+%% ev(D[o -> o \ (O \ {o})]).   [Paths from o's first to its last event using
+%% only o's edges traverse exactly Tr(o); then Lemma 1.]
+%% INCLUDE: p4_projection.in
+%% CITES: l1b_parts
+formulas(goals).
+  all e (event(e) ->
+     (part(e,sg(d0,g)) <-> (exists o (sim(d0,o,g) & onpath1(o,e))))).
+end_of_list.

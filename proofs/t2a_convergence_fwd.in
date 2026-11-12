@@ -1,0 +1,8 @@
+%% Theorem 2 (Convergence), first part, direction ->.  A convergent event has
+%% identity-bearing participants x, y with x not ~_D y.   [Lemma 1.]
+%% CITES: l1a_sim_to_sigma
+formulas(goals).
+  all d all e ((event(e) & convergent(d,e)) ->
+     (exists x exists y (ib(d,x) & ib(d,y) & participates(x,e) &
+                         participates(y,e) & -sim(d,x,y)))).
+end_of_list.

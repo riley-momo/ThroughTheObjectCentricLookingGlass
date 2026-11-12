@@ -1,0 +1,14 @@
+%% Proposition 3 (no unique case notion), minimal example.
+%% D1 puts e1 and e2 in one whole (fuses a-b at e1 and b-c at e2).
+%% INCLUDE: example_p3.in
+%% CITES: l1b_parts
+%% INSTANCE: det(ta,e1)
+%% INSTANCE: det(tb,e1)
+%% INSTANCE: det(tb,e2)
+%% INSTANCE: det(tc,e2)
+%% INSTANCE: fp(d1,a,b)
+%% INSTANCE: fp(d1,b,c)
+%% INSTANCE: part(e1,sg(d1,a))
+formulas(goals).
+  part(e1,sg(d1,a)) & part(e2,sg(d1,a)).
+end_of_list.

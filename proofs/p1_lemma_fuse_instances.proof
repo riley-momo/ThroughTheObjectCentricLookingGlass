@@ -1,0 +1,90 @@
+%%%%%%%%%% p1_lemma_fuse_instances: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168419 was started by riley on aurora,
+Wed Nov 11 12:08:29 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.04 (+ 0.01) seconds.
+% Length of proof is 68.
+% Level of proof is 19.
+% Maximum clause weight is 31.000.
+% Given clauses 539.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+18 (all d all t1 all t2 all e (app(d,t1,t2,e) <-> decl(d,t1,t2) | (exists a (decla(d,t1,t2,a) & occurrence_of(e,a))))) # label(non_clause).  [assumption].
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+30 (all d all d2 (leq(d,d2) <-> (all t (ibt(d,t) -> ibt(d2,t))) & (all t1 all t2 (decl(d,t1,t2) -> decl(d2,t1,t2))) & (all t1 all t2 all a (decla(d,t1,t2,a) -> decla(d2,t1,t2,a))) & (nodet(d) -> nodet(d2)))) # label(non_clause).  [assumption].
+34 (all d all d2 all x all y (leq(d,d2) & fp(d,x,y) -> fp(d2,x,y))) # label(non_clause) # label(goal).  [goal].
+37 -ib(x,y) | object(y).  [clausify(17)].
+38 ib(x,y) | -object(y) | -ibt(x,ty(y)).  [clausify(17)].
+54 app(x,y,z,u) | -decla(x,y,z,w) | -occurrence_of(u,w).  [clausify(18)].
+55 -app(x,y,z,u) | decl(x,y,z) | occurrence_of(u,f3(x,y,z,u)).  [clausify(18)].
+72 -leq(x,y) | -ibt(x,z) | ibt(y,z).  [clausify(30)].
+73 -leq(x,y) | -decl(x,z,u) | decl(y,z,u).  [clausify(30)].
+74 -leq(x,y) | -decla(x,z,u,w) | decla(y,z,u,w).  [clausify(30)].
+75 -leq(x,y) | -nodet(x) | nodet(y).  [clausify(30)].
+91 leq(c1,c2).  [deny(34)].
+121 -ib(x,y) | ibt(x,ty(y)).  [clausify(17)].
+122 -app(x,y,z,u) | decl(x,y,z) | decla(x,y,z,f3(x,y,z,u)).  [clausify(18)].
+123 app(x,y,z,u) | -decl(x,y,z).  [clausify(18)].
+132 -fp(x,y,z) | ib(x,y).  [clausify(22)].
+133 -fp(x,y,z) | ib(x,z).  [clausify(22)].
+134 -fp(x,y,z) | participates(y,f6(x,y,z)).  [clausify(22)].
+135 -fp(x,y,z) | participates(z,f6(x,y,z)).  [clausify(22)].
+136 -fp(x,y,z) | app(x,ty(y),ty(z),f6(x,y,z)).  [clausify(22)].
+137 -fp(x,y,z) | nodet(x) | det(ty(y),f6(x,y,z)).  [clausify(22)].
+138 -fp(x,y,z) | nodet(x) | det(ty(z),f6(x,y,z)).  [clausify(22)].
+139 fp(x,y,z) | -ib(x,y) | -ib(x,z) | -participates(y,u) | -participates(z,u) | -app(x,ty(y),ty(z),u) | -nodet(x).  [clausify(22)].
+140 fp(x,y,z) | -ib(x,y) | -ib(x,z) | -participates(y,u) | -participates(z,u) | -app(x,ty(y),ty(z),u) | -det(ty(y),u) | -det(ty(z),u).  [clausify(22)].
+148 fp(c1,c3,c4).  [deny(34)].
+149 -fp(c2,c3,c4).  [deny(34)].
+151 ib(x,y) | -ibt(x,ty(y)) | -ib(z,y).  [resolve(38,b,37,b)].
+158 app(x,y,z,u) | -decla(x,y,z,f3(w,v5,v6,u)) | -app(w,v5,v6,u) | decl(w,v5,v6).  [resolve(54,c,55,c)].
+227 -ibt(c1,x) | ibt(c2,x).  [resolve(91,a,72,a)].
+228 -decl(c1,x,y) | decl(c2,x,y).  [resolve(91,a,73,a)].
+229 -decla(c1,x,y,z) | decla(c2,x,y,z).  [resolve(91,a,74,a)].
+230 -nodet(c1) | nodet(c2).  [resolve(91,a,75,a)].
+268 nodet(c1) | det(ty(c4),f6(c1,c3,c4)).  [resolve(148,a,138,a)].
+269 nodet(c1) | det(ty(c3),f6(c1,c3,c4)).  [resolve(148,a,137,a)].
+270 app(c1,ty(c3),ty(c4),f6(c1,c3,c4)).  [resolve(148,a,136,a)].
+271 participates(c4,f6(c1,c3,c4)).  [resolve(148,a,135,a)].
+272 participates(c3,f6(c1,c3,c4)).  [resolve(148,a,134,a)].
+273 ib(c1,c4).  [resolve(148,a,133,a)].
+274 ib(c1,c3).  [resolve(148,a,132,a)].
+287 ib(x,c4) | -ibt(x,ty(c4)).  [resolve(273,a,151,c)].
+289 ibt(c1,ty(c4)).  [resolve(273,a,121,a)].
+290 ib(x,c3) | -ibt(x,ty(c3)).  [resolve(274,a,151,c)].
+292 ibt(c1,ty(c3)).  [resolve(274,a,121,a)].
+302 ibt(c2,ty(c4)).  [resolve(289,a,227,a)].
+307 ibt(c2,ty(c3)).  [resolve(292,a,227,a)].
+361 ib(c2,c4).  [resolve(287,b,302,a)].
+365 ib(c2,c3).  [resolve(290,b,307,a)].
+373 app(x,y,z,f6(c1,c3,c4)) | -decla(x,y,z,f3(c1,ty(c3),ty(c4),f6(c1,c3,c4))) | decl(c1,ty(c3),ty(c4)).  [resolve(270,a,158,c)].
+375 decl(c1,ty(c3),ty(c4)) | decla(c1,ty(c3),ty(c4),f3(c1,ty(c3),ty(c4),f6(c1,c3,c4))).  [resolve(270,a,122,a)].
+1114 decl(c1,ty(c3),ty(c4)) | decla(c2,ty(c3),ty(c4),f3(c1,ty(c3),ty(c4),f6(c1,c3,c4))).  [resolve(375,b,229,a)].
+1301 decl(c1,ty(c3),ty(c4)) | app(c2,ty(c3),ty(c4),f6(c1,c3,c4)).  [resolve(1114,b,373,b),merge(c)].
+1335 decl(c1,ty(c3),ty(c4)) | -det(ty(c3),f6(c1,c3,c4)) | -det(ty(c4),f6(c1,c3,c4)).  [resolve(1301,b,140,f),unit_del(b,149),unit_del(c,365),unit_del(d,361),unit_del(e,272),unit_del(f,271)].
+1336 decl(c1,ty(c3),ty(c4)) | -nodet(c2).  [resolve(1301,b,139,f),unit_del(b,149),unit_del(c,365),unit_del(d,361),unit_del(e,272),unit_del(f,271)].
+1338 decl(c1,ty(c3),ty(c4)) | -det(ty(c3),f6(c1,c3,c4)) | nodet(c1).  [resolve(1335,c,268,b)].
+1343 decl(c1,ty(c3),ty(c4)) | nodet(c1).  [resolve(1338,b,269,b),merge(c)].
+1344 nodet(c1) | decl(c2,ty(c3),ty(c4)).  [resolve(1343,a,228,a)].
+1362 nodet(c1) | app(c2,ty(c3),ty(c4),x).  [resolve(1344,b,123,b)].
+1363 nodet(c1) | -participates(c3,x) | -participates(c4,x) | -det(ty(c3),x) | -det(ty(c4),x).  [resolve(1362,b,140,f),unit_del(b,149),unit_del(c,365),unit_del(d,361)].
+1366 nodet(c1) | -det(ty(c3),f6(c1,c3,c4)).  [resolve(1363,e,268,b),merge(e),unit_del(b,272),unit_del(c,271)].
+1371 nodet(c1).  [resolve(1366,b,269,b),merge(b)].
+1372 nodet(c2).  [back_unit_del(230),unit_del(a,1371)].
+1373 decl(c1,ty(c3),ty(c4)).  [back_unit_del(1336),unit_del(b,1372)].
+1376 decl(c2,ty(c3),ty(c4)).  [resolve(1373,a,228,a)].
+1386 app(c2,ty(c3),ty(c4),x).  [resolve(1376,a,123,b)].
+1388 -participates(c3,x) | -participates(c4,x).  [resolve(1386,a,139,f),unit_del(a,149),unit_del(b,365),unit_del(c,361),unit_del(f,1372)].
+1389 $F.  [resolve(1388,b,271,a),unit_del(a,272)].
+
+============================== end of proof ==========================

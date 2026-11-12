@@ -1,0 +1,12 @@
+%% Theorem 2 (Convergence), second part.  If e is convergent then either
+%%  (i)  det_T(e) fails for some T in B_D, or
+%%  (ii) e has identity-bearing participants of distinct types with no
+%%       applicable declared (Fuse) instance.
+%% CITES: t2a_convergence_fwd
+formulas(goals).
+  all d all e ((event(e) & convergent(d,e)) ->
+     ( (exists t (ibt(d,t) & -det(t,e)))
+     | (exists x exists y (ib(d,x) & ib(d,y) & participates(x,e) &
+                           participates(y,e) & ty(x) != ty(y) &
+                           -app(d,ty(x),ty(y),e))) )).
+end_of_list.

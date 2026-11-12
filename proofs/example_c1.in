@@ -1,0 +1,18 @@
+%% Minimal example for Corollary 1.  Objects a:A, b:B;  e1 = {a,b},  e2 = {b}.
+%%   D* (ds): B = {A,B}, TypeConn(A,B)        D (dd): B = {A}, no pairs
+formulas(assumptions).
+  event(e1).  event(e2).  object(a).  object(b).
+  participates(a,e1).  participates(b,e1).  participates(b,e2).
+  all x (participates(x,e2) -> x = b).          % only b participates in e2
+  ty(a) = ta.  ty(b) = tb.  ta != tb.
+
+  all t (ibt(ds,t) <-> t = ta | t = tb).
+  all t1 all t2 (decl(ds,t1,t2) <-> t1 = ta & t2 = tb).
+  all t1 all t2 all p -decla(ds,t1,t2,p).
+  -nodet(ds).
+
+  all t (ibt(dd,t) <-> t = ta).
+  all t1 all t2 -decl(dd,t1,t2).
+  all t1 all t2 all p -decla(dd,t1,t2,p).
+  -nodet(dd).
+end_of_list.

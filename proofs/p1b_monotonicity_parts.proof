@@ -1,0 +1,49 @@
+%%%%%%%%%% p1b_monotonicity_parts: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168534 was started by riley on aurora,
+Wed Nov 11 12:08:46 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.02 (+ 0.00) seconds.
+% Length of proof is 27.
+% Level of proof is 5.
+% Maximum clause weight is 15.000.
+% Given clauses 212.
+
+
+25 (all d all x all y (sim(d,x,y) -> ib(d,x) & ib(d,y))) # label(non_clause).  [assumption].
+26 (all d all x (ib(d,x) -> sim(d,x,x))) # label(non_clause).  [assumption].
+34 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (sim(d,o2,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+35 (all d all d2 (leq(d,d2) -> (all x all y (sim(d,x,y) -> sim(d2,x,y))))) # label(non_clause).  [assumption].
+36 (all d all d2 all o all e (leq(d,d2) & ib(d,o) & event(e) & part(e,sg(d,o)) -> part(e,sg(d2,o)))) # label(non_clause) # label(goal).  [goal].
+73 event(c4).  [deny(36)].
+78 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | sim(x,f19(x,y,z),y).  [clausify(34)].
+79 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | participates(f19(x,y,z),z).  [clausify(34)].
+80 -ib(x,y) | -event(z) | part(z,sg(x,y)) | -sim(x,u,y) | -participates(u,z).  [clausify(34)].
+108 -leq(x,y) | -sim(x,z,u) | sim(y,z,u).  [clausify(35)].
+109 leq(c1,c2).  [deny(36)].
+151 -sim(x,y,z) | ib(x,z).  [clausify(25)].
+152 -ib(x,y) | sim(x,y,y).  [clausify(26)].
+155 ib(c1,c3).  [deny(36)].
+156 part(c4,sg(c1,c3)).  [deny(36)].
+157 -part(c4,sg(c2,c3)).  [deny(36)].
+186 -ib(x,y) | -part(c4,sg(x,y)) | sim(x,f19(x,y,c4),y).  [resolve(73,a,78,b)].
+187 -ib(x,y) | -part(c4,sg(x,y)) | participates(f19(x,y,c4),c4).  [resolve(73,a,79,b)].
+188 -ib(x,y) | part(c4,sg(x,y)) | -sim(x,z,y) | -participates(z,c4).  [resolve(73,a,80,b)].
+289 -sim(c1,x,y) | sim(c2,x,y).  [resolve(109,a,108,a)].
+331 sim(c1,c3,c3).  [resolve(155,a,152,a)].
+343 sim(c1,f19(c1,c3,c4),c3).  [resolve(186,b,156,a),unit_del(a,155)].
+344 participates(f19(c1,c3,c4),c4).  [resolve(187,b,156,a),unit_del(a,155)].
+367 sim(c2,c3,c3).  [resolve(331,a,289,a)].
+390 ib(c2,c3).  [resolve(367,a,151,a)].
+445 sim(c2,f19(c1,c3,c4),c3).  [resolve(343,a,289,a)].
+507 $F.  [resolve(445,a,188,c),unit_del(a,390),unit_del(b,157),unit_del(c,344)].
+
+============================== end of proof ==========================

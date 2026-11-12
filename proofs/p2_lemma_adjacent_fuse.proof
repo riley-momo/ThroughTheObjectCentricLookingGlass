@@ -1,0 +1,124 @@
+%%%%%%%%%% p2_lemma_adjacent_fuse: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168587 was started by riley on aurora,
+Wed Nov 11 12:08:50 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.80 (+ 0.02) seconds.
+% Length of proof is 102.
+% Level of proof is 37.
+% Maximum clause weight is 23.000.
+% Given clauses 2307.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+18 (all d all t1 all t2 all e (app(d,t1,t2,e) <-> decl(d,t1,t2) | (exists a (decla(d,t1,t2,a) & occurrence_of(e,a))))) # label(non_clause).  [assumption].
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+34 (all x all y (adj(x,y) <-> object(x) & object(y) & (exists e (participates(x,e) & participates(y,e))))) # label(non_clause).  [assumption].
+40 (all d (iscc(d) <-> (all t ibt(d,t)) & (all t1 all t2 decl(d,t1,t2)) & (all t1 all t2 all a decla(d,t1,t2,a)) & nodet(d))) # label(non_clause).  [assumption].
+41 (all d (iscc(d) -> (all x (object(x) -> ib(d,x))) & (all x all y (adj(x,y) <-> fp(d,x,y))))) # label(non_clause) # label(goal).  [goal].
+91 fp(x,y,z) | -ib(x,y) | -ib(x,z) | -participates(y,u) | -participates(z,u) | -app(x,ty(y),ty(z),u) | -nodet(x).  [clausify(22)].
+94 -iscc(x) | nodet(x).  [clausify(40)].
+160 iscc(c1).  [deny(41)].
+161 -iscc(x) | ibt(x,y).  [clausify(40)].
+162 -iscc(x) | decl(x,y,z).  [clausify(40)].
+164 -iscc(x) | fp(x,y,z) | -ib(x,y) | -ib(x,z) | -participates(y,u) | -participates(z,u) | -app(x,ty(y),ty(z),u).  [resolve(94,b,91,g)].
+229 -ib(x,y) | object(y).  [clausify(17)].
+231 ib(x,y) | -object(y) | -ibt(x,ty(y)).  [clausify(17)].
+233 app(x,y,z,u) | -decl(x,y,z).  [clausify(18)].
+242 -fp(x,y,z) | ib(x,y).  [clausify(22)].
+243 -fp(x,y,z) | ib(x,z).  [clausify(22)].
+244 -fp(x,y,z) | participates(y,f6(x,y,z)).  [clausify(22)].
+245 -fp(x,y,z) | participates(z,f6(x,y,z)).  [clausify(22)].
+255 -adj(x,y) | object(x).  [clausify(34)].
+256 -adj(x,y) | object(y).  [clausify(34)].
+257 -adj(x,y) | participates(x,f19(x,y)).  [clausify(34)].
+258 -adj(x,y) | participates(y,f19(x,y)).  [clausify(34)].
+259 adj(x,y) | -object(x) | -object(y) | -participates(x,z) | -participates(y,z).  [clausify(34)].
+266 object(c2) | adj(c3,c4) | fp(c1,c3,c4).  [deny(41)].
+267 object(c2) | -adj(c3,c4) | -fp(c1,c3,c4).  [deny(41)].
+268 -ib(c1,c2) | adj(c3,c4) | fp(c1,c3,c4).  [deny(41)].
+269 -ib(c1,c2) | -adj(c3,c4) | -fp(c1,c3,c4).  [deny(41)].
+958 ibt(c1,x).  [resolve(160,a,161,a)].
+959 decl(c1,x,y).  [resolve(160,a,162,a)].
+961 fp(c1,x,y) | -ib(c1,x) | -ib(c1,y) | -participates(x,z) | -participates(y,z) | -app(c1,ty(x),ty(y),z).  [resolve(164,a,160,a)].
+2135 object(c2) | adj(c3,c4) | participates(c4,f6(c1,c3,c4)).  [resolve(266,c,245,a)].
+2136 object(c2) | adj(c3,c4) | participates(c3,f6(c1,c3,c4)).  [resolve(266,c,244,a)].
+2137 object(c2) | adj(c3,c4) | ib(c1,c4).  [resolve(266,c,243,a)].
+2138 object(c2) | adj(c3,c4) | ib(c1,c3).  [resolve(266,c,242,a)].
+2157 ib(c1,x) | -object(x).  [resolve(958,a,231,c)].
+2158 app(c1,x,y,z).  [resolve(959,a,233,b)].
+2160 fp(c1,x,y) | -ib(c1,x) | -ib(c1,y) | -participates(x,z) | -participates(y,z).  [back_unit_del(961),unit_del(f,2158)].
+2241 object(c2) | ib(c1,c4) | object(c4).  [resolve(2137,b,256,a)].
+2244 object(c2) | object(c4).  [resolve(2241,b,229,a),merge(c)].
+2245 object(c2) | ib(c1,c4).  [resolve(2244,b,2157,b)].
+2251 object(c2) | ib(c1,c3) | object(c3).  [resolve(2138,b,255,a)].
+2253 object(c2) | object(c3).  [resolve(2251,b,229,a),merge(c)].
+2254 object(c2) | ib(c1,c3).  [resolve(2253,b,2157,b)].
+2285 object(c2) | participates(c4,f6(c1,c3,c4)) | participates(c4,f19(c3,c4)).  [resolve(2135,b,258,a)].
+2286 object(c2) | participates(c4,f6(c1,c3,c4)) | participates(c3,f19(c3,c4)).  [resolve(2135,b,257,a)].
+2288 object(c2) | participates(c3,f6(c1,c3,c4)) | participates(c4,f19(c3,c4)).  [resolve(2136,b,258,a)].
+2289 object(c2) | participates(c3,f6(c1,c3,c4)) | participates(c3,f19(c3,c4)).  [resolve(2136,b,257,a)].
+2329 object(c2) | participates(c4,f19(c3,c4)) | adj(x,c4) | -object(x) | -object(c4) | -participates(x,f6(c1,c3,c4)).  [resolve(2285,b,259,e)].
+2363 object(c2) | participates(c3,f19(c3,c4)) | adj(x,c4) | -object(x) | -object(c4) | -participates(x,f6(c1,c3,c4)).  [resolve(2286,b,259,e)].
+2951 object(c2) | participates(c3,f19(c3,c4)) | adj(c3,c4) | -object(c3) | -object(c4).  [resolve(2363,f,2289,b),merge(f),merge(g)].
+2952 object(c2) | participates(c3,f19(c3,c4)) | adj(c3,c4) | -object(c3).  [resolve(2951,e,2244,b),merge(e)].
+2953 object(c2) | participates(c3,f19(c3,c4)) | adj(c3,c4).  [resolve(2952,d,2253,b),merge(d)].
+2955 object(c2) | participates(c3,f19(c3,c4)).  [resolve(2953,c,257,a),merge(c)].
+2974 object(c2) | fp(c1,c3,x) | -ib(c1,c3) | -ib(c1,x) | -participates(x,f19(c3,c4)).  [resolve(2955,b,2160,d)].
+2985 object(c2) | adj(c3,x) | -object(c3) | -object(x) | -participates(x,f19(c3,c4)).  [resolve(2955,b,259,d)].
+3134 object(c2) | fp(c1,c3,c4) | -ib(c1,c3) | -ib(c1,c4) | participates(c3,f6(c1,c3,c4)).  [resolve(2974,e,2288,c),merge(e)].
+3277 object(c2) | fp(c1,c3,c4) | -ib(c1,c3) | participates(c3,f6(c1,c3,c4)).  [resolve(3134,d,2245,b),merge(e)].
+3278 object(c2) | fp(c1,c3,c4) | participates(c3,f6(c1,c3,c4)).  [resolve(3277,c,2254,b),merge(d)].
+3281 object(c2) | participates(c3,f6(c1,c3,c4)).  [resolve(3278,b,244,a),merge(c)].
+3298 object(c2) | participates(c4,f19(c3,c4)) | adj(c3,c4) | -object(c3) | -object(c4).  [resolve(3281,b,2329,f),merge(b)].
+3429 object(c2) | participates(c4,f19(c3,c4)) | adj(c3,c4) | -object(c3).  [resolve(3298,e,2244,b),merge(e)].
+3430 object(c2) | participates(c4,f19(c3,c4)) | adj(c3,c4).  [resolve(3429,d,2253,b),merge(d)].
+3431 object(c2) | participates(c4,f19(c3,c4)).  [resolve(3430,c,258,a),merge(c)].
+3432 object(c2) | adj(c3,c4) | -object(c3) | -object(c4).  [resolve(3431,b,2985,e),merge(b)].
+3434 object(c2) | fp(c1,c3,c4) | -ib(c1,c3) | -ib(c1,c4).  [resolve(3431,b,2974,e),merge(b)].
+3507 object(c2) | adj(c3,c4) | -object(c3).  [resolve(3432,d,2244,b),merge(d)].
+3508 object(c2) | adj(c3,c4).  [resolve(3507,c,2253,b),merge(c)].
+3676 object(c2) | fp(c1,c3,c4) | -ib(c1,c3).  [resolve(3434,d,2245,b),merge(d)].
+3677 object(c2) | fp(c1,c3,c4).  [resolve(3676,c,2254,b),merge(c)].
+3678 object(c2) | -adj(c3,c4).  [resolve(3677,b,267,c),merge(b)].
+3682 object(c2).  [resolve(3678,b,3508,b),merge(b)].
+3683 ib(c1,c2).  [resolve(3682,a,2157,b)].
+3685 -adj(c3,c4) | -fp(c1,c3,c4).  [back_unit_del(269),unit_del(a,3683)].
+3686 adj(c3,c4) | fp(c1,c3,c4).  [back_unit_del(268),unit_del(a,3683)].
+3692 adj(c3,c4) | participates(c4,f6(c1,c3,c4)).  [resolve(3686,b,245,a)].
+3693 adj(c3,c4) | participates(c3,f6(c1,c3,c4)).  [resolve(3686,b,244,a)].
+3694 adj(c3,c4) | ib(c1,c4).  [resolve(3686,b,243,a)].
+3695 adj(c3,c4) | ib(c1,c3).  [resolve(3686,b,242,a)].
+3699 ib(c1,c4) | object(c4).  [resolve(3694,a,256,a)].
+3728 object(c4).  [resolve(3699,a,229,a),merge(b)].
+3729 ib(c1,c4).  [resolve(3728,a,2157,b)].
+3741 ib(c1,c3) | object(c3).  [resolve(3695,a,255,a)].
+3745 object(c3).  [resolve(3741,a,229,a),merge(b)].
+3746 ib(c1,c3).  [resolve(3745,a,2157,b)].
+3782 participates(c4,f6(c1,c3,c4)) | participates(c4,f19(c3,c4)).  [resolve(3692,a,258,a)].
+3783 participates(c4,f6(c1,c3,c4)) | participates(c3,f19(c3,c4)).  [resolve(3692,a,257,a)].
+3786 participates(c3,f6(c1,c3,c4)) | participates(c4,f19(c3,c4)).  [resolve(3693,a,258,a)].
+3787 participates(c3,f6(c1,c3,c4)) | participates(c3,f19(c3,c4)).  [resolve(3693,a,257,a)].
+3923 participates(c4,f19(c3,c4)) | adj(x,c4) | -object(x) | -participates(x,f6(c1,c3,c4)).  [resolve(3782,a,259,e),unit_del(d,3728)].
+3969 participates(c3,f19(c3,c4)) | adj(x,c4) | -object(x) | -participates(x,f6(c1,c3,c4)).  [resolve(3783,a,259,e),unit_del(d,3728)].
+4520 participates(c3,f19(c3,c4)) | adj(c3,c4).  [resolve(3969,d,3787,a),merge(d),unit_del(c,3745)].
+4522 participates(c3,f19(c3,c4)).  [resolve(4520,b,257,a),merge(b)].
+4538 fp(c1,c3,x) | -ib(c1,x) | -participates(x,f19(c3,c4)).  [resolve(4522,a,2160,d),unit_del(b,3746)].
+4549 adj(c3,x) | -object(x) | -participates(x,f19(c3,c4)).  [resolve(4522,a,259,d),unit_del(b,3745)].
+4733 fp(c1,c3,c4) | participates(c3,f6(c1,c3,c4)).  [resolve(4538,c,3786,b),unit_del(b,3729)].
+4736 participates(c3,f6(c1,c3,c4)).  [resolve(4733,a,244,a),merge(b)].
+4748 participates(c4,f19(c3,c4)) | adj(c3,c4).  [resolve(4736,a,3923,d),unit_del(c,3745)].
+4774 participates(c4,f19(c3,c4)).  [resolve(4748,b,258,a),merge(b)].
+4775 adj(c3,c4).  [resolve(4774,a,4549,c),unit_del(b,3728)].
+4777 fp(c1,c3,c4).  [resolve(4774,a,4538,c),unit_del(b,3729)].
+4801 $F.  [back_unit_del(3685),unit_del(a,4775),unit_del(b,4777)].
+
+============================== end of proof ==========================

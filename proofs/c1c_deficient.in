@@ -1,0 +1,7 @@
+%% Corollary 1.  Deficiency does not imply divergence.
+%% Yet e2 is deficient under D (Theorem 1).
+%% INCLUDE: example_c1.in
+%% CITES: t1a_deficiency
+formulas(goals).
+  deficient(dd,e2).
+end_of_list.

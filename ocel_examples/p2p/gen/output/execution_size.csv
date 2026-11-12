@@ -1,927 +1,2550 @@
-purchase_requisition:0:pr_trigger_0	20
-purchase_requisition:100:pr_trigger_100	25
-purchase_requisition:101:pr_trigger_101	9
-purchase_requisition:102:pr_trigger_102	30
-purchase_requisition:103:pr_trigger_103	20
-purchase_requisition:104:pr_trigger_104	11
-purchase_requisition:105:pr_trigger_105	25
-purchase_requisition:106:pr_trigger_106	17
-purchase_requisition:107:pr_trigger_107	25
-purchase_requisition:108:pr_trigger_108	23
-purchase_requisition:109:pr_trigger_109	9
-purchase_requisition:10:pr_trigger_10	16
-purchase_requisition:110:pr_trigger_110	36
-purchase_requisition:111:pr_trigger_111	30
-purchase_requisition:112:pr_trigger_112	17
-purchase_requisition:113:pr_trigger_113	9
-purchase_requisition:114:pr_trigger_114	16
-purchase_requisition:115:pr_trigger_115	23
-purchase_requisition:116:pr_trigger_116	21
-purchase_requisition:117:pr_trigger_117	15
-purchase_requisition:118:pr_trigger_118	18
-purchase_requisition:119:pr_trigger_119	25
-purchase_requisition:11:pr_trigger_11	19
-purchase_requisition:120:pr_trigger_120	10
-purchase_requisition:121:pr_trigger_121	12
-purchase_requisition:122:pr_trigger_122	12
-purchase_requisition:123:pr_trigger_123	10
-purchase_requisition:124:pr_trigger_124	25
-purchase_requisition:125:pr_trigger_125	20
-purchase_requisition:126:pr_trigger_126	9
-purchase_requisition:127:pr_trigger_127	10
-purchase_requisition:128:pr_trigger_128	16
-purchase_requisition:129:pr_trigger_129	14
-purchase_requisition:12:pr_trigger_12	12
-purchase_requisition:130:pr_trigger_130	9
-purchase_requisition:131:pr_trigger_131	13
-purchase_requisition:132:pr_trigger_132	9
-purchase_requisition:133:pr_trigger_133	16
-purchase_requisition:134:pr_trigger_134	9
-purchase_requisition:135:pr_trigger_135	25
-purchase_requisition:136:pr_trigger_136	36
-purchase_requisition:137:pr_trigger_137	9
-purchase_requisition:138:pr_trigger_138	21
-purchase_requisition:139:pr_trigger_139	36
-purchase_requisition:13:pr_trigger_13	20
-purchase_requisition:140:pr_trigger_140	9
-purchase_requisition:141:pr_trigger_141	30
-purchase_requisition:142:pr_trigger_142	7
-purchase_requisition:143:pr_trigger_143	24
-purchase_requisition:144:pr_trigger_144	14
-purchase_requisition:145:pr_trigger_145	16
-purchase_requisition:146:pr_trigger_146	9
-purchase_requisition:147:pr_trigger_147	17
-purchase_requisition:148:pr_trigger_148	25
-purchase_requisition:149:pr_trigger_149	25
-purchase_requisition:14:pr_trigger_14	25
-purchase_requisition:150:pr_trigger_150	26
-purchase_requisition:151:pr_trigger_151	7
-purchase_requisition:152:pr_trigger_152	9
-purchase_requisition:153:pr_trigger_153	9
-purchase_requisition:154:pr_trigger_154	12
-purchase_requisition:155:pr_trigger_155	10
-purchase_requisition:156:pr_trigger_156	23
-purchase_requisition:157:pr_trigger_157	9
-purchase_requisition:158:pr_trigger_158	16
-purchase_requisition:159:pr_trigger_159	15
-purchase_requisition:15:pr_trigger_15	8
-purchase_requisition:160:pr_trigger_160	25
-purchase_requisition:161:pr_trigger_161	16
-purchase_requisition:162:pr_trigger_162	10
-purchase_requisition:163:pr_trigger_163	9
-purchase_requisition:164:pr_trigger_164	9
-purchase_requisition:165:pr_trigger_165	9
-purchase_requisition:166:pr_trigger_166	10
-purchase_requisition:167:pr_trigger_167	16
-purchase_requisition:168:pr_trigger_168	11
-purchase_requisition:169:pr_trigger_169	12
-purchase_requisition:16:pr_trigger_16	12
-purchase_requisition:170:pr_trigger_170	7
-purchase_requisition:171:pr_trigger_171	9
-purchase_requisition:172:pr_trigger_172	9
-purchase_requisition:173:pr_trigger_173	7
-purchase_requisition:174:pr_trigger_174	16
-purchase_requisition:175:pr_trigger_175	36
-purchase_requisition:176:pr_trigger_176	9
-purchase_requisition:177:pr_trigger_177	9
-purchase_requisition:178:pr_trigger_178	34
-purchase_requisition:179:pr_trigger_179	7
-purchase_requisition:17:pr_trigger_17	16
-purchase_requisition:180:pr_trigger_180	7
-purchase_requisition:181:pr_trigger_181	30
-purchase_requisition:182:pr_trigger_182	13
-purchase_requisition:183:pr_trigger_183	15
-purchase_requisition:184:pr_trigger_184	9
-purchase_requisition:185:pr_trigger_185	23
-purchase_requisition:186:pr_trigger_186	23
-purchase_requisition:187:pr_trigger_187	7
-purchase_requisition:188:pr_trigger_188	9
-purchase_requisition:189:pr_trigger_189	12
-purchase_requisition:18:pr_trigger_18	16
-purchase_requisition:190:pr_trigger_190	12
-purchase_requisition:191:pr_trigger_191	7
-purchase_requisition:192:pr_trigger_192	11
-purchase_requisition:193:pr_trigger_193	25
-purchase_requisition:194:pr_trigger_194	9
-purchase_requisition:195:pr_trigger_195	16
-purchase_requisition:196:pr_trigger_196	36
-purchase_requisition:197:pr_trigger_197	12
-purchase_requisition:198:pr_trigger_198	9
-purchase_requisition:199:pr_trigger_199	12
-purchase_requisition:19:pr_trigger_19	16
-purchase_requisition:1:pr_trigger_1	11
-purchase_requisition:200:pr_trigger_200	9
-purchase_requisition:201:pr_trigger_201	12
-purchase_requisition:202:pr_trigger_202	9
-purchase_requisition:203:pr_trigger_203	20
-purchase_requisition:204:pr_trigger_204	20
-purchase_requisition:205:pr_trigger_205	9
-purchase_requisition:206:pr_trigger_206	25
-purchase_requisition:207:pr_trigger_207	20
-purchase_requisition:208:pr_trigger_208	25
-purchase_requisition:209:pr_trigger_209	9
-purchase_requisition:20:pr_trigger_20	10
-purchase_requisition:210:pr_trigger_210	9
-purchase_requisition:211:pr_trigger_211	16
-purchase_requisition:212:pr_trigger_212	16
-purchase_requisition:213:pr_trigger_213	12
-purchase_requisition:214:pr_trigger_214	36
-purchase_requisition:215:pr_trigger_215	30
-purchase_requisition:216:pr_trigger_216	9
-purchase_requisition:217:pr_trigger_217	19
-purchase_requisition:218:pr_trigger_218	7
-purchase_requisition:219:pr_trigger_219	24
-purchase_requisition:21:pr_trigger_21	12
-purchase_requisition:220:pr_trigger_220	14
-purchase_requisition:221:pr_trigger_221	12
-purchase_requisition:222:pr_trigger_222	11
-purchase_requisition:223:pr_trigger_223	13
-purchase_requisition:224:pr_trigger_224	12
-purchase_requisition:225:pr_trigger_225	16
-purchase_requisition:226:pr_trigger_226	12
-purchase_requisition:227:pr_trigger_227	10
-purchase_requisition:228:pr_trigger_228	16
-purchase_requisition:229:pr_trigger_229	9
-purchase_requisition:22:pr_trigger_22	15
-purchase_requisition:230:pr_trigger_230	10
-purchase_requisition:231:pr_trigger_231	20
-purchase_requisition:232:pr_trigger_232	36
-purchase_requisition:233:pr_trigger_233	9
-purchase_requisition:234:pr_trigger_234	7
-purchase_requisition:235:pr_trigger_235	7
-purchase_requisition:236:pr_trigger_236	16
-purchase_requisition:237:pr_trigger_237	12
-purchase_requisition:238:pr_trigger_238	8
-purchase_requisition:239:pr_trigger_239	9
-purchase_requisition:23:pr_trigger_23	9
-purchase_requisition:240:pr_trigger_240	20
-purchase_requisition:241:pr_trigger_241	16
-purchase_requisition:242:pr_trigger_242	25
-purchase_requisition:243:pr_trigger_243	16
-purchase_requisition:244:pr_trigger_244	9
-purchase_requisition:245:pr_trigger_245	9
-purchase_requisition:246:pr_trigger_246	23
-purchase_requisition:247:pr_trigger_247	13
-purchase_requisition:248:pr_trigger_248	26
-purchase_requisition:249:pr_trigger_249	9
-purchase_requisition:24:pr_trigger_24	9
-purchase_requisition:250:pr_trigger_250	9
-purchase_requisition:251:pr_trigger_251	10
-purchase_requisition:252:pr_trigger_252	12
-purchase_requisition:253:pr_trigger_253	9
-purchase_requisition:254:pr_trigger_254	15
-purchase_requisition:255:pr_trigger_255	11
-purchase_requisition:256:pr_trigger_256	12
-purchase_requisition:257:pr_trigger_257	25
-purchase_requisition:258:pr_trigger_258	13
-purchase_requisition:259:pr_trigger_259	12
-purchase_requisition:25:pr_trigger_25	23
-purchase_requisition:260:pr_trigger_260	9
-purchase_requisition:261:pr_trigger_261	9
-purchase_requisition:262:pr_trigger_262	26
-purchase_requisition:263:pr_trigger_263	25
-purchase_requisition:264:pr_trigger_264	15
-purchase_requisition:265:pr_trigger_265	16
-purchase_requisition:266:pr_trigger_266	10
-purchase_requisition:267:pr_trigger_267	23
-purchase_requisition:268:pr_trigger_268	37
-purchase_requisition:269:pr_trigger_269	9
-purchase_requisition:26:pr_trigger_26	36
-purchase_requisition:270:pr_trigger_270	12
-purchase_requisition:271:pr_trigger_271	16
-purchase_requisition:272:pr_trigger_272	16
-purchase_requisition:273:pr_trigger_273	23
-purchase_requisition:274:pr_trigger_274	12
-purchase_requisition:275:pr_trigger_275	25
-purchase_requisition:276:pr_trigger_276	12
-purchase_requisition:277:pr_trigger_277	10
-purchase_requisition:278:pr_trigger_278	7
-purchase_requisition:279:pr_trigger_279	14
-purchase_requisition:27:pr_trigger_27	9
-purchase_requisition:280:pr_trigger_280	10
-purchase_requisition:281:pr_trigger_281	15
-purchase_requisition:282:pr_trigger_282	16
-purchase_requisition:283:pr_trigger_283	10
-purchase_requisition:284:pr_trigger_284	13
-purchase_requisition:285:pr_trigger_285	19
-purchase_requisition:286:pr_trigger_286	15
-purchase_requisition:287:pr_trigger_287	25
-purchase_requisition:288:pr_trigger_288	20
-purchase_requisition:289:pr_trigger_289	26
-purchase_requisition:28:pr_trigger_28	9
-purchase_requisition:290:pr_trigger_290	23
-purchase_requisition:291:pr_trigger_291	16
-purchase_requisition:292:pr_trigger_292	20
-purchase_requisition:293:pr_trigger_293	36
-purchase_requisition:294:pr_trigger_294	7
-purchase_requisition:295:pr_trigger_295	15
-purchase_requisition:296:pr_trigger_296	21
-purchase_requisition:297:pr_trigger_297	7
-purchase_requisition:298:pr_trigger_298	30
-purchase_requisition:299:pr_trigger_299	25
-purchase_requisition:29:pr_trigger_29	20
-purchase_requisition:2:pr_trigger_2	20
-purchase_requisition:300:pr_trigger_300	10
-purchase_requisition:301:pr_trigger_301	9
-purchase_requisition:302:pr_trigger_302	25
-purchase_requisition:303:pr_trigger_303	14
-purchase_requisition:304:pr_trigger_304	10
-purchase_requisition:305:pr_trigger_305	36
-purchase_requisition:306:pr_trigger_306	19
-purchase_requisition:307:pr_trigger_307	9
-purchase_requisition:308:pr_trigger_308	10
-purchase_requisition:309:pr_trigger_309	9
-purchase_requisition:30:pr_trigger_30	9
-purchase_requisition:310:pr_trigger_310	12
-purchase_requisition:311:pr_trigger_311	13
-purchase_requisition:312:pr_trigger_312	15
-purchase_requisition:313:pr_trigger_313	16
-purchase_requisition:314:pr_trigger_314	7
-purchase_requisition:315:pr_trigger_315	20
-purchase_requisition:316:pr_trigger_316	11
-purchase_requisition:317:pr_trigger_317	24
-purchase_requisition:318:pr_trigger_318	36
-purchase_requisition:319:pr_trigger_319	7
-purchase_requisition:31:pr_trigger_31	36
-purchase_requisition:320:pr_trigger_320	15
-purchase_requisition:321:pr_trigger_321	9
-purchase_requisition:322:pr_trigger_322	15
-purchase_requisition:323:pr_trigger_323	7
-purchase_requisition:324:pr_trigger_324	16
-purchase_requisition:325:pr_trigger_325	16
-purchase_requisition:326:pr_trigger_326	12
-purchase_requisition:327:pr_trigger_327	9
-purchase_requisition:328:pr_trigger_328	10
-purchase_requisition:329:pr_trigger_329	7
-purchase_requisition:32:pr_trigger_32	13
-purchase_requisition:330:pr_trigger_330	10
-purchase_requisition:331:pr_trigger_331	18
-purchase_requisition:332:pr_trigger_332	9
-purchase_requisition:333:pr_trigger_333	14
-purchase_requisition:334:pr_trigger_334	23
-purchase_requisition:335:pr_trigger_335	7
-purchase_requisition:336:pr_trigger_336	9
-purchase_requisition:337:pr_trigger_337	30
-purchase_requisition:338:pr_trigger_338	19
-purchase_requisition:339:pr_trigger_339	9
-purchase_requisition:33:pr_trigger_33	9
-purchase_requisition:340:pr_trigger_340	16
-purchase_requisition:341:pr_trigger_341	14
-purchase_requisition:342:pr_trigger_342	36
-purchase_requisition:343:pr_trigger_343	18
-purchase_requisition:344:pr_trigger_344	21
-purchase_requisition:345:pr_trigger_345	10
-purchase_requisition:346:pr_trigger_346	9
-purchase_requisition:347:pr_trigger_347	9
-purchase_requisition:348:pr_trigger_348	14
-purchase_requisition:349:pr_trigger_349	7
-purchase_requisition:34:pr_trigger_34	13
-purchase_requisition:350:pr_trigger_350	10
-purchase_requisition:351:pr_trigger_351	36
-purchase_requisition:352:pr_trigger_352	16
-purchase_requisition:353:pr_trigger_353	20
-purchase_requisition:354:pr_trigger_354	36
-purchase_requisition:355:pr_trigger_355	10
-purchase_requisition:356:pr_trigger_356	9
-purchase_requisition:357:pr_trigger_357	15
-purchase_requisition:358:pr_trigger_358	38
-purchase_requisition:359:pr_trigger_359	9
-purchase_requisition:35:pr_trigger_35	16
-purchase_requisition:360:pr_trigger_360	7
-purchase_requisition:361:pr_trigger_361	27
-purchase_requisition:362:pr_trigger_362	23
-purchase_requisition:363:pr_trigger_363	24
-purchase_requisition:364:pr_trigger_364	9
-purchase_requisition:365:pr_trigger_365	9
-purchase_requisition:366:pr_trigger_366	12
-purchase_requisition:367:pr_trigger_367	20
-purchase_requisition:368:pr_trigger_368	10
-purchase_requisition:369:pr_trigger_369	21
-purchase_requisition:36:pr_trigger_36	22
-purchase_requisition:370:pr_trigger_370	21
-purchase_requisition:371:pr_trigger_371	9
-purchase_requisition:372:pr_trigger_372	9
-purchase_requisition:373:pr_trigger_373	9
-purchase_requisition:374:pr_trigger_374	16
-purchase_requisition:375:pr_trigger_375	36
-purchase_requisition:376:pr_trigger_376	17
-purchase_requisition:377:pr_trigger_377	13
-purchase_requisition:378:pr_trigger_378	9
-purchase_requisition:379:pr_trigger_379	20
-purchase_requisition:37:pr_trigger_37	16
-purchase_requisition:380:pr_trigger_380	9
-purchase_requisition:381:pr_trigger_381	25
-purchase_requisition:382:pr_trigger_382	30
-purchase_requisition:383:pr_trigger_383	9
-purchase_requisition:384:pr_trigger_384	9
-purchase_requisition:385:pr_trigger_385	9
-purchase_requisition:386:pr_trigger_386	24
-purchase_requisition:387:pr_trigger_387	12
-purchase_requisition:388:pr_trigger_388	20
-purchase_requisition:389:pr_trigger_389	18
-purchase_requisition:38:pr_trigger_38	10
-purchase_requisition:390:pr_trigger_390	12
-purchase_requisition:391:pr_trigger_391	14
-purchase_requisition:392:pr_trigger_392	16
-purchase_requisition:393:pr_trigger_393	16
-purchase_requisition:394:pr_trigger_394	12
-purchase_requisition:395:pr_trigger_395	7
-purchase_requisition:396:pr_trigger_396	9
-purchase_requisition:397:pr_trigger_397	17
-purchase_requisition:398:pr_trigger_398	14
-purchase_requisition:399:pr_trigger_399	23
-purchase_requisition:39:pr_trigger_39	9
-purchase_requisition:3:pr_trigger_3	16
-purchase_requisition:400:pr_trigger_400	17
-purchase_requisition:401:pr_trigger_401	9
-purchase_requisition:402:pr_trigger_402	12
-purchase_requisition:403:pr_trigger_403	20
-purchase_requisition:404:pr_trigger_404	25
-purchase_requisition:405:pr_trigger_405	13
-purchase_requisition:406:pr_trigger_406	18
-purchase_requisition:407:pr_trigger_407	25
-purchase_requisition:408:pr_trigger_408	9
-purchase_requisition:409:pr_trigger_409	37
-purchase_requisition:40:pr_trigger_40	17
-purchase_requisition:410:pr_trigger_410	9
-purchase_requisition:411:pr_trigger_411	9
-purchase_requisition:412:pr_trigger_412	10
-purchase_requisition:413:pr_trigger_413	16
-purchase_requisition:414:pr_trigger_414	9
-purchase_requisition:415:pr_trigger_415	10
-purchase_requisition:416:pr_trigger_416	22
-purchase_requisition:417:pr_trigger_417	16
-purchase_requisition:418:pr_trigger_418	13
-purchase_requisition:419:pr_trigger_419	16
-purchase_requisition:41:pr_trigger_41	7
-purchase_requisition:420:pr_trigger_420	16
-purchase_requisition:421:pr_trigger_421	9
-purchase_requisition:422:pr_trigger_422	16
-purchase_requisition:423:pr_trigger_423	15
-purchase_requisition:424:pr_trigger_424	15
-purchase_requisition:425:pr_trigger_425	11
-purchase_requisition:426:pr_trigger_426	16
-purchase_requisition:427:pr_trigger_427	14
-purchase_requisition:428:pr_trigger_428	36
-purchase_requisition:429:pr_trigger_429	36
-purchase_requisition:42:pr_trigger_42	16
-purchase_requisition:430:pr_trigger_430	10
-purchase_requisition:431:pr_trigger_431	9
-purchase_requisition:432:pr_trigger_432	12
-purchase_requisition:433:pr_trigger_433	16
-purchase_requisition:434:pr_trigger_434	9
-purchase_requisition:435:pr_trigger_435	14
-purchase_requisition:436:pr_trigger_436	13
-purchase_requisition:437:pr_trigger_437	9
-purchase_requisition:438:pr_trigger_438	14
-purchase_requisition:439:pr_trigger_439	14
-purchase_requisition:43:pr_trigger_43	25
-purchase_requisition:440:pr_trigger_440	20
-purchase_requisition:441:pr_trigger_441	25
-purchase_requisition:442:pr_trigger_442	12
-purchase_requisition:443:pr_trigger_443	9
-purchase_requisition:444:pr_trigger_444	9
-purchase_requisition:445:pr_trigger_445	7
-purchase_requisition:446:pr_trigger_446	16
-purchase_requisition:447:pr_trigger_447	7
-purchase_requisition:448:pr_trigger_448	9
-purchase_requisition:449:pr_trigger_449	20
-purchase_requisition:44:pr_trigger_44	7
-purchase_requisition:450:pr_trigger_450	20
-purchase_requisition:451:pr_trigger_451	12
-purchase_requisition:452:pr_trigger_452	12
-purchase_requisition:453:pr_trigger_453	16
-purchase_requisition:454:pr_trigger_454	9
-purchase_requisition:455:pr_trigger_455	30
-purchase_requisition:456:pr_trigger_456	9
-purchase_requisition:457:pr_trigger_457	34
-purchase_requisition:458:pr_trigger_458	7
-purchase_requisition:459:pr_trigger_459	14
-purchase_requisition:45:pr_trigger_45	13
-purchase_requisition:460:pr_trigger_460	14
-purchase_requisition:461:pr_trigger_461	9
-purchase_requisition:462:pr_trigger_462	14
-purchase_requisition:463:pr_trigger_463	9
-purchase_requisition:464:pr_trigger_464	23
-purchase_requisition:465:pr_trigger_465	13
-purchase_requisition:466:pr_trigger_466	9
-purchase_requisition:467:pr_trigger_467	9
-purchase_requisition:468:pr_trigger_468	19
-purchase_requisition:469:pr_trigger_469	12
-purchase_requisition:46:pr_trigger_46	12
-purchase_requisition:470:pr_trigger_470	9
-purchase_requisition:471:pr_trigger_471	9
-purchase_requisition:472:pr_trigger_472	9
-purchase_requisition:473:pr_trigger_473	20
-purchase_requisition:474:pr_trigger_474	10
-purchase_requisition:475:pr_trigger_475	9
-purchase_requisition:476:pr_trigger_476	16
-purchase_requisition:477:pr_trigger_477	14
-purchase_requisition:478:pr_trigger_478	13
-purchase_requisition:479:pr_trigger_479	20
-purchase_requisition:47:pr_trigger_47	19
-purchase_requisition:480:pr_trigger_480	9
-purchase_requisition:481:pr_trigger_481	9
-purchase_requisition:482:pr_trigger_482	14
-purchase_requisition:483:pr_trigger_483	16
-purchase_requisition:484:pr_trigger_484	36
-purchase_requisition:485:pr_trigger_485	9
-purchase_requisition:486:pr_trigger_486	20
-purchase_requisition:487:pr_trigger_487	30
-purchase_requisition:488:pr_trigger_488	13
-purchase_requisition:489:pr_trigger_489	10
-purchase_requisition:48:pr_trigger_48	16
-purchase_requisition:490:pr_trigger_490	26
-purchase_requisition:491:pr_trigger_491	11
-purchase_requisition:492:pr_trigger_492	16
-purchase_requisition:493:pr_trigger_493	25
-purchase_requisition:494:pr_trigger_494	21
-purchase_requisition:495:pr_trigger_495	9
-purchase_requisition:496:pr_trigger_496	15
-purchase_requisition:497:pr_trigger_497	9
-purchase_requisition:498:pr_trigger_498	9
-purchase_requisition:499:pr_trigger_499	9
-purchase_requisition:49:pr_trigger_49	10
-purchase_requisition:4:pr_trigger_4	9
-purchase_requisition:500:pr_trigger_500	18
-purchase_requisition:501:pr_trigger_501	7
-purchase_requisition:502:pr_trigger_502	20
-purchase_requisition:503:pr_trigger_503	23
-purchase_requisition:504:pr_trigger_504	20
-purchase_requisition:505:pr_trigger_505	7
-purchase_requisition:506:pr_trigger_506	26
-purchase_requisition:507:pr_trigger_507	28
-purchase_requisition:508:pr_trigger_508	21
-purchase_requisition:509:pr_trigger_509	17
-purchase_requisition:50:pr_trigger_50	10
-purchase_requisition:510:pr_trigger_510	13
-purchase_requisition:511:pr_trigger_511	37
-purchase_requisition:512:pr_trigger_512	9
-purchase_requisition:513:pr_trigger_513	12
-purchase_requisition:514:pr_trigger_514	9
-purchase_requisition:515:pr_trigger_515	14
-purchase_requisition:516:pr_trigger_516	7
-purchase_requisition:517:pr_trigger_517	12
-purchase_requisition:518:pr_trigger_518	23
-purchase_requisition:519:pr_trigger_519	23
-purchase_requisition:51:pr_trigger_51	14
-purchase_requisition:520:pr_trigger_520	10
-purchase_requisition:521:pr_trigger_521	30
-purchase_requisition:522:pr_trigger_522	36
-purchase_requisition:523:pr_trigger_523	14
-purchase_requisition:524:pr_trigger_524	9
-purchase_requisition:525:pr_trigger_525	37
-purchase_requisition:526:pr_trigger_526	35
-purchase_requisition:527:pr_trigger_527	14
-purchase_requisition:528:pr_trigger_528	9
-purchase_requisition:529:pr_trigger_529	9
-purchase_requisition:52:pr_trigger_52	37
-purchase_requisition:530:pr_trigger_530	10
-purchase_requisition:531:pr_trigger_531	10
-purchase_requisition:532:pr_trigger_532	34
-purchase_requisition:533:pr_trigger_533	10
-purchase_requisition:534:pr_trigger_534	24
-purchase_requisition:535:pr_trigger_535	38
-purchase_requisition:536:pr_trigger_536	9
-purchase_requisition:537:pr_trigger_537	15
-purchase_requisition:538:pr_trigger_538	9
-purchase_requisition:539:pr_trigger_539	23
-purchase_requisition:53:pr_trigger_53	26
-purchase_requisition:540:pr_trigger_540	9
-purchase_requisition:541:pr_trigger_541	16
-purchase_requisition:542:pr_trigger_542	20
-purchase_requisition:543:pr_trigger_543	13
-purchase_requisition:544:pr_trigger_544	11
-purchase_requisition:545:pr_trigger_545	9
-purchase_requisition:546:pr_trigger_546	30
-purchase_requisition:547:pr_trigger_547	23
-purchase_requisition:548:pr_trigger_548	16
-purchase_requisition:549:pr_trigger_549	12
-purchase_requisition:54:pr_trigger_54	30
-purchase_requisition:550:pr_trigger_550	17
-purchase_requisition:551:pr_trigger_551	28
-purchase_requisition:552:pr_trigger_552	30
-purchase_requisition:553:pr_trigger_553	23
-purchase_requisition:554:pr_trigger_554	20
-purchase_requisition:555:pr_trigger_555	9
-purchase_requisition:556:pr_trigger_556	25
-purchase_requisition:557:pr_trigger_557	12
-purchase_requisition:558:pr_trigger_558	9
-purchase_requisition:559:pr_trigger_559	14
-purchase_requisition:55:pr_trigger_55	8
-purchase_requisition:560:pr_trigger_560	20
-purchase_requisition:561:pr_trigger_561	17
-purchase_requisition:562:pr_trigger_562	14
-purchase_requisition:563:pr_trigger_563	13
-purchase_requisition:564:pr_trigger_564	11
-purchase_requisition:565:pr_trigger_565	27
-purchase_requisition:566:pr_trigger_566	9
-purchase_requisition:567:pr_trigger_567	16
-purchase_requisition:568:pr_trigger_568	37
-purchase_requisition:569:pr_trigger_569	14
-purchase_requisition:56:pr_trigger_56	16
-purchase_requisition:570:pr_trigger_570	26
-purchase_requisition:571:pr_trigger_571	20
-purchase_requisition:572:pr_trigger_572	9
-purchase_requisition:573:pr_trigger_573	16
-purchase_requisition:574:pr_trigger_574	36
-purchase_requisition:575:pr_trigger_575	9
-purchase_requisition:576:pr_trigger_576	17
-purchase_requisition:577:pr_trigger_577	20
-purchase_requisition:578:pr_trigger_578	12
-purchase_requisition:579:pr_trigger_579	13
-purchase_requisition:57:pr_trigger_57	25
-purchase_requisition:580:pr_trigger_580	30
-purchase_requisition:581:pr_trigger_581	12
-purchase_requisition:582:pr_trigger_582	9
-purchase_requisition:583:pr_trigger_583	10
-purchase_requisition:584:pr_trigger_584	10
-purchase_requisition:585:pr_trigger_585	16
-purchase_requisition:586:pr_trigger_586	7
-purchase_requisition:587:pr_trigger_587	9
-purchase_requisition:588:pr_trigger_588	9
-purchase_requisition:589:pr_trigger_589	7
-purchase_requisition:58:pr_trigger_58	9
-purchase_requisition:590:pr_trigger_590	9
-purchase_requisition:591:pr_trigger_591	20
-purchase_requisition:592:pr_trigger_592	20
-purchase_requisition:593:pr_trigger_593	9
-purchase_requisition:594:pr_trigger_594	16
-purchase_requisition:595:pr_trigger_595	12
-purchase_requisition:596:pr_trigger_596	21
-purchase_requisition:597:pr_trigger_597	9
-purchase_requisition:598:pr_trigger_598	20
-purchase_requisition:599:pr_trigger_599	12
-purchase_requisition:59:pr_trigger_59	9
-purchase_requisition:5:pr_trigger_5	14
-purchase_requisition:600:pr_trigger_600	16
-purchase_requisition:601:pr_trigger_601	16
-purchase_requisition:602:pr_trigger_602	9
-purchase_requisition:603:pr_trigger_603	25
-purchase_requisition:604:pr_trigger_604	28
-purchase_requisition:605:pr_trigger_605	36
-purchase_requisition:606:pr_trigger_606	20
-purchase_requisition:607:pr_trigger_607	7
-purchase_requisition:608:pr_trigger_608	21
-purchase_requisition:609:pr_trigger_609	36
-purchase_requisition:60:pr_trigger_60	10
-purchase_requisition:610:pr_trigger_610	16
-purchase_requisition:611:pr_trigger_611	25
-purchase_requisition:612:pr_trigger_612	20
-purchase_requisition:613:pr_trigger_613	8
-purchase_requisition:614:pr_trigger_614	14
-purchase_requisition:615:pr_trigger_615	30
-purchase_requisition:616:pr_trigger_616	10
-purchase_requisition:617:pr_trigger_617	17
-purchase_requisition:618:pr_trigger_618	9
-purchase_requisition:619:pr_trigger_619	16
-purchase_requisition:61:pr_trigger_61	9
-purchase_requisition:620:pr_trigger_620	20
-purchase_requisition:621:pr_trigger_621	15
-purchase_requisition:622:pr_trigger_622	13
-purchase_requisition:623:pr_trigger_623	7
-purchase_requisition:624:pr_trigger_624	36
-purchase_requisition:625:pr_trigger_625	15
-purchase_requisition:626:pr_trigger_626	20
-purchase_requisition:627:pr_trigger_627	9
-purchase_requisition:628:pr_trigger_628	9
-purchase_requisition:629:pr_trigger_629	30
-purchase_requisition:62:pr_trigger_62	7
-purchase_requisition:630:pr_trigger_630	25
-purchase_requisition:631:pr_trigger_631	14
-purchase_requisition:632:pr_trigger_632	9
-purchase_requisition:633:pr_trigger_633	9
-purchase_requisition:634:pr_trigger_634	16
-purchase_requisition:635:pr_trigger_635	20
-purchase_requisition:636:pr_trigger_636	16
-purchase_requisition:637:pr_trigger_637	9
-purchase_requisition:638:pr_trigger_638	9
-purchase_requisition:639:pr_trigger_639	9
-purchase_requisition:63:pr_trigger_63	9
-purchase_requisition:640:pr_trigger_640	24
-purchase_requisition:641:pr_trigger_641	25
-purchase_requisition:642:pr_trigger_642	16
-purchase_requisition:643:pr_trigger_643	19
-purchase_requisition:644:pr_trigger_644	26
-purchase_requisition:645:pr_trigger_645	9
-purchase_requisition:646:pr_trigger_646	22
-purchase_requisition:647:pr_trigger_647	20
-purchase_requisition:648:pr_trigger_648	10
-purchase_requisition:649:pr_trigger_649	21
-purchase_requisition:64:pr_trigger_64	17
-purchase_requisition:650:pr_trigger_650	9
-purchase_requisition:651:pr_trigger_651	9
-purchase_requisition:652:pr_trigger_652	30
-purchase_requisition:653:pr_trigger_653	22
-purchase_requisition:654:pr_trigger_654	7
-purchase_requisition:655:pr_trigger_655	10
-purchase_requisition:656:pr_trigger_656	36
-purchase_requisition:657:pr_trigger_657	7
-purchase_requisition:658:pr_trigger_658	9
-purchase_requisition:659:pr_trigger_659	12
-purchase_requisition:65:pr_trigger_65	9
-purchase_requisition:660:pr_trigger_660	10
-purchase_requisition:661:pr_trigger_661	9
-purchase_requisition:662:pr_trigger_662	16
-purchase_requisition:663:pr_trigger_663	9
-purchase_requisition:664:pr_trigger_664	9
-purchase_requisition:665:pr_trigger_665	15
-purchase_requisition:666:pr_trigger_666	9
-purchase_requisition:667:pr_trigger_667	9
-purchase_requisition:668:pr_trigger_668	10
-purchase_requisition:669:pr_trigger_669	25
-purchase_requisition:66:pr_trigger_66	25
-purchase_requisition:670:pr_trigger_670	30
-purchase_requisition:671:pr_trigger_671	10
-purchase_requisition:672:pr_trigger_672	16
-purchase_requisition:673:pr_trigger_673	9
-purchase_requisition:674:pr_trigger_674	12
-purchase_requisition:675:pr_trigger_675	9
-purchase_requisition:676:pr_trigger_676	15
-purchase_requisition:677:pr_trigger_677	20
-purchase_requisition:678:pr_trigger_678	36
-purchase_requisition:679:pr_trigger_679	7
-purchase_requisition:67:pr_trigger_67	16
-purchase_requisition:680:pr_trigger_680	9
-purchase_requisition:681:pr_trigger_681	20
-purchase_requisition:682:pr_trigger_682	9
-purchase_requisition:683:pr_trigger_683	16
-purchase_requisition:684:pr_trigger_684	16
-purchase_requisition:685:pr_trigger_685	10
-purchase_requisition:686:pr_trigger_686	34
-purchase_requisition:687:pr_trigger_687	36
-purchase_requisition:688:pr_trigger_688	25
-purchase_requisition:689:pr_trigger_689	12
-purchase_requisition:68:pr_trigger_68	25
-purchase_requisition:690:pr_trigger_690	9
-purchase_requisition:691:pr_trigger_691	9
-purchase_requisition:692:pr_trigger_692	9
-purchase_requisition:693:pr_trigger_693	10
-purchase_requisition:694:pr_trigger_694	35
-purchase_requisition:695:pr_trigger_695	9
-purchase_requisition:696:pr_trigger_696	7
-purchase_requisition:697:pr_trigger_697	25
-purchase_requisition:698:pr_trigger_698	7
-purchase_requisition:699:pr_trigger_699	30
-purchase_requisition:69:pr_trigger_69	9
-purchase_requisition:6:pr_trigger_6	12
-purchase_requisition:700:pr_trigger_700	10
-purchase_requisition:701:pr_trigger_701	23
-purchase_requisition:702:pr_trigger_702	17
-purchase_requisition:703:pr_trigger_703	9
-purchase_requisition:704:pr_trigger_704	16
-purchase_requisition:705:pr_trigger_705	20
-purchase_requisition:706:pr_trigger_706	16
-purchase_requisition:707:pr_trigger_707	20
-purchase_requisition:708:pr_trigger_708	30
-purchase_requisition:709:pr_trigger_709	9
-purchase_requisition:70:pr_trigger_70	9
-purchase_requisition:710:pr_trigger_710	12
-purchase_requisition:711:pr_trigger_711	7
-purchase_requisition:712:pr_trigger_712	14
-purchase_requisition:713:pr_trigger_713	9
-purchase_requisition:714:pr_trigger_714	23
-purchase_requisition:715:pr_trigger_715	9
-purchase_requisition:716:pr_trigger_716	20
-purchase_requisition:717:pr_trigger_717	15
-purchase_requisition:718:pr_trigger_718	18
-purchase_requisition:719:pr_trigger_719	7
-purchase_requisition:71:pr_trigger_71	9
-purchase_requisition:720:pr_trigger_720	12
-purchase_requisition:721:pr_trigger_721	16
-purchase_requisition:722:pr_trigger_722	10
-purchase_requisition:723:pr_trigger_723	16
-purchase_requisition:724:pr_trigger_724	9
-purchase_requisition:725:pr_trigger_725	10
-purchase_requisition:726:pr_trigger_726	9
-purchase_requisition:727:pr_trigger_727	9
-purchase_requisition:728:pr_trigger_728	16
-purchase_requisition:729:pr_trigger_729	7
-purchase_requisition:72:pr_trigger_72	16
-purchase_requisition:730:pr_trigger_730	15
-purchase_requisition:731:pr_trigger_731	18
-purchase_requisition:732:pr_trigger_732	9
-purchase_requisition:733:pr_trigger_733	21
-purchase_requisition:734:pr_trigger_734	12
-purchase_requisition:735:pr_trigger_735	25
-purchase_requisition:736:pr_trigger_736	15
-purchase_requisition:737:pr_trigger_737	30
-purchase_requisition:738:pr_trigger_738	9
-purchase_requisition:739:pr_trigger_739	30
-purchase_requisition:73:pr_trigger_73	9
-purchase_requisition:740:pr_trigger_740	13
-purchase_requisition:741:pr_trigger_741	7
-purchase_requisition:742:pr_trigger_742	9
-purchase_requisition:743:pr_trigger_743	7
-purchase_requisition:744:pr_trigger_744	7
-purchase_requisition:745:pr_trigger_745	9
-purchase_requisition:746:pr_trigger_746	15
-purchase_requisition:747:pr_trigger_747	18
-purchase_requisition:748:pr_trigger_748	9
-purchase_requisition:749:pr_trigger_749	9
-purchase_requisition:74:pr_trigger_74	9
-purchase_requisition:750:pr_trigger_750	9
-purchase_requisition:751:pr_trigger_751	9
-purchase_requisition:752:pr_trigger_752	16
-purchase_requisition:753:pr_trigger_753	7
-purchase_requisition:754:pr_trigger_754	25
-purchase_requisition:755:pr_trigger_755	14
-purchase_requisition:756:pr_trigger_756	7
-purchase_requisition:757:pr_trigger_757	14
-purchase_requisition:758:pr_trigger_758	17
-purchase_requisition:759:pr_trigger_759	7
-purchase_requisition:75:pr_trigger_75	12
-purchase_requisition:760:pr_trigger_760	14
-purchase_requisition:761:pr_trigger_761	7
-purchase_requisition:762:pr_trigger_762	14
-purchase_requisition:763:pr_trigger_763	11
-purchase_requisition:764:pr_trigger_764	16
-purchase_requisition:765:pr_trigger_765	9
-purchase_requisition:766:pr_trigger_766	10
-purchase_requisition:767:pr_trigger_767	25
-purchase_requisition:768:pr_trigger_768	26
-purchase_requisition:769:pr_trigger_769	16
-purchase_requisition:76:pr_trigger_76	13
-purchase_requisition:770:pr_trigger_770	25
-purchase_requisition:771:pr_trigger_771	16
-purchase_requisition:772:pr_trigger_772	9
-purchase_requisition:773:pr_trigger_773	10
-purchase_requisition:774:pr_trigger_774	13
-purchase_requisition:775:pr_trigger_775	9
-purchase_requisition:776:pr_trigger_776	10
-purchase_requisition:777:pr_trigger_777	8
-purchase_requisition:778:pr_trigger_778	10
-purchase_requisition:779:pr_trigger_779	16
-purchase_requisition:77:pr_trigger_77	21
-purchase_requisition:780:pr_trigger_780	25
-purchase_requisition:781:pr_trigger_781	9
-purchase_requisition:782:pr_trigger_782	7
-purchase_requisition:783:pr_trigger_783	7
-purchase_requisition:784:pr_trigger_784	17
-purchase_requisition:785:pr_trigger_785	14
-purchase_requisition:786:pr_trigger_786	12
-purchase_requisition:787:pr_trigger_787	9
-purchase_requisition:788:pr_trigger_788	18
-purchase_requisition:789:pr_trigger_789	34
-purchase_requisition:78:pr_trigger_78	9
-purchase_requisition:790:pr_trigger_790	20
-purchase_requisition:791:pr_trigger_791	30
-purchase_requisition:792:pr_trigger_792	36
-purchase_requisition:793:pr_trigger_793	7
-purchase_requisition:794:pr_trigger_794	14
-purchase_requisition:795:pr_trigger_795	8
-purchase_requisition:796:pr_trigger_796	9
-purchase_requisition:797:pr_trigger_797	23
-purchase_requisition:798:pr_trigger_798	24
-purchase_requisition:799:pr_trigger_799	13
-purchase_requisition:79:pr_trigger_79	10
-purchase_requisition:7:pr_trigger_7	7
-purchase_requisition:800:pr_trigger_800	26
-purchase_requisition:801:pr_trigger_801	16
-purchase_requisition:802:pr_trigger_802	9
-purchase_requisition:803:pr_trigger_803	20
-purchase_requisition:804:pr_trigger_804	10
-purchase_requisition:805:pr_trigger_805	16
-purchase_requisition:806:pr_trigger_806	25
-purchase_requisition:807:pr_trigger_807	34
-purchase_requisition:808:pr_trigger_808	22
-purchase_requisition:809:pr_trigger_809	31
-purchase_requisition:80:pr_trigger_80	9
-purchase_requisition:810:pr_trigger_810	36
-purchase_requisition:811:pr_trigger_811	12
-purchase_requisition:812:pr_trigger_812	10
-purchase_requisition:813:pr_trigger_813	9
-purchase_requisition:814:pr_trigger_814	9
-purchase_requisition:815:pr_trigger_815	9
-purchase_requisition:816:pr_trigger_816	11
-purchase_requisition:817:pr_trigger_817	15
-purchase_requisition:818:pr_trigger_818	7
-purchase_requisition:819:pr_trigger_819	9
-purchase_requisition:81:pr_trigger_81	9
-purchase_requisition:820:pr_trigger_820	25
-purchase_requisition:821:pr_trigger_821	20
-purchase_requisition:822:pr_trigger_822	14
-purchase_requisition:823:pr_trigger_823	16
-purchase_requisition:824:pr_trigger_824	7
-purchase_requisition:825:pr_trigger_825	28
-purchase_requisition:826:pr_trigger_826	25
-purchase_requisition:827:pr_trigger_827	16
-purchase_requisition:828:pr_trigger_828	14
-purchase_requisition:829:pr_trigger_829	7
-purchase_requisition:82:pr_trigger_82	17
-purchase_requisition:830:pr_trigger_830	7
-purchase_requisition:831:pr_trigger_831	17
-purchase_requisition:832:pr_trigger_832	25
-purchase_requisition:833:pr_trigger_833	9
-purchase_requisition:834:pr_trigger_834	25
-purchase_requisition:835:pr_trigger_835	30
-purchase_requisition:836:pr_trigger_836	16
-purchase_requisition:837:pr_trigger_837	14
-purchase_requisition:838:pr_trigger_838	16
-purchase_requisition:839:pr_trigger_839	15
-purchase_requisition:83:pr_trigger_83	7
-purchase_requisition:840:pr_trigger_840	16
-purchase_requisition:841:pr_trigger_841	15
-purchase_requisition:842:pr_trigger_842	9
-purchase_requisition:843:pr_trigger_843	37
-purchase_requisition:844:pr_trigger_844	23
-purchase_requisition:845:pr_trigger_845	36
-purchase_requisition:846:pr_trigger_846	34
-purchase_requisition:847:pr_trigger_847	7
-purchase_requisition:848:pr_trigger_848	12
-purchase_requisition:849:pr_trigger_849	17
-purchase_requisition:84:pr_trigger_84	9
-purchase_requisition:850:pr_trigger_850	7
-purchase_requisition:851:pr_trigger_851	20
-purchase_requisition:852:pr_trigger_852	16
-purchase_requisition:853:pr_trigger_853	9
-purchase_requisition:854:pr_trigger_854	26
-purchase_requisition:855:pr_trigger_855	20
-purchase_requisition:856:pr_trigger_856	16
-purchase_requisition:857:pr_trigger_857	9
-purchase_requisition:858:pr_trigger_858	25
-purchase_requisition:859:pr_trigger_859	12
-purchase_requisition:85:pr_trigger_85	17
-purchase_requisition:860:pr_trigger_860	7
-purchase_requisition:861:pr_trigger_861	36
-purchase_requisition:862:pr_trigger_862	14
-purchase_requisition:863:pr_trigger_863	9
-purchase_requisition:864:pr_trigger_864	9
-purchase_requisition:865:pr_trigger_865	7
-purchase_requisition:866:pr_trigger_866	10
-purchase_requisition:867:pr_trigger_867	10
-purchase_requisition:868:pr_trigger_868	13
-purchase_requisition:869:pr_trigger_869	25
-purchase_requisition:86:pr_trigger_86	30
-purchase_requisition:870:pr_trigger_870	16
-purchase_requisition:871:pr_trigger_871	25
-purchase_requisition:872:pr_trigger_872	9
-purchase_requisition:873:pr_trigger_873	9
-purchase_requisition:874:pr_trigger_874	20
-purchase_requisition:875:pr_trigger_875	9
-purchase_requisition:876:pr_trigger_876	25
-purchase_requisition:877:pr_trigger_877	30
-purchase_requisition:878:pr_trigger_878	17
-purchase_requisition:879:pr_trigger_879	9
-purchase_requisition:87:pr_trigger_87	37
-purchase_requisition:880:pr_trigger_880	30
-purchase_requisition:881:pr_trigger_881	12
-purchase_requisition:882:pr_trigger_882	36
-purchase_requisition:883:pr_trigger_883	21
-purchase_requisition:884:pr_trigger_884	16
-purchase_requisition:885:pr_trigger_885	9
-purchase_requisition:886:pr_trigger_886	12
-purchase_requisition:887:pr_trigger_887	16
-purchase_requisition:888:pr_trigger_888	9
-purchase_requisition:889:pr_trigger_889	9
-purchase_requisition:88:pr_trigger_88	9
-purchase_requisition:890:pr_trigger_890	9
-purchase_requisition:891:pr_trigger_891	17
-purchase_requisition:892:pr_trigger_892	36
-purchase_requisition:893:pr_trigger_893	9
-purchase_requisition:894:pr_trigger_894	11
-purchase_requisition:895:pr_trigger_895	20
-purchase_requisition:896:pr_trigger_896	9
-purchase_requisition:897:pr_trigger_897	15
-purchase_requisition:898:pr_trigger_898	10
-purchase_requisition:899:pr_trigger_899	9
-purchase_requisition:89:pr_trigger_89	9
-purchase_requisition:8:pr_trigger_8	14
-purchase_requisition:900:pr_trigger_900	28
-purchase_requisition:901:pr_trigger_901	11
-purchase_requisition:902:pr_trigger_902	30
-purchase_requisition:903:pr_trigger_903	25
-purchase_requisition:904:pr_trigger_904	19
-purchase_requisition:905:pr_trigger_905	37
-purchase_requisition:906:pr_trigger_906	11
-purchase_requisition:907:pr_trigger_907	30
-purchase_requisition:908:pr_trigger_908	12
-purchase_requisition:909:pr_trigger_909	9
-purchase_requisition:90:pr_trigger_90	15
-purchase_requisition:910:pr_trigger_910	34
-purchase_requisition:911:pr_trigger_911	9
-purchase_requisition:912:pr_trigger_912	12
-purchase_requisition:913:pr_trigger_913	10
-purchase_requisition:914:pr_trigger_914	10
-purchase_requisition:915:pr_trigger_915	9
-purchase_requisition:916:pr_trigger_916	16
-purchase_requisition:917:pr_trigger_917	14
-purchase_requisition:918:pr_trigger_918	14
-purchase_requisition:919:pr_trigger_919	16
-purchase_requisition:91:pr_trigger_91	9
-purchase_requisition:920:pr_trigger_920	9
-purchase_requisition:921:pr_trigger_921	26
-purchase_requisition:922:pr_trigger_922	16
-purchase_requisition:923:pr_trigger_923	9
-purchase_requisition:924:pr_trigger_924	16
-purchase_requisition:925:pr_trigger_925	9
-purchase_requisition:926:pr_trigger_926	18
-purchase_requisition:92:pr_trigger_92	23
-purchase_requisition:93:pr_trigger_93	8
-purchase_requisition:94:pr_trigger_94	36
-purchase_requisition:95:pr_trigger_95	9
-purchase_requisition:96:pr_trigger_96	23
-purchase_requisition:97:pr_trigger_97	8
-purchase_requisition:98:pr_trigger_98	26
-purchase_requisition:99:pr_trigger_99	25
-purchase_requisition:9:pr_trigger_9	9
+goods receipt:0	20
+goods receipt:10	12
+goods receipt:100	16
+goods receipt:1000	30
+goods receipt:1002	11
+goods receipt:1003	9
+goods receipt:1004	21
+goods receipt:1007	9
+goods receipt:1008	16
+goods receipt:101	7
+goods receipt:1010	16
+goods receipt:1012	7
+goods receipt:1013	14
+goods receipt:1015	9
+goods receipt:1016	7
+goods receipt:1017	26
+goods receipt:102	16
+goods receipt:1020	9
+goods receipt:1021	9
+goods receipt:1022	20
+goods receipt:1025	23
+goods receipt:1028	25
+goods receipt:1031	28
+goods receipt:1035	20
+goods receipt:1038	15
+goods receipt:104	10
+goods receipt:1041	13
+goods receipt:1043	18
+goods receipt:1045	17
+goods receipt:1047	9
+goods receipt:1048	21
+goods receipt:105	26
+goods receipt:1051	26
+goods receipt:1054	37
+goods receipt:1058	23
+goods receipt:1061	14
+goods receipt:1063	9
+goods receipt:1064	14
+goods receipt:1066	7
+goods receipt:1067	10
+goods receipt:1068	23
+goods receipt:1071	30
+goods receipt:1075	10
+goods receipt:1077	9
+goods receipt:1078	34
+goods receipt:108	9
+goods receipt:1082	12
+goods receipt:1084	12
+goods receipt:1086	9
+goods receipt:1087	35
+goods receipt:109	16
+goods receipt:1091	37
+goods receipt:1095	38
+goods receipt:1099	36
+goods receipt:11	20
+goods receipt:1103	9
+goods receipt:1104	10
+goods receipt:1105	14
+goods receipt:1107	9
+goods receipt:1108	10
+goods receipt:1109	23
+goods receipt:111	9
+goods receipt:1112	24
+goods receipt:1116	16
+goods receipt:1118	20
+goods receipt:112	9
+goods receipt:1121	9
+goods receipt:1122	15
+goods receipt:1125	9
+goods receipt:1126	9
+goods receipt:1127	13
+goods receipt:1129	23
+goods receipt:113	16
+goods receipt:1132	28
+goods receipt:1136	12
+goods receipt:1137	16
+goods receipt:1139	11
+goods receipt:1140	25
+goods receipt:1143	23
+goods receipt:1146	20
+goods receipt:1149	12
+goods receipt:115	17
+goods receipt:1151	9
+goods receipt:1152	30
+goods receipt:1156	11
+goods receipt:1157	14
+goods receipt:1159	17
+goods receipt:1161	20
+goods receipt:1164	9
+goods receipt:1165	13
+goods receipt:1168	14
+goods receipt:117	9
+goods receipt:1170	17
+goods receipt:1172	30
+goods receipt:1176	9
+goods receipt:1177	36
+goods receipt:118	30
+goods receipt:1181	20
+goods receipt:1184	12
+goods receipt:1186	26
+goods receipt:1189	16
+goods receipt:1191	14
+goods receipt:1193	37
+goods receipt:1197	17
+goods receipt:1199	16
+goods receipt:1201	9
+goods receipt:1202	9
+goods receipt:1203	20
+goods receipt:1206	12
+goods receipt:1208	9
+goods receipt:1209	7
+goods receipt:1210	13
+goods receipt:1212	9
+goods receipt:1213	7
+goods receipt:1214	10
+goods receipt:1215	16
+goods receipt:1217	9
+goods receipt:1218	9
+goods receipt:1219	30
+goods receipt:122	25
+goods receipt:1223	16
+goods receipt:1225	9
+goods receipt:1226	21
+goods receipt:1229	27
+goods receipt:1232	10
+goods receipt:1234	20
+goods receipt:1237	16
+goods receipt:1239	12
+goods receipt:1241	7
+goods receipt:1242	12
+goods receipt:1244	9
+goods receipt:1245	20
+goods receipt:1248	9
+goods receipt:1249	20
+goods receipt:125	9
+goods receipt:1252	36
+goods receipt:1256	28
+goods receipt:126	9
+goods receipt:1260	16
+goods receipt:1262	14
+goods receipt:1264	25
+goods receipt:1267	16
+goods receipt:1269	20
+goods receipt:127	9
+goods receipt:1272	15
+goods receipt:1275	20
+goods receipt:1278	8
+goods receipt:1279	17
+goods receipt:128	16
+goods receipt:1281	10
+goods receipt:1282	7
+goods receipt:1283	30
+goods receipt:1287	15
+goods receipt:1289	21
+goods receipt:1292	20
+goods receipt:1295	16
+goods receipt:1297	20
+goods receipt:130	9
+goods receipt:1300	9
+goods receipt:1301	9
+goods receipt:1302	9
+goods receipt:1303	13
+goods receipt:1305	14
+goods receipt:1307	36
+goods receipt:131	9
+goods receipt:1311	16
+goods receipt:1313	25
+goods receipt:1316	9
+goods receipt:1317	9
+goods receipt:1318	25
+goods receipt:132	9
+goods receipt:1321	16
+goods receipt:1323	36
+goods receipt:1327	9
+goods receipt:1328	9
+goods receipt:1329	25
+goods receipt:133	12
+goods receipt:1332	16
+goods receipt:1334	26
+goods receipt:1337	9
+goods receipt:1338	20
+goods receipt:1341	9
+goods receipt:1342	30
+goods receipt:1346	10
+goods receipt:1347	30
+goods receipt:135	13
+goods receipt:1351	22
+goods receipt:1354	20
+goods receipt:1357	21
+goods receipt:1360	22
+goods receipt:1364	24
+goods receipt:1368	7
+goods receipt:1369	10
+goods receipt:137	37
+goods receipt:1370	9
+goods receipt:1371	9
+goods receipt:1372	19
+goods receipt:1376	9
+goods receipt:1377	9
+goods receipt:1378	7
+goods receipt:1379	15
+goods receipt:1382	10
+goods receipt:1383	16
+goods receipt:1386	12
+goods receipt:1388	9
+goods receipt:1389	36
+goods receipt:1393	10
+goods receipt:1394	9
+goods receipt:1395	15
+goods receipt:1398	9
+goods receipt:1399	9
+goods receipt:14	9
+goods receipt:1400	10
+goods receipt:1401	9
+goods receipt:1402	7
+goods receipt:1403	20
+goods receipt:1406	16
+goods receipt:1408	25
+goods receipt:141	25
+goods receipt:1411	12
+goods receipt:1413	9
+goods receipt:1414	36
+goods receipt:1418	10
+goods receipt:1419	16
+goods receipt:1421	34
+goods receipt:1425	9
+goods receipt:1426	20
+goods receipt:1430	16
+goods receipt:1432	36
+goods receipt:1436	30
+goods receipt:144	21
+goods receipt:1440	9
+goods receipt:1441	9
+goods receipt:1442	9
+goods receipt:1443	35
+goods receipt:1447	17
+goods receipt:1449	9
+goods receipt:1450	30
+goods receipt:1454	25
+goods receipt:1457	10
+goods receipt:1458	7
+goods receipt:1459	9
+goods receipt:1460	25
+goods receipt:1463	23
+goods receipt:1466	10
+goods receipt:1468	9
+goods receipt:1469	7
+goods receipt:147	30
+goods receipt:1470	7
+goods receipt:1471	16
+goods receipt:1473	20
+goods receipt:1476	12
+goods receipt:1478	23
+goods receipt:1481	12
+goods receipt:1483	14
+goods receipt:1485	9
+goods receipt:1486	9
+goods receipt:1487	15
+goods receipt:1490	16
+goods receipt:1492	30
+goods receipt:1496	9
+goods receipt:1497	7
+goods receipt:1498	12
+goods receipt:15	12
+goods receipt:1500	18
+goods receipt:1504	9
+goods receipt:1505	20
+goods receipt:1508	16
+goods receipt:151	9
+goods receipt:1510	7
+goods receipt:1511	9
+goods receipt:1512	15
+goods receipt:1515	20
+goods receipt:1519	10
+goods receipt:152	9
+goods receipt:1520	9
+goods receipt:1521	18
+goods receipt:1525	16
+goods receipt:1527	13
+goods receipt:1529	16
+goods receipt:153	7
+goods receipt:1531	10
+goods receipt:1532	9
+goods receipt:1533	15
+goods receipt:1536	21
+goods receipt:1539	9
+goods receipt:154	9
+goods receipt:1540	7
+goods receipt:1541	25
+goods receipt:1544	30
+goods receipt:1548	30
+goods receipt:155	9
+goods receipt:1552	12
+goods receipt:1554	18
+goods receipt:1556	7
+goods receipt:1557	9
+goods receipt:1558	7
+goods receipt:1559	14
+goods receipt:156	17
+goods receipt:1561	14
+goods receipt:1563	9
+goods receipt:1564	9
+goods receipt:1565	7
+goods receipt:1566	14
+goods receipt:1568	7
+goods receipt:1569	7
+goods receipt:1570	9
+goods receipt:1571	14
+goods receipt:1573	25
+goods receipt:1576	16
+goods receipt:1578	11
+goods receipt:1579	9
+goods receipt:158	23
+goods receipt:1580	9
+goods receipt:1581	16
+goods receipt:1583	26
+goods receipt:1586	7
+goods receipt:1587	10
+goods receipt:1588	15
+goods receipt:1591	25
+goods receipt:1594	9
+goods receipt:1595	25
+goods receipt:1598	17
+goods receipt:1600	13
+goods receipt:1603	10
+goods receipt:1604	10
+goods receipt:1606	16
+goods receipt:1608	16
+goods receipt:1610	8
+goods receipt:1611	9
+goods receipt:1612	10
+goods receipt:1613	7
+goods receipt:1614	12
+goods receipt:1616	7
+goods receipt:1617	16
+goods receipt:1619	9
+goods receipt:162	9
+goods receipt:1620	14
+goods receipt:1622	18
+goods receipt:1626	9
+goods receipt:1627	34
+goods receipt:163	36
+goods receipt:1631	17
+goods receipt:1633	8
+goods receipt:1634	9
+goods receipt:1635	14
+goods receipt:1637	9
+goods receipt:1638	20
+goods receipt:1641	25
+goods receipt:1644	7
+goods receipt:1645	36
+goods receipt:1649	26
+goods receipt:1652	30
+goods receipt:1656	24
+goods receipt:1660	23
+goods receipt:1663	20
+goods receipt:1666	13
+goods receipt:1668	9
+goods receipt:1669	10
+goods receipt:167	23
+goods receipt:1671	16
+goods receipt:1673	25
+goods receipt:1676	34
+goods receipt:1680	16
+goods receipt:1682	22
+goods receipt:1685	12
+goods receipt:1687	9
+goods receipt:1688	10
+goods receipt:1689	15
+goods receipt:1692	9
+goods receipt:1693	31
+goods receipt:1697	36
+goods receipt:17	12
+goods receipt:170	15
+goods receipt:1701	14
+goods receipt:1703	11
+goods receipt:1704	9
+goods receipt:1705	9
+goods receipt:1706	20
+goods receipt:1709	25
+goods receipt:1712	16
+goods receipt:1714	7
+goods receipt:1715	7
+goods receipt:1716	17
+goods receipt:1720	14
+goods receipt:1722	28
+goods receipt:1726	7
+goods receipt:1727	7
+goods receipt:1728	14
+goods receipt:173	8
+goods receipt:1730	25
+goods receipt:1733	16
+goods receipt:1735	34
+goods receipt:1739	7
+goods receipt:174	10
+goods receipt:1740	16
+goods receipt:1742	25
+goods receipt:1745	15
+goods receipt:1748	15
+goods receipt:1751	30
+goods receipt:1755	23
+goods receipt:1759	16
+goods receipt:176	17
+goods receipt:1761	16
+goods receipt:1763	9
+goods receipt:1764	37
+goods receipt:1768	36
+goods receipt:1772	20
+goods receipt:1775	17
+goods receipt:1777	9
+goods receipt:1778	25
+goods receipt:178	9
+goods receipt:1781	16
+goods receipt:1783	7
+goods receipt:1784	9
+goods receipt:1785	26
+goods receipt:1788	20
+goods receipt:179	8
+goods receipt:1791	7
+goods receipt:1792	12
+goods receipt:1794	16
+goods receipt:1796	25
+goods receipt:1799	14
+goods receipt:18	14
+goods receipt:180	25
+goods receipt:1801	9
+goods receipt:1802	7
+goods receipt:1803	12
+goods receipt:1805	36
+goods receipt:1809	9
+goods receipt:1810	9
+goods receipt:1811	10
+goods receipt:1812	13
+goods receipt:1815	10
+goods receipt:1816	25
+goods receipt:1819	25
+goods receipt:1822	9
+goods receipt:1823	9
+goods receipt:1824	16
+goods receipt:1826	9
+goods receipt:1827	9
+goods receipt:1828	20
+goods receipt:183	9
+goods receipt:1831	12
+goods receipt:1833	30
+goods receipt:1837	25
+goods receipt:184	26
+goods receipt:1840	21
+goods receipt:1843	30
+goods receipt:1847	16
+goods receipt:1850	9
+goods receipt:1851	9
+goods receipt:1852	9
+goods receipt:1853	9
+goods receipt:1854	36
+goods receipt:1858	15
+goods receipt:1861	36
+goods receipt:1865	11
+goods receipt:1867	9
+goods receipt:1868	9
+goods receipt:1869	17
+goods receipt:187	20
+goods receipt:1871	11
+goods receipt:1872	10
+goods receipt:1874	16
+goods receipt:1876	28
+goods receipt:1880	9
+goods receipt:1881	9
+goods receipt:1882	20
+goods receipt:1885	12
+goods receipt:1887	12
+goods receipt:1889	37
+goods receipt:1893	30
+goods receipt:1897	10
+goods receipt:1898	9
+goods receipt:1899	19
+goods receipt:190	25
+goods receipt:1901	11
+goods receipt:1902	12
+goods receipt:1904	25
+goods receipt:1907	16
+goods receipt:1909	17
+goods receipt:1911	14
+goods receipt:1913	16
+goods receipt:1915	34
+goods receipt:1919	30
+goods receipt:1923	9
+goods receipt:1924	14
+goods receipt:1926	9
+goods receipt:1927	16
+goods receipt:1929	10
+goods receipt:193	30
+goods receipt:1930	9
+goods receipt:1931	9
+goods receipt:1932	16
+goods receipt:1934	18
+goods receipt:1938	26
+goods receipt:197	25
+goods receipt:20	8
+goods receipt:200	9
+goods receipt:201	25
+goods receipt:204	17
+goods receipt:207	30
+goods receipt:21	9
+goods receipt:211	17
+goods receipt:213	25
+goods receipt:216	15
+goods receipt:219	37
+goods receipt:22	16
+goods receipt:223	36
+goods receipt:227	21
+goods receipt:230	10
+goods receipt:231	16
+goods receipt:233	23
+goods receipt:236	18
+goods receipt:239	11
+goods receipt:24	19
+goods receipt:240	23
+goods receipt:243	10
+goods receipt:245	25
+goods receipt:248	9
+goods receipt:249	9
+goods receipt:250	12
+goods receipt:252	10
+goods receipt:254	20
+goods receipt:257	16
+goods receipt:259	25
+goods receipt:263	12
+goods receipt:265	14
+goods receipt:267	25
+goods receipt:27	20
+goods receipt:270	13
+goods receipt:273	9
+goods receipt:274	16
+goods receipt:276	9
+goods receipt:277	9
+goods receipt:278	30
+goods receipt:282	36
+goods receipt:286	9
+goods receipt:287	14
+goods receipt:289	36
+goods receipt:293	9
+goods receipt:294	16
+goods receipt:296	7
+goods receipt:297	21
+goods receipt:3	11
+goods receipt:30	15
+goods receipt:300	9
+goods receipt:301	9
+goods receipt:302	7
+goods receipt:303	7
+goods receipt:304	17
+goods receipt:306	25
+goods receipt:309	12
+goods receipt:311	24
+goods receipt:315	16
+goods receipt:317	10
+goods receipt:319	9
+goods receipt:320	25
+goods receipt:323	10
+goods receipt:324	25
+goods receipt:327	9
+goods receipt:328	13
+goods receipt:33	16
+goods receipt:330	9
+goods receipt:331	23
+goods receipt:334	7
+goods receipt:335	16
+goods receipt:337	11
+goods receipt:338	10
+goods receipt:339	7
+goods receipt:340	15
+goods receipt:343	34
+goods receipt:347	16
+goods receipt:349	16
+goods receipt:35	9
+goods receipt:351	7
+goods receipt:352	23
+goods receipt:355	9
+goods receipt:356	15
+goods receipt:359	9
+goods receipt:36	20
+goods receipt:360	9
+goods receipt:361	9
+goods receipt:362	36
+goods receipt:366	9
+goods receipt:367	12
+goods receipt:369	23
+goods receipt:372	7
+goods receipt:373	11
+goods receipt:374	30
+goods receipt:378	7
+goods receipt:379	9
+goods receipt:380	9
+goods receipt:381	12
+goods receipt:383	25
+goods receipt:386	9
+goods receipt:387	12
+goods receipt:389	16
+goods receipt:39	23
+goods receipt:391	12
+goods receipt:393	9
+goods receipt:394	9
+goods receipt:395	26
+goods receipt:398	12
+goods receipt:4	14
+goods receipt:400	20
+goods receipt:403	36
+goods receipt:407	12
+goods receipt:409	9
+goods receipt:410	20
+goods receipt:413	20
+goods receipt:415	9
+goods receipt:416	9
+goods receipt:417	7
+goods receipt:418	9
+goods receipt:419	16
+goods receipt:42	16
+goods receipt:421	11
+goods receipt:423	16
+goods receipt:425	14
+goods receipt:427	12
+goods receipt:429	30
+goods receipt:433	9
+goods receipt:434	25
+goods receipt:437	13
+goods receipt:439	9
+goods receipt:44	12
+goods receipt:440	12
+goods receipt:442	36
+goods receipt:446	19
+goods receipt:449	12
+goods receipt:451	12
+goods receipt:453	24
+goods receipt:457	10
+goods receipt:458	20
+goods receipt:46	16
+goods receipt:461	25
+goods receipt:464	10
+goods receipt:465	16
+goods receipt:467	16
+goods receipt:469	9
+goods receipt:470	7
+goods receipt:471	9
+goods receipt:472	36
+goods receipt:476	7
+goods receipt:477	8
+goods receipt:478	9
+goods receipt:479	12
+goods receipt:48	25
+goods receipt:481	16
+goods receipt:483	16
+goods receipt:485	9
+goods receipt:486	25
+goods receipt:489	16
+goods receipt:491	20
+goods receipt:494	13
+goods receipt:496	23
+goods receipt:499	9
+goods receipt:500	10
+goods receipt:502	9
+goods receipt:503	25
+goods receipt:506	9
+goods receipt:507	26
+goods receipt:51	10
+goods receipt:510	9
+goods receipt:511	15
+goods receipt:513	12
+goods receipt:515	11
+goods receipt:516	9
+goods receipt:517	10
+goods receipt:519	26
+goods receipt:52	9
+goods receipt:522	9
+goods receipt:523	12
+goods receipt:525	15
+goods receipt:528	25
+goods receipt:53	13
+goods receipt:531	13
+goods receipt:533	16
+goods receipt:535	37
+goods receipt:539	9
+goods receipt:540	23
+goods receipt:543	25
+goods receipt:546	7
+goods receipt:547	12
+goods receipt:549	16
+goods receipt:55	9
+goods receipt:551	10
+goods receipt:553	14
+goods receipt:555	16
+goods receipt:557	12
+goods receipt:559	23
+goods receipt:56	22
+goods receipt:562	10
+goods receipt:563	10
+goods receipt:564	12
+goods receipt:566	13
+goods receipt:569	12
+goods receipt:571	15
+goods receipt:574	15
+goods receipt:577	19
+goods receipt:581	7
+goods receipt:582	16
+goods receipt:584	25
+goods receipt:587	20
+goods receipt:59	36
+goods receipt:590	16
+goods receipt:592	23
+goods receipt:595	20
+goods receipt:598	7
+goods receipt:599	36
+goods receipt:6	7
+goods receipt:603	25
+goods receipt:606	26
+goods receipt:609	36
+goods receipt:613	10
+goods receipt:615	10
+goods receipt:616	9
+goods receipt:617	25
+goods receipt:620	21
+goods receipt:623	14
+goods receipt:625	15
+goods receipt:628	10
+goods receipt:629	19
+goods receipt:63	16
+goods receipt:632	13
+goods receipt:634	12
+goods receipt:636	15
+goods receipt:639	11
+goods receipt:640	23
+goods receipt:643	9
+goods receipt:644	30
+goods receipt:648	7
+goods receipt:649	7
+goods receipt:65	7
+goods receipt:650	24
+goods receipt:654	16
+goods receipt:656	20
+goods receipt:66	36
+goods receipt:660	36
+goods receipt:664	9
+goods receipt:665	14
+goods receipt:667	7
+goods receipt:668	9
+goods receipt:669	15
+goods receipt:672	18
+goods receipt:675	16
+goods receipt:677	10
+goods receipt:678	15
+goods receipt:681	7
+goods receipt:682	12
+goods receipt:684	16
+goods receipt:686	30
+goods receipt:690	9
+goods receipt:691	7
+goods receipt:692	9
+goods receipt:693	10
+goods receipt:694	14
+goods receipt:696	19
+goods receipt:699	9
+goods receipt:7	16
+goods receipt:70	9
+goods receipt:700	21
+goods receipt:703	18
+goods receipt:705	7
+goods receipt:706	9
+goods receipt:707	36
+goods receipt:71	25
+goods receipt:711	9
+goods receipt:712	36
+goods receipt:716	20
+goods receipt:719	9
+goods receipt:720	9
+goods receipt:721	16
+goods receipt:723	9
+goods receipt:724	14
+goods receipt:726	16
+goods receipt:728	36
+goods receipt:732	27
+goods receipt:735	38
+goods receipt:739	10
+goods receipt:74	7
+goods receipt:741	9
+goods receipt:742	10
+goods receipt:743	15
+goods receipt:746	23
+goods receipt:749	12
+goods receipt:75	13
+goods receipt:751	10
+goods receipt:752	9
+goods receipt:753	7
+goods receipt:754	24
+goods receipt:758	20
+goods receipt:761	21
+goods receipt:764	10
+goods receipt:765	21
+goods receipt:768	9
+goods receipt:769	9
+goods receipt:77	9
+goods receipt:770	16
+goods receipt:772	9
+goods receipt:773	9
+goods receipt:774	9
+goods receipt:775	17
+goods receipt:777	13
+goods receipt:779	20
+goods receipt:78	12
+goods receipt:782	36
+goods receipt:786	25
+goods receipt:789	9
+goods receipt:790	9
+goods receipt:791	12
+goods receipt:793	12
+goods receipt:795	14
+goods receipt:797	24
+goods receipt:80	10
+goods receipt:801	9
+goods receipt:802	16
+goods receipt:804	7
+goods receipt:805	23
+goods receipt:808	30
+goods receipt:81	9
+goods receipt:812	20
+goods receipt:815	12
+goods receipt:817	14
+goods receipt:819	18
+goods receipt:82	16
+goods receipt:822	17
+goods receipt:824	13
+goods receipt:827	16
+goods receipt:829	18
+goods receipt:832	9
+goods receipt:833	9
+goods receipt:834	25
+goods receipt:837	9
+goods receipt:838	20
+goods receipt:84	14
+goods receipt:841	9
+goods receipt:842	25
+goods receipt:845	12
+goods receipt:847	13
+goods receipt:849	16
+goods receipt:851	22
+goods receipt:855	37
+goods receipt:859	17
+goods receipt:86	9
+goods receipt:861	16
+goods receipt:863	16
+goods receipt:865	9
+goods receipt:866	10
+goods receipt:867	9
+goods receipt:868	9
+goods receipt:869	15
+goods receipt:87	10
+goods receipt:872	14
+goods receipt:874	11
+goods receipt:875	10
+goods receipt:876	9
+goods receipt:877	15
+goods receipt:88	13
+goods receipt:880	16
+goods receipt:882	10
+goods receipt:883	36
+goods receipt:887	36
+goods receipt:891	16
+goods receipt:893	16
+goods receipt:895	14
+goods receipt:897	9
+goods receipt:898	14
+goods receipt:90	17
+goods receipt:900	16
+goods receipt:902	9
+goods receipt:903	13
+goods receipt:905	14
+goods receipt:907	12
+goods receipt:909	12
+goods receipt:911	9
+goods receipt:912	7
+goods receipt:913	7
+goods receipt:914	16
+goods receipt:916	25
+goods receipt:919	12
+goods receipt:92	19
+goods receipt:921	20
+goods receipt:924	20
+goods receipt:927	12
+goods receipt:929	7
+goods receipt:930	16
+goods receipt:932	9
+goods receipt:933	20
+goods receipt:936	9
+goods receipt:937	9
+goods receipt:938	9
+goods receipt:939	9
+goods receipt:94	9
+goods receipt:940	14
+goods receipt:942	14
+goods receipt:944	9
+goods receipt:945	9
+goods receipt:946	9
+goods receipt:947	10
+goods receipt:949	9
+goods receipt:95	9
+goods receipt:950	14
+goods receipt:952	34
+goods receipt:956	9
+goods receipt:957	23
+goods receipt:96	10
+goods receipt:960	30
+goods receipt:964	13
+goods receipt:966	9
+goods receipt:967	20
+goods receipt:970	9
+goods receipt:971	19
+goods receipt:974	14
+goods receipt:976	13
+goods receipt:978	9
+goods receipt:979	9
+goods receipt:98	8
+goods receipt:980	20
+goods receipt:983	12
+goods receipt:985	16
+goods receipt:987	20
+goods receipt:990	36
+goods receipt:994	13
+goods receipt:996	10
+material:0	2
+material:1	2
+material:10	2
+material:100	2
+material:1003	2
+material:1004	2
+material:1005	2
+material:1006	2
+material:1007	2
+material:1008	2
+material:1009	2
+material:101	2
+material:1010	2
+material:1011	2
+material:1012	2
+material:1013	2
+material:1014	2
+material:1015	2
+material:1017	2
+material:1018	2
+material:1019	2
+material:102	2
+material:1020	2
+material:1021	2
+material:1022	2
+material:1023	2
+material:1029	2
+material:103	2
+material:1030	2
+material:1031	2
+material:1032	2
+material:1033	2
+material:1034	2
+material:1035	2
+material:1036	2
+material:1037	2
+material:1038	2
+material:1039	2
+material:104	2
+material:1040	2
+material:1041	2
+material:1042	2
+material:1043	2
+material:1044	2
+material:1045	2
+material:1046	2
+material:1047	2
+material:1048	2
+material:1049	2
+material:1050	2
+material:1051	2
+material:1052	2
+material:1053	2
+material:1054	2
+material:1059	2
+material:106	2
+material:1060	2
+material:1061	2
+material:1062	2
+material:1063	2
+material:1064	2
+material:1065	2
+material:1066	2
+material:1068	2
+material:1069	2
+material:107	2
+material:1070	2
+material:1071	2
+material:1072	2
+material:1073	2
+material:1074	2
+material:1078	2
+material:1079	2
+material:108	2
+material:1080	2
+material:1081	2
+material:1088	2
+material:1089	2
+material:109	2
+material:1090	2
+material:1091	2
+material:1092	2
+material:1093	2
+material:1094	2
+material:1095	2
+material:1096	2
+material:11	2
+material:110	2
+material:1102	2
+material:1103	2
+material:1108	2
+material:1109	2
+material:111	2
+material:1110	2
+material:1111	2
+material:1112	2
+material:1113	2
+material:1114	2
+material:1115	2
+material:1116	2
+material:1117	2
+material:1118	2
+material:1119	2
+material:112	2
+material:1120	2
+material:1121	2
+material:1122	2
+material:1123	2
+material:1124	2
+material:1125	2
+material:1126	2
+material:1127	2
+material:113	2
+material:114	2
+material:1142	2
+material:1143	2
+material:1144	2
+material:1148	2
+material:1149	2
+material:115	2
+material:1150	2
+material:1152	2
+material:1153	2
+material:1154	2
+material:1158	2
+material:1159	2
+material:116	2
+material:1162	2
+material:1163	2
+material:1164	2
+material:1165	2
+material:1166	2
+material:117	2
+material:1170	2
+material:1171	2
+material:1174	2
+material:1175	2
+material:1176	2
+material:1177	2
+material:1178	2
+material:1181	2
+material:1182	2
+material:1183	2
+material:1184	2
+material:1185	2
+material:1186	2
+material:1187	2
+material:1188	2
+material:1189	2
+material:1190	2
+material:1191	2
+material:1192	2
+material:1193	2
+material:1194	2
+material:1195	2
+material:1196	2
+material:1197	2
+material:1198	2
+material:1199	2
+material:12	2
+material:1204	2
+material:1205	2
+material:1206	2
+material:1207	2
+material:1208	2
+material:1209	2
+material:121	2
+material:1210	2
+material:1211	2
+material:1212	2
+material:1213	2
+material:1214	2
+material:1215	2
+material:1216	2
+material:1217	2
+material:1218	2
+material:1219	2
+material:122	2
+material:1220	2
+material:1221	2
+material:1222	2
+material:1223	2
+material:1225	2
+material:1226	2
+material:1227	2
+material:1228	2
+material:123	2
+material:1230	2
+material:1231	2
+material:1232	2
+material:1233	2
+material:1235	2
+material:1236	2
+material:1237	2
+material:124	2
+material:1242	2
+material:1243	2
+material:1244	2
+material:1245	2
+material:1247	2
+material:1248	2
+material:1249	2
+material:125	2
+material:1254	2
+material:1255	2
+material:1256	2
+material:1257	2
+material:1258	2
+material:1259	2
+material:126	2
+material:1260	2
+material:1261	2
+material:1262	2
+material:1263	2
+material:1264	2
+material:1265	2
+material:1267	2
+material:1268	2
+material:1269	2
+material:127	2
+material:1270	2
+material:1277	2
+material:1278	2
+material:128	2
+material:1286	2
+material:1287	2
+material:1288	2
+material:1289	2
+material:129	2
+material:1290	2
+material:1291	2
+material:1292	2
+material:1293	2
+material:1294	2
+material:1295	2
+material:1299	2
+material:130	2
+material:1300	2
+material:1301	2
+material:1302	2
+material:1309	2
+material:131	2
+material:1310	2
+material:132	2
+material:1321	2
+material:1322	2
+material:1323	2
+material:1324	2
+material:1325	2
+material:1326	2
+material:1327	2
+material:1328	2
+material:1329	2
+material:1330	2
+material:1331	2
+material:1332	2
+material:1333	2
+material:1334	2
+material:1335	2
+material:1336	2
+material:1340	2
+material:1341	2
+material:1342	2
+material:1343	2
+material:1344	2
+material:1345	2
+material:1346	2
+material:1347	2
+material:1348	2
+material:1349	2
+material:135	2
+material:1350	2
+material:1351	2
+material:1354	2
+material:1355	2
+material:1356	2
+material:1357	2
+material:136	2
+material:1362	2
+material:1363	2
+material:1365	2
+material:1366	2
+material:137	2
+material:1371	2
+material:1372	2
+material:1373	2
+material:1374	2
+material:1379	2
+material:138	2
+material:1380	2
+material:1381	2
+material:1382	2
+material:1384	2
+material:1385	2
+material:1386	2
+material:1387	2
+material:1388	2
+material:1389	2
+material:139	2
+material:1390	2
+material:1391	2
+material:1396	2
+material:1397	2
+material:1398	2
+material:1399	2
+material:1400	2
+material:1401	2
+material:1402	2
+material:1403	2
+material:1412	2
+material:1413	2
+material:1414	2
+material:1416	2
+material:1417	2
+material:1418	2
+material:1419	2
+material:1420	2
+material:1421	2
+material:1425	2
+material:1426	2
+material:1427	2
+material:1428	2
+material:1429	2
+material:1430	2
+material:1432	2
+material:1433	2
+material:1434	2
+material:1435	2
+material:1436	2
+material:1437	2
+material:1438	2
+material:1439	2
+material:1440	2
+material:1441	2
+material:1442	2
+material:1443	2
+material:1444	2
+material:1445	2
+material:1446	2
+material:1447	2
+material:1448	2
+material:1449	2
+material:1450	2
+material:1451	2
+material:1452	2
+material:1453	2
+material:1454	2
+material:1455	2
+material:1456	2
+material:1457	2
+material:1458	2
+material:1459	2
+material:146	2
+material:1460	2
+material:1465	2
+material:1466	2
+material:1469	2
+material:147	2
+material:1470	2
+material:1473	2
+material:1474	2
+material:1475	2
+material:1476	2
+material:1477	2
+material:1478	2
+material:1479	2
+material:148	2
+material:1480	2
+material:1481	2
+material:1482	2
+material:1483	2
+material:1484	2
+material:1485	2
+material:1486	2
+material:1487	2
+material:1488	2
+material:1489	2
+material:149	2
+material:1490	2
+material:1492	2
+material:1493	2
+material:1494	2
+material:1495	2
+material:1496	2
+material:1497	2
+material:1498	2
+material:1499	2
+material:150	2
+material:1500	2
+material:1501	2
+material:1502	2
+material:1503	2
+material:1504	2
+material:1505	2
+material:151	2
+material:1510	2
+material:1511	2
+material:1512	2
+material:1513	2
+material:1514	2
+material:1515	2
+material:1516	2
+material:1517	2
+material:1519	2
+material:1520	2
+material:1521	2
+material:1522	2
+material:1523	2
+material:1524	2
+material:1525	2
+material:1526	2
+material:1527	2
+material:1528	2
+material:1529	2
+material:153	2
+material:1530	2
+material:1531	2
+material:1532	2
+material:1533	2
+material:1534	2
+material:154	2
+material:1541	2
+material:1542	2
+material:1543	2
+material:1544	2
+material:1546	2
+material:1547	2
+material:1548	2
+material:1549	2
+material:155	2
+material:1550	2
+material:1551	2
+material:1552	2
+material:1553	2
+material:1554	2
+material:1555	2
+material:1556	2
+material:1557	2
+material:1558	2
+material:1559	2
+material:156	2
+material:1560	2
+material:1561	2
+material:1563	2
+material:1564	2
+material:1565	2
+material:1566	2
+material:1569	2
+material:157	2
+material:1570	2
+material:1571	2
+material:1574	2
+material:1575	2
+material:1576	2
+material:1577	2
+material:1578	2
+material:1579	2
+material:158	2
+material:1580	2
+material:1585	2
+material:1586	2
+material:1587	2
+material:1588	2
+material:1589	2
+material:159	2
+material:1590	2
+material:1591	2
+material:1592	2
+material:1593	2
+material:1597	2
+material:1598	2
+material:1599	2
+material:16	2
+material:160	2
+material:1600	2
+material:1601	2
+material:1602	2
+material:1603	2
+material:1604	2
+material:1605	2
+material:1606	2
+material:1607	2
+material:1608	2
+material:1609	2
+material:161	2
+material:1610	2
+material:1611	2
+material:1612	2
+material:1613	2
+material:1614	2
+material:1615	2
+material:1616	2
+material:1617	2
+material:1618	2
+material:1619	2
+material:162	2
+material:1620	2
+material:1621	2
+material:1622	2
+material:1623	2
+material:1624	2
+material:1625	2
+material:1626	2
+material:1627	2
+material:1628	2
+material:1629	2
+material:163	2
+material:1630	2
+material:1632	2
+material:1633	2
+material:1634	2
+material:1635	2
+material:164	2
+material:1643	2
+material:1644	2
+material:1645	2
+material:1646	2
+material:1648	2
+material:1649	2
+material:165	2
+material:1650	2
+material:1651	2
+material:1652	2
+material:1654	2
+material:1655	2
+material:1656	2
+material:1657	2
+material:1658	2
+material:1659	2
+material:166	2
+material:1661	2
+material:1662	2
+material:1663	2
+material:1664	2
+material:1665	2
+material:1666	2
+material:1667	2
+material:1668	2
+material:167	2
+material:1671	2
+material:1672	2
+material:1673	2
+material:1674	2
+material:1675	2
+material:1676	2
+material:1677	2
+material:1678	2
+material:1679	2
+material:168	2
+material:1680	2
+material:1682	2
+material:1683	2
+material:1684	2
+material:1685	2
+material:1686	2
+material:1687	2
+material:1689	2
+material:169	2
+material:1690	2
+material:1691	2
+material:1692	2
+material:1693	2
+material:1694	2
+material:1695	2
+material:1696	2
+material:1697	2
+material:1698	2
+material:1699	2
+material:17	2
+material:170	2
+material:1700	2
+material:1703	2
+material:1704	2
+material:1705	2
+material:1706	2
+material:1708	2
+material:1709	2
+material:171	2
+material:1710	2
+material:1711	2
+material:1717	2
+material:1718	2
+material:1719	2
+material:172	2
+material:1720	2
+material:1721	2
+material:1722	2
+material:1723	2
+material:1724	2
+material:1725	2
+material:1726	2
+material:1727	2
+material:1728	2
+material:1729	2
+material:173	2
+material:1739	2
+material:174	2
+material:1740	2
+material:1741	2
+material:1743	2
+material:1744	2
+material:1745	2
+material:1746	2
+material:175	2
+material:1752	2
+material:1753	2
+material:1755	2
+material:1756	2
+material:1757	2
+material:1758	2
+material:1759	2
+material:1760	2
+material:1761	2
+material:1762	2
+material:1763	2
+material:1764	2
+material:1765	2
+material:1766	2
+material:1767	2
+material:1768	2
+material:1769	2
+material:177	2
+material:1770	2
+material:1771	2
+material:1772	2
+material:1773	2
+material:1774	2
+material:178	2
+material:1785	2
+material:1786	2
+material:1787	2
+material:1788	2
+material:1789	2
+material:179	2
+material:1790	2
+material:1791	2
+material:1792	2
+material:1793	2
+material:1794	2
+material:1795	2
+material:1796	2
+material:1798	2
+material:1799	2
+material:18	2
+material:180	2
+material:1800	2
+material:1801	2
+material:1802	2
+material:1803	2
+material:1804	2
+material:1805	2
+material:1806	2
+material:1807	2
+material:1808	2
+material:1809	2
+material:181	2
+material:1810	2
+material:1814	2
+material:1815	2
+material:1816	2
+material:1817	2
+material:1818	2
+material:182	2
+material:1822	2
+material:1823	2
+material:1824	2
+material:183	2
+material:1830	2
+material:1831	2
+material:1832	2
+material:1833	2
+material:1834	2
+material:1835	2
+material:1836	2
+material:1837	2
+material:1838	2
+material:1839	2
+material:184	2
+material:1840	2
+material:1841	2
+material:1842	2
+material:1843	2
+material:1844	2
+material:1845	2
+material:1846	2
+material:1848	2
+material:1849	2
+material:185	2
+material:1850	2
+material:1851	2
+material:1852	2
+material:1853	2
+material:1854	2
+material:186	2
+material:1862	2
+material:1863	2
+material:1864	2
+material:1865	2
+material:1866	2
+material:1867	2
+material:1868	2
+material:1869	2
+material:1874	2
+material:1875	2
+material:1876	2
+material:1877	2
+material:1880	2
+material:1881	2
+material:1882	2
+material:1890	2
+material:1891	2
+material:1892	2
+material:1902	2
+material:1903	2
+material:1905	2
+material:1906	2
+material:1907	2
+material:1908	2
+material:1909	2
+material:191	2
+material:1913	2
+material:1914	2
+material:1915	2
+material:1916	2
+material:1917	2
+material:1918	2
+material:1919	2
+material:192	2
+material:1920	2
+material:1921	2
+material:193	2
+material:1930	2
+material:1931	2
+material:1936	2
+material:1937	2
+material:1938	2
+material:1939	2
+material:194	2
+material:1940	2
+material:1941	2
+material:1945	2
+material:1946	2
+material:1949	2
+material:195	2
+material:1950	2
+material:1951	2
+material:1953	2
+material:1954	2
+material:1955	2
+material:1956	2
+material:196	2
+material:1961	2
+material:1962	2
+material:1963	2
+material:1964	2
+material:1965	2
+material:1966	2
+material:1967	2
+material:1968	2
+material:1969	2
+material:197	2
+material:1970	2
+material:1971	2
+material:1984	2
+material:1985	2
+material:1986	2
+material:1987	2
+material:1988	2
+material:1989	2
+material:1990	2
+material:1991	2
+material:1992	2
+material:1993	2
+material:1994	2
+material:1995	2
+material:1996	2
+material:1997	2
+material:1998	2
+material:1999	2
+material:2	2
+material:200	2
+material:2000	2
+material:2003	2
+material:2004	2
+material:2005	2
+material:2006	2
+material:2007	2
+material:201	2
+material:2012	2
+material:2013	2
+material:2014	2
+material:2015	2
+material:2016	2
+material:2017	2
+material:2018	2
+material:2019	2
+material:202	2
+material:2020	2
+material:2021	2
+material:2022	2
+material:2023	2
+material:2024	2
+material:203	2
+material:2030	2
+material:2031	2
+material:2032	2
+material:2033	2
+material:2037	2
+material:2038	2
+material:2039	2
+material:204	2
+material:2040	2
+material:2041	2
+material:2042	2
+material:2043	2
+material:2044	2
+material:2045	2
+material:2046	2
+material:205	2
+material:2052	2
+material:2053	2
+material:2054	2
+material:2055	2
+material:2056	2
+material:2057	2
+material:206	2
+material:2066	2
+material:2067	2
+material:2068	2
+material:2069	2
+material:207	2
+material:2071	2
+material:2072	2
+material:2073	2
+material:2074	2
+material:2075	2
+material:2076	2
+material:2077	2
+material:2078	2
+material:2079	2
+material:208	2
+material:2082	2
+material:2083	2
+material:2084	2
+material:2085	2
+material:2086	2
+material:2087	2
+material:2088	2
+material:2089	2
+material:209	2
+material:2090	2
+material:2091	2
+material:2092	2
+material:2093	2
+material:2094	2
+material:2095	2
+material:2096	2
+material:2097	2
+material:2098	2
+material:2099	2
+material:210	2
+material:2104	2
+material:2105	2
+material:2106	2
+material:2107	2
+material:211	2
+material:2113	2
+material:2114	2
+material:2115	2
+material:2116	2
+material:2117	2
+material:2119	2
+material:2120	2
+material:2121	2
+material:2122	2
+material:2123	2
+material:2125	2
+material:2126	2
+material:2127	2
+material:2128	2
+material:2129	2
+material:213	2
+material:2130	2
+material:2131	2
+material:2132	2
+material:2134	2
+material:2135	2
+material:2136	2
+material:2137	2
+material:2138	2
+material:2139	2
+material:214	2
+material:2140	2
+material:2142	2
+material:2143	2
+material:2144	2
+material:2145	2
+material:215	2
+material:2157	2
+material:2158	2
+material:2159	2
+material:2160	2
+material:2161	2
+material:2162	2
+material:2163	2
+material:2164	2
+material:2165	2
+material:2168	2
+material:2169	2
+material:2170	2
+material:2171	2
+material:2172	2
+material:2173	2
+material:2174	2
+material:2175	2
+material:2176	2
+material:2177	2
+material:2178	2
+material:2179	2
+material:2180	2
+material:2181	2
+material:2182	2
+material:2183	2
+material:2185	2
+material:2186	2
+material:2187	2
+material:2188	2
+material:2189	2
+material:2190	2
+material:2191	2
+material:2192	2
+material:2193	2
+material:2194	2
+material:2195	2
+material:2196	2
+material:2197	2
+material:2198	2
+material:2199	2
+material:2201	2
+material:2202	2
+material:2203	2
+material:2204	2
+material:2205	2
+material:2209	2
+material:221	2
+material:2210	2
+material:2211	2
+material:2212	2
+material:2213	2
+material:2214	2
+material:2217	2
+material:2218	2
+material:2219	2
+material:222	2
+material:2221	2
+material:2222	2
+material:2223	2
+material:223	2
+material:2235	2
+material:2236	2
+material:2237	2
+material:2238	2
+material:2239	2
+material:224	2
+material:2240	2
+material:2241	2
+material:2242	2
+material:2243	2
+material:2244	2
+material:2245	2
+material:2246	2
+material:2247	2
+material:2249	2
+material:225	2
+material:2250	2
+material:2251	2
+material:2252	2
+material:2253	2
+material:2254	2
+material:226	2
+material:2261	2
+material:2262	2
+material:2263	2
+material:2264	2
+material:2265	2
+material:2266	2
+material:2269	2
+material:2270	2
+material:2277	2
+material:2278	2
+material:2280	2
+material:2281	2
+material:2282	2
+material:2283	2
+material:2284	2
+material:2285	2
+material:2286	2
+material:2287	2
+material:2288	2
+material:2289	2
+material:2290	2
+material:2292	2
+material:2293	2
+material:2294	2
+material:2295	2
+material:23	2
+material:233	2
+material:234	2
+material:235	2
+material:236	2
+material:237	2
+material:238	2
+material:239	2
+material:24	2
+material:240	2
+material:241	2
+material:242	2
+material:243	2
+material:244	2
+material:245	2
+material:246	2
+material:247	2
+material:248	2
+material:249	2
+material:25	2
+material:250	2
+material:251	2
+material:252	2
+material:253	2
+material:255	2
+material:256	2
+material:257	2
+material:258	2
+material:259	2
+material:26	2
+material:260	2
+material:261	2
+material:262	2
+material:263	2
+material:267	2
+material:268	2
+material:269	2
+material:27	2
+material:270	2
+material:271	2
+material:272	2
+material:273	2
+material:274	2
+material:275	2
+material:276	2
+material:277	2
+material:278	2
+material:28	2
+material:280	2
+material:281	2
+material:285	2
+material:286	2
+material:287	2
+material:288	2
+material:289	2
+material:290	2
+material:291	2
+material:295	2
+material:296	2
+material:297	2
+material:299	2
+material:3	2
+material:300	2
+material:301	2
+material:302	2
+material:303	2
+material:307	2
+material:308	2
+material:309	2
+material:310	2
+material:311	2
+material:312	2
+material:313	2
+material:314	2
+material:315	2
+material:319	2
+material:32	2
+material:320	2
+material:321	2
+material:322	2
+material:33	2
+material:330	2
+material:331	2
+material:332	2
+material:333	2
+material:335	2
+material:336	2
+material:337	2
+material:338	2
+material:339	2
+material:34	2
+material:340	2
+material:341	2
+material:342	2
+material:344	2
+material:345	2
+material:346	2
+material:347	2
+material:348	2
+material:349	2
+material:35	2
+material:350	2
+material:352	2
+material:353	2
+material:354	2
+material:355	2
+material:357	2
+material:358	2
+material:359	2
+material:36	2
+material:360	2
+material:363	2
+material:364	2
+material:366	2
+material:367	2
+material:368	2
+material:369	2
+material:37	2
+material:370	2
+material:371	2
+material:372	2
+material:373	2
+material:374	2
+material:375	2
+material:376	2
+material:377	2
+material:38	2
+material:382	2
+material:383	2
+material:39	2
+material:390	2
+material:391	2
+material:392	2
+material:393	2
+material:394	2
+material:395	2
+material:396	2
+material:397	2
+material:398	2
+material:399	2
+material:4	2
+material:405	2
+material:406	2
+material:407	2
+material:408	2
+material:409	2
+material:410	2
+material:411	2
+material:412	2
+material:417	2
+material:418	2
+material:419	2
+material:42	2
+material:420	2
+material:421	2
+material:422	2
+material:423	2
+material:424	2
+material:43	2
+material:433	2
+material:434	2
+material:435	2
+material:436	2
+material:437	2
+material:438	2
+material:439	2
+material:44	2
+material:440	2
+material:441	2
+material:442	2
+material:45	2
+material:453	2
+material:454	2
+material:455	2
+material:456	2
+material:457	2
+material:459	2
+material:46	2
+material:460	2
+material:461	2
+material:462	2
+material:463	2
+material:465	2
+material:466	2
+material:467	2
+material:468	2
+material:469	2
+material:47	2
+material:470	2
+material:471	2
+material:472	2
+material:473	2
+material:475	2
+material:476	2
+material:477	2
+material:478	2
+material:479	2
+material:48	2
+material:480	2
+material:481	2
+material:482	2
+material:483	2
+material:484	2
+material:485	2
+material:486	2
+material:487	2
+material:488	2
+material:489	2
+material:490	2
+material:491	2
+material:492	2
+material:493	2
+material:494	2
+material:495	2
+material:496	2
+material:497	2
+material:498	2
+material:499	2
+material:5	2
+material:50	2
+material:500	2
+material:501	2
+material:502	2
+material:503	2
+material:504	2
+material:505	2
+material:506	2
+material:507	2
+material:508	2
+material:509	2
+material:51	2
+material:510	2
+material:511	2
+material:512	2
+material:513	2
+material:514	2
+material:515	2
+material:516	2
+material:517	2
+material:518	2
+material:519	2
+material:52	2
+material:520	2
+material:521	2
+material:522	2
+material:523	2
+material:524	2
+material:53	2
+material:532	2
+material:533	2
+material:534	2
+material:535	2
+material:538	2
+material:539	2
+material:54	2
+material:542	2
+material:543	2
+material:544	2
+material:545	2
+material:546	2
+material:547	2
+material:548	2
+material:549	2
+material:55	2
+material:550	2
+material:551	2
+material:552	2
+material:553	2
+material:554	2
+material:555	2
+material:556	2
+material:557	2
+material:558	2
+material:559	2
+material:56	2
+material:560	2
+material:561	2
+material:562	2
+material:563	2
+material:564	2
+material:565	2
+material:566	2
+material:567	2
+material:568	2
+material:569	2
+material:570	2
+material:571	2
+material:572	2
+material:576	2
+material:577	2
+material:578	2
+material:579	2
+material:582	2
+material:583	2
+material:584	2
+material:585	2
+material:586	2
+material:587	2
+material:588	2
+material:589	2
+material:590	2
+material:591	2
+material:592	2
+material:593	2
+material:599	2
+material:6	2
+material:600	2
+material:601	2
+material:602	2
+material:603	2
+material:604	2
+material:610	2
+material:611	2
+material:617	2
+material:618	2
+material:619	2
+material:62	2
+material:620	2
+material:621	2
+material:622	2
+material:623	2
+material:624	2
+material:625	2
+material:626	2
+material:627	2
+material:628	2
+material:63	2
+material:630	2
+material:631	2
+material:632	2
+material:633	2
+material:634	2
+material:635	2
+material:636	2
+material:637	2
+material:638	2
+material:639	2
+material:64	2
+material:640	2
+material:641	2
+material:647	2
+material:648	2
+material:649	2
+material:65	2
+material:650	2
+material:652	2
+material:653	2
+material:654	2
+material:655	2
+material:656	2
+material:657	2
+material:66	2
+material:662	2
+material:663	2
+material:664	2
+material:665	2
+material:666	2
+material:667	2
+material:668	2
+material:669	2
+material:67	2
+material:670	2
+material:681	2
+material:682	2
+material:683	2
+material:684	2
+material:685	2
+material:686	2
+material:687	2
+material:69	2
+material:692	2
+material:693	2
+material:694	2
+material:695	2
+material:696	2
+material:697	2
+material:698	2
+material:699	2
+material:7	2
+material:70	2
+material:700	2
+material:701	2
+material:702	2
+material:703	2
+material:704	2
+material:705	2
+material:706	2
+material:707	2
+material:71	2
+material:712	2
+material:713	2
+material:714	2
+material:715	2
+material:716	2
+material:717	2
+material:718	2
+material:719	2
+material:720	2
+material:721	2
+material:723	2
+material:724	2
+material:725	2
+material:726	2
+material:727	2
+material:728	2
+material:729	2
+material:73	2
+material:731	2
+material:732	2
+material:733	2
+material:734	2
+material:735	2
+material:736	2
+material:737	2
+material:738	2
+material:74	2
+material:742	2
+material:743	2
+material:744	2
+material:745	2
+material:748	2
+material:749	2
+material:75	2
+material:750	2
+material:751	2
+material:752	2
+material:753	2
+material:754	2
+material:755	2
+material:76	2
+material:760	2
+material:761	2
+material:763	2
+material:764	2
+material:765	2
+material:766	2
+material:767	2
+material:768	2
+material:769	2
+material:77	2
+material:770	2
+material:771	2
+material:772	2
+material:773	2
+material:775	2
+material:776	2
+material:777	2
+material:778	2
+material:779	2
+material:78	2
+material:780	2
+material:781	2
+material:782	2
+material:783	2
+material:784	2
+material:785	2
+material:786	2
+material:787	2
+material:788	2
+material:790	2
+material:791	2
+material:792	2
+material:793	2
+material:794	2
+material:795	2
+material:796	2
+material:797	2
+material:798	2
+material:799	2
+material:8	2
+material:80	2
+material:802	2
+material:803	2
+material:804	2
+material:805	2
+material:806	2
+material:807	2
+material:808	2
+material:809	2
+material:81	2
+material:82	2
+material:827	2
+material:828	2
+material:829	2
+material:83	2
+material:830	2
+material:836	2
+material:837	2
+material:84	2
+material:840	2
+material:841	2
+material:842	2
+material:843	2
+material:844	2
+material:845	2
+material:846	2
+material:847	2
+material:848	2
+material:849	2
+material:85	2
+material:850	2
+material:852	2
+material:853	2
+material:859	2
+material:86	2
+material:860	2
+material:861	2
+material:862	2
+material:863	2
+material:864	2
+material:865	2
+material:866	2
+material:867	2
+material:868	2
+material:869	2
+material:87	2
+material:870	2
+material:871	2
+material:872	2
+material:873	2
+material:874	2
+material:879	2
+material:88	2
+material:880	2
+material:881	2
+material:882	2
+material:883	2
+material:884	2
+material:885	2
+material:886	2
+material:887	2
+material:89	2
+material:890	2
+material:891	2
+material:892	2
+material:897	2
+material:898	2
+material:899	2
+material:9	2
+material:90	2
+material:900	2
+material:903	2
+material:904	2
+material:905	2
+material:906	2
+material:907	2
+material:908	2
+material:91	2
+material:910	2
+material:911	2
+material:912	2
+material:913	2
+material:914	2
+material:915	2
+material:916	2
+material:917	2
+material:918	2
+material:919	2
+material:922	2
+material:923	2
+material:924	2
+material:925	2
+material:926	2
+material:927	2
+material:928	2
+material:929	2
+material:93	2
+material:930	2
+material:931	2
+material:933	2
+material:934	2
+material:935	2
+material:937	2
+material:938	2
+material:939	2
+material:94	2
+material:940	2
+material:941	2
+material:942	2
+material:943	2
+material:944	2
+material:945	2
+material:948	2
+material:949	2
+material:950	2
+material:951	2
+material:952	2
+material:953	2
+material:954	2
+material:955	2
+material:956	2
+material:957	2
+material:962	2
+material:963	2
+material:967	2
+material:968	2
+material:971	2
+material:972	2
+material:974	2
+material:975	2
+material:976	2
+material:977	2
+material:978	2
+material:979	2
+material:98	2
+material:980	2
+material:984	2
+material:985	2
+material:987	2
+material:988	2
+material:989	2
+material:99	2
+material:990	2
+material:991	2
+material:992	2
+material:993	2
+material:994	2
+material:995	2

@@ -1,5 +1,0 @@
-%% Coverage. Every event with an identity-bearing participant o
-%% is part of sigma(o).   [Proof: take o' = o in (Sum(T)).]
-formulas(goals).
-  all x all y ((ib(x) & event(y) & participates(x,y)) -> part(y,sg(x))).
-end_of_list.

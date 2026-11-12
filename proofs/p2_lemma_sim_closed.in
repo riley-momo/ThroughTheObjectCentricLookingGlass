@@ -1,0 +1,9 @@
+%% Proposition 2, proof step.  Under D_CC, ~ is reflexive on all objects and
+%% contains every co-participating pair (the premises of Least_cc[sim]).
+%% INCLUDE: connected_components.in
+%% CITES: p2_lemma_adjacent_fuse
+formulas(goals).
+  all d (iscc(d) ->
+     ((all x (object(x) -> sim(d,x,x))) &
+      (all x all y (adj(x,y) -> sim(d,x,y))))).
+end_of_list.

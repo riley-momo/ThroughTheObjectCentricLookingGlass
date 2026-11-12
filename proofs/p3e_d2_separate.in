@@ -1,0 +1,8 @@
+%% Proposition 3 (no unique case notion), minimal example.
+%% D2 never puts e1 and e2 in one whole, so D1 and D2 partition the events
+%% differently.   [Lemma 1: wholes of D2 are single traces here.]
+%% INCLUDE: example_p3.in
+%% CITES: l1a_sigma_to_sim l1b_parts p3d_d2_identity
+formulas(goals).
+  -(exists z (ib(d2,z) & part(e1,sg(d2,z)) & part(e2,sg(d2,z)))).
+end_of_list.

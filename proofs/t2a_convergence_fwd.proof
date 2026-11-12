@@ -1,0 +1,71 @@
+%%%%%%%%%% t2a_convergence_fwd: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168395 was started by riley on aurora,
+Wed Nov 11 12:08:26 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.64 (+ 0.03) seconds.
+% Length of proof is 49.
+% Level of proof is 8.
+% Maximum clause weight is 18.000.
+% Given clauses 1907.
+
+
+24 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (ib(d,o2) & sg(d,o2) = sg(d,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+31 (all d all e (deficient(d,e) <-> -(exists x (ib(d,x) & part(e,sg(d,x)))))) # label(non_clause).  [assumption].
+32 (all d all e (convergent(d,e) <-> (exists x exists y (ib(d,x) & ib(d,y) & part(e,sg(d,x)) & part(e,sg(d,y)) & sg(d,x) != sg(d,y))))) # label(non_clause).  [assumption].
+34 (all d all x all y (sim(d,x,y) -> sg(d,x) = sg(d,y))) # label(non_clause).  [assumption].
+35 (all d all e (event(e) & convergent(d,e) -> (exists x exists y (ib(d,x) & ib(d,y) & participates(x,e) & participates(y,e) & -sim(d,x,y))))) # label(non_clause) # label(goal).  [goal].
+72 event(c2).  [deny(35)].
+73 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | ib(x,f7(x,y,z)).  [clausify(24)].
+74 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | sg(x,y) = sg(x,f7(x,y,z)).  [clausify(24)].
+75 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | participates(f7(x,y,z),z).  [clausify(24)].
+104 deficient(x,y) | ib(x,f14(x,y)).  [clausify(31)].
+105 -deficient(x,y) | -ib(x,z) | -part(y,sg(x,z)).  [clausify(31)].
+106 deficient(x,y) | part(y,sg(x,f14(x,y))).  [clausify(31)].
+108 -convergent(x,y) | ib(x,f15(x,y)).  [clausify(32)].
+109 -convergent(x,y) | ib(x,f16(x,y)).  [clausify(32)].
+110 -convergent(x,y) | part(y,sg(x,f15(x,y))).  [clausify(32)].
+111 -convergent(x,y) | part(y,sg(x,f16(x,y))).  [clausify(32)].
+112 -convergent(x,y) | sg(x,f16(x,y)) != sg(x,f15(x,y)).  [clausify(32)].
+113 convergent(c1,c2).  [deny(35)].
+205 -sim(x,y,z) | sg(x,z) = sg(x,y).  [clausify(34)].
+206 -ib(c1,x) | -ib(c1,y) | -participates(x,c2) | -participates(y,c2) | sim(c1,x,y).  [deny(35)].
+223 -ib(x,y) | -part(c2,sg(x,y)) | ib(x,f7(x,y,c2)).  [resolve(72,a,73,b)].
+224 -ib(x,y) | -part(c2,sg(x,y)) | sg(x,y) = sg(x,f7(x,y,c2)).  [resolve(72,a,74,b)].
+225 -ib(x,y) | -part(c2,sg(x,y)) | sg(x,f7(x,y,c2)) = sg(x,y).  [copy(224),flip(c)].
+226 -ib(x,y) | -part(c2,sg(x,y)) | participates(f7(x,y,c2),c2).  [resolve(72,a,75,b)].
+250 ib(x,f14(x,y)) | -ib(x,z) | -part(y,sg(x,z)).  [resolve(104,a,105,a)].
+251 part(x,sg(y,f14(y,x))) | -ib(y,z) | -part(x,sg(y,z)).  [resolve(106,a,105,a)].
+257 ib(c1,f15(c1,c2)).  [resolve(113,a,108,a)].
+258 ib(c1,f16(c1,c2)).  [resolve(113,a,109,a)].
+259 part(c2,sg(c1,f15(c1,c2))).  [resolve(113,a,110,a)].
+260 part(c2,sg(c1,f16(c1,c2))).  [resolve(113,a,111,a)].
+261 sg(c1,f16(c1,c2)) != sg(c1,f15(c1,c2)).  [resolve(113,a,112,a)].
+2270 part(c2,sg(c1,f14(c1,c2))).  [resolve(259,a,251,c),unit_del(b,257)].
+2271 ib(c1,f14(c1,c2)).  [resolve(259,a,250,c),unit_del(b,257)].
+2278 participates(f7(c1,f15(c1,c2),c2),c2).  [resolve(259,a,226,b),unit_del(a,257)].
+2279 sg(c1,f7(c1,f15(c1,c2),c2)) = sg(c1,f15(c1,c2)).  [resolve(259,a,225,b),unit_del(a,257)].
+2280 ib(c1,f7(c1,f15(c1,c2),c2)).  [resolve(259,a,223,b),unit_del(a,257)].
+2294 participates(f7(c1,f16(c1,c2),c2),c2).  [resolve(260,a,226,b),unit_del(a,258)].
+2295 sg(c1,f7(c1,f16(c1,c2),c2)) = sg(c1,f16(c1,c2)).  [resolve(260,a,225,b),unit_del(a,258)].
+2296 ib(c1,f7(c1,f16(c1,c2),c2)).  [resolve(260,a,223,b),unit_del(a,258)].
+2375 participates(f7(c1,f14(c1,c2),c2),c2).  [resolve(2270,a,226,b),unit_del(a,2271)].
+2376 sg(c1,f7(c1,f14(c1,c2),c2)) = sg(c1,f14(c1,c2)).  [resolve(2270,a,225,b),unit_del(a,2271)].
+2377 ib(c1,f7(c1,f14(c1,c2),c2)).  [resolve(2270,a,223,b),unit_del(a,2271)].
+2403 -ib(c1,x) | -participates(x,c2) | sim(c1,x,f7(c1,f15(c1,c2),c2)).  [resolve(2280,a,206,b),unit_del(c,2278)].
+2934 sim(c1,f7(c1,f14(c1,c2),c2),f7(c1,f15(c1,c2),c2)).  [resolve(2403,a,2377,a),unit_del(a,2375)].
+2935 sim(c1,f7(c1,f16(c1,c2),c2),f7(c1,f15(c1,c2),c2)).  [resolve(2403,a,2296,a),unit_del(a,2294)].
+2945 sg(c1,f15(c1,c2)) = sg(c1,f14(c1,c2)).  [resolve(2934,a,205,a),rewrite([2279(8),2376(13)])].
+2986 sg(c1,f7(c1,f15(c1,c2),c2)) = sg(c1,f14(c1,c2)).  [back_rewrite(2279),rewrite([2945(13)])].
+2987 sg(c1,f16(c1,c2)) != sg(c1,f14(c1,c2)).  [back_rewrite(261),rewrite([2945(10)])].
+3000 $F.  [resolve(2935,a,205,a),rewrite([2986(8),2295(13)]),flip(a),unit_del(a,2987)].
+
+============================== end of proof ==========================

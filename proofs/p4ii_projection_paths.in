@@ -1,0 +1,8 @@
+%% Proposition 4 (ii).  ev(D[o_s -> o_e \ (O \ G)]) is contained in
+%% ev(sigma_G).   [Every event on a path using only edges of objects in G
+%% involves some object of G; then Lemma 1.]
+%% INCLUDE: p4_projection.in
+%% CITES: l1b_parts
+formulas(goals).
+  all e ((event(e) & onpathG(e)) -> part(e,sg(d0,g))).
+end_of_list.

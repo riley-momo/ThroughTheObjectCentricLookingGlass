@@ -1,0 +1,15 @@
+%% Proposition 2, proof step (and (ii) at the level of objects).  For every
+%% domain theory D, ~_D refines connectivity.   [Least_sim(d)[ccomp].]
+%% INCLUDE: connected_components.in
+%% CITES: p2_lemma_fuse_adjacent
+formulas(assumptions).
+  % Least_sim(d)[ ccomp(x,y) ]
+  all d (( (all x (ib(d,x) -> ccomp(x,x))) &
+           (all x all y (ccomp(x,y) -> ccomp(y,x))) &
+           (all x all y all z (ccomp(x,y) & ccomp(y,z) -> ccomp(x,z))) &
+           (all x all y (fp(d,x,y) -> ccomp(x,y))) )
+         -> (all x all y (sim(d,x,y) -> ccomp(x,y)))).
+end_of_list.
+formulas(goals).
+  all d all x all y (sim(d,x,y) -> ccomp(x,y)).
+end_of_list.

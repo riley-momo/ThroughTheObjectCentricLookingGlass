@@ -1,0 +1,8 @@
+%% Proposition 2, proof step.  Under D_CC every object is identity-bearing
+%% and the Fuse^0 instances are exactly the co-participating pairs.
+%% INCLUDE: connected_components.in
+formulas(goals).
+  all d (iscc(d) ->
+     ((all x (object(x) -> ib(d,x))) &
+      (all x all y (adj(x,y) <-> fp(d,x,y))))).
+end_of_list.

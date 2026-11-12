@@ -1,0 +1,8 @@
+%% Proposition 1 (Monotonicity), second part.  If D below D' then every whole
+%% of D is part of a whole of D':  E[[o]_D] is contained in E[[o]_D'], i.e.
+%% every event that is part of sigma_D(o) is part of sigma_D'(o).  [Lemma 1.]
+%% CITES: l1b_parts p1a_monotonicity_sim
+formulas(goals).
+  all d all d2 all o all e ((leq(d,d2) & ib(d,o) & event(e) & part(e,sg(d,o)))
+                              -> part(e,sg(d2,o))).
+end_of_list.

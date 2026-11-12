@@ -1,0 +1,46 @@
+%%%%%%%%%% p2ii_cc_upper_bound: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168834 was started by riley on aurora,
+Wed Nov 11 12:09:27 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.79 (+ 0.03) seconds.
+% Length of proof is 24.
+% Level of proof is 5.
+% Maximum clause weight is 15.000.
+% Given clauses 2059.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+41 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (sim(d,o2,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+42 (all d all x all y (sim(d,x,y) -> ccomp(x,y))) # label(non_clause).  [assumption].
+43 (all d all o all e (iscc(d) & object(o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (ccomp(o2,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+44 (all d all dc all o all e (iscc(dc) & ib(d,o) & event(e) & part(e,sg(d,o)) -> part(e,sg(dc,o)))) # label(non_clause) # label(goal).  [goal].
+75 event(c4).  [deny(44)].
+80 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | sim(x,f26(x,y,z),y).  [clausify(41)].
+81 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | participates(f26(x,y,z),z).  [clausify(41)].
+85 -iscc(x) | -object(y) | -event(z) | part(z,sg(x,y)) | -ccomp(u,y) | -participates(u,z).  [clausify(43)].
+139 iscc(c2).  [deny(44)].
+142 -iscc(x) | -object(y) | part(c4,sg(x,y)) | -ccomp(z,y) | -participates(z,c4).  [resolve(75,a,85,c)].
+239 -ib(x,y) | object(y).  [clausify(17)].
+262 -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+263 ib(c1,c3).  [deny(44)].
+264 part(c4,sg(c1,c3)).  [deny(44)].
+265 -part(c4,sg(c2,c3)).  [deny(44)].
+283 -ib(x,y) | -part(c4,sg(x,y)) | sim(x,f26(x,y,c4),y).  [resolve(75,a,80,b)].
+284 -ib(x,y) | -part(c4,sg(x,y)) | participates(f26(x,y,c4),c4).  [resolve(75,a,81,b)].
+338 -object(x) | part(c4,sg(c2,x)) | -ccomp(y,x) | -participates(y,c4).  [resolve(142,a,139,a)].
+2660 object(c3).  [resolve(263,a,239,a)].
+2672 sim(c1,f26(c1,c3,c4),c3).  [resolve(283,b,264,a),unit_del(a,263)].
+2673 participates(f26(c1,c3,c4),c4).  [resolve(284,b,264,a),unit_del(a,263)].
+2928 ccomp(f26(c1,c3,c4),c3).  [resolve(2672,a,262,a)].
+2941 $F.  [resolve(2928,a,338,c),unit_del(a,2660),unit_del(b,265),unit_del(c,2673)].
+
+============================== end of proof ==========================

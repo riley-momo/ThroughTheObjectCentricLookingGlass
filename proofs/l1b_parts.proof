@@ -1,0 +1,92 @@
+%%%%%%%%%% l1b_parts: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168344 was started by riley on aurora,
+Wed Nov 11 12:08:21 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 3.79 (+ 0.12) seconds.
+% Length of proof is 70.
+% Level of proof is 22.
+% Maximum clause weight is 25.000.
+% Given clauses 4045.
+
+
+24 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (ib(d,o2) & sg(d,o2) = sg(d,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+25 (all d all x all y (sim(d,x,y) -> ib(d,x) & ib(d,y))) # label(non_clause).  [assumption].
+27 (all d all x all y (sim(d,x,y) -> sim(d,y,x))) # label(non_clause).  [assumption].
+34 (all d all x all y (sim(d,x,y) -> sg(d,x) = sg(d,y))) # label(non_clause).  [assumption].
+35 (all d all x all y (ib(d,x) & ib(d,y) & sg(d,x) = sg(d,y) -> sim(d,x,y))) # label(non_clause).  [assumption].
+36 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (sim(d,o2,o) & participates(o2,e)))))) # label(non_clause) # label(goal).  [goal].
+73 event(c3).  [deny(36)].
+74 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | ib(x,f7(x,y,z)).  [clausify(24)].
+75 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | sg(x,y) = sg(x,f7(x,y,z)).  [clausify(24)].
+76 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | participates(f7(x,y,z),z).  [clausify(24)].
+77 -ib(x,y) | -event(z) | part(z,sg(x,y)) | -ib(x,u) | sg(x,y) != sg(x,u) | -participates(u,z).  [clausify(24)].
+200 -sim(x,y,z) | ib(x,y).  [clausify(25)].
+203 -sim(x,y,z) | sim(x,z,y).  [clausify(27)].
+205 -sim(x,y,z) | sg(x,z) = sg(x,y).  [clausify(34)].
+206 -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(35)].
+207 ib(c1,c2).  [deny(36)].
+208 part(c3,sg(c1,c2)) | sim(c1,c4,c2).  [deny(36)].
+209 part(c3,sg(c1,c2)) | participates(c4,c3).  [deny(36)].
+210 -part(c3,sg(c1,c2)) | -sim(c1,x,c2) | -participates(x,c3).  [deny(36)].
+227 -ib(x,y) | -part(c3,sg(x,y)) | ib(x,f7(x,y,c3)).  [resolve(73,a,74,b)].
+228 -ib(x,y) | -part(c3,sg(x,y)) | sg(x,y) = sg(x,f7(x,y,c3)).  [resolve(73,a,75,b)].
+229 -ib(x,y) | -part(c3,sg(x,y)) | sg(x,f7(x,y,c3)) = sg(x,y).  [copy(228),flip(c)].
+230 -ib(x,y) | -part(c3,sg(x,y)) | participates(f7(x,y,c3),c3).  [resolve(73,a,76,b)].
+231 -ib(x,y) | part(c3,sg(x,y)) | -ib(x,z) | sg(x,y) != sg(x,z) | -participates(z,c3).  [resolve(73,a,77,b)].
+2235 -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,x,c2).  [resolve(207,a,206,b)].
+2236 -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c2,x).  [resolve(207,a,206,a),flip(b)].
+2240 part(c3,sg(c1,c2)) | sg(c1,c4) = sg(c1,c2).  [resolve(208,b,205,a),flip(b)].
+2244 part(c3,sg(c1,c2)) | ib(c1,c4).  [resolve(208,b,200,a)].
+2254 ib(c1,f7(c1,c2,c3)) | participates(c4,c3).  [resolve(227,b,209,a),unit_del(a,207)].
+2255 sg(c1,f7(c1,c2,c3)) = sg(c1,c2) | participates(c4,c3).  [resolve(229,b,209,a),unit_del(a,207)].
+2256 participates(f7(c1,c2,c3),c3) | participates(c4,c3).  [resolve(230,b,209,a),unit_del(a,207)].
+2257 part(c3,sg(c1,c2)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | -participates(x,c3).  [resolve(231,a,207,a)].
+2325 ib(c1,c4) | participates(f7(c1,c2,c3),c3).  [resolve(2244,a,230,b),unit_del(b,207)].
+2326 ib(c1,c4) | sg(c1,f7(c1,c2,c3)) = sg(c1,c2).  [resolve(2244,a,229,b),unit_del(b,207)].
+2327 ib(c1,c4) | ib(c1,f7(c1,c2,c3)).  [resolve(2244,a,227,b),unit_del(b,207)].
+2459 sg(c1,f7(c1,c2,c3)) != sg(c1,c2) | sim(c1,f7(c1,c2,c3),c2) | ib(c1,c4).  [resolve(2235,a,2327,b),flip(a)].
+2460 sg(c1,c4) != sg(c1,c2) | sim(c1,c4,c2) | participates(f7(c1,c2,c3),c3).  [resolve(2235,a,2325,a),flip(a)].
+2463 sg(c1,f7(c1,c2,c3)) != sg(c1,c2) | sim(c1,f7(c1,c2,c3),c2) | participates(c4,c3).  [resolve(2235,a,2254,a),flip(a)].
+2589 sg(c1,c4) = sg(c1,c2) | participates(f7(c1,c2,c3),c3).  [resolve(2240,a,230,b),unit_del(b,207)].
+2590 sg(c1,c4) = sg(c1,c2) | sg(c1,f7(c1,c2,c3)) = sg(c1,c2).  [resolve(2240,a,229,b),unit_del(b,207)].
+2591 sg(c1,c4) = sg(c1,c2) | ib(c1,f7(c1,c2,c3)).  [resolve(2240,a,227,b),unit_del(b,207)].
+2780 part(c3,sg(c1,c2)) | sg(c1,c4) != sg(c1,c2) | -participates(c4,c3) | participates(f7(c1,c2,c3),c3).  [resolve(2257,b,2325,a),flip(b)].
+2784 sg(c1,f7(c1,c2,c3)) = sg(c1,c2) | part(c3,sg(c1,c2)) | sg(c1,c4) != sg(c1,c2) | -participates(c4,c3).  [resolve(2326,a,2257,b),flip(c)].
+2970 sg(c1,c4) = sg(c1,c2) | sg(c1,f7(c1,c2,c3)) != sg(c1,c2) | sim(c1,c2,f7(c1,c2,c3)).  [resolve(2591,b,2236,a),flip(b)].
+16869 sg(c1,f7(c1,c2,c3)) = sg(c1,c2) | part(c3,sg(c1,c2)) | sg(c1,c4) != sg(c1,c2).  [resolve(2784,d,2255,b),merge(d)].
+21820 sg(c1,c4) = sg(c1,c2) | sim(c1,c2,f7(c1,c2,c3)).  [resolve(2970,b,2590,b),merge(c)].
+21829 sg(c1,c4) = sg(c1,c2) | sim(c1,f7(c1,c2,c3),c2).  [resolve(21820,b,203,a)].
+21836 sg(c1,c4) = sg(c1,c2) | -part(c3,sg(c1,c2)) | -participates(f7(c1,c2,c3),c3).  [resolve(21829,b,210,b)].
+21840 sg(c1,c4) = sg(c1,c2) | -participates(f7(c1,c2,c3),c3).  [resolve(21836,b,2240,a),merge(c)].
+21841 sg(c1,c4) = sg(c1,c2).  [resolve(21840,b,2589,b),merge(b)].
+22314 sg(c1,f7(c1,c2,c3)) = sg(c1,c2) | part(c3,sg(c1,c2)).  [back_rewrite(16869),rewrite([21841(18)]),xx(c)].
+23120 part(c3,sg(c1,c2)) | -participates(c4,c3) | participates(f7(c1,c2,c3),c3).  [back_rewrite(2780),rewrite([21841(8)]),xx(b)].
+23129 sim(c1,c4,c2) | participates(f7(c1,c2,c3),c3).  [back_rewrite(2460),rewrite([21841(3)]),xx(a)].
+23175 participates(f7(c1,c2,c3),c3) | -part(c3,sg(c1,c2)) | -participates(c4,c3).  [resolve(23129,a,210,b)].
+23341 sg(c1,f7(c1,c2,c3)) = sg(c1,c2).  [resolve(22314,b,229,b),merge(c),unit_del(b,207)].
+23772 sim(c1,f7(c1,c2,c3),c2) | participates(c4,c3).  [back_rewrite(2463),rewrite([23341(6)]),xx(a)].
+23773 sim(c1,f7(c1,c2,c3),c2) | ib(c1,c4).  [back_rewrite(2459),rewrite([23341(6)]),xx(a)].
+23839 participates(c4,c3) | -part(c3,sg(c1,c2)) | -participates(f7(c1,c2,c3),c3).  [resolve(23772,a,210,b)].
+23848 ib(c1,c4) | -part(c3,sg(c1,c2)) | -participates(f7(c1,c2,c3),c3).  [resolve(23773,a,210,b)].
+23918 participates(c4,c3) | -participates(f7(c1,c2,c3),c3).  [resolve(23839,b,209,a),merge(c)].
+23920 participates(c4,c3).  [resolve(23918,b,2256,a),merge(b)].
+23923 participates(f7(c1,c2,c3),c3) | -part(c3,sg(c1,c2)).  [back_unit_del(23175),unit_del(c,23920)].
+23925 part(c3,sg(c1,c2)) | participates(f7(c1,c2,c3),c3).  [back_unit_del(23120),unit_del(b,23920)].
+24027 participates(f7(c1,c2,c3),c3).  [resolve(23925,a,23923,b),merge(b)].
+24029 ib(c1,c4) | -part(c3,sg(c1,c2)).  [back_unit_del(23848),unit_del(c,24027)].
+24068 ib(c1,c4).  [resolve(24029,b,2244,a),merge(b)].
+24206 part(c3,sg(c1,c2)).  [resolve(24068,a,2257,b),rewrite([21841(11)]),xx(b),unit_del(b,23920)].
+24208 sim(c1,c4,c2).  [resolve(24068,a,2235,a),rewrite([21841(6)]),xx(a)].
+24226 -sim(c1,x,c2) | -participates(x,c3).  [back_unit_del(210),unit_del(a,24206)].
+24285 $F.  [resolve(24208,a,24226,a),unit_del(a,23920)].
+
+============================== end of proof ==========================

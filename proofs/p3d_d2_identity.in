@@ -1,0 +1,15 @@
+%% Proposition 3 (no unique case notion), minimal example.
+%% D2 declares no pairs, so it has no (Fuse) instances and ~_D2 is the
+%% identity.   [Least_sim(d2)[x = y].]
+%% INCLUDE: example_p3.in
+formulas(assumptions).
+  % Least_sim(d2)[ x = y ]
+  ( (all x (ib(d2,x) -> x = x)) &
+    (all x all y (x = y -> y = x)) &
+    (all x all y all z (x = y & y = z -> x = z)) &
+    (all x all y (fp(d2,x,y) -> x = y)) )
+  -> (all x all y (sim(d2,x,y) -> x = y)).
+end_of_list.
+formulas(goals).
+  all x all y (sim(d2,x,y) -> x = y).
+end_of_list.

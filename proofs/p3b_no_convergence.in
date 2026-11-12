@@ -1,0 +1,17 @@
+%% Proposition 3 (no unique case notion), minimal example.
+%% Neither D1 nor D2 has convergent events (Theorem 2): all identity-bearing
+%% participants of each event are equivalent.
+%% INCLUDE: example_p3.in
+%% CITES: t2a_convergence_fwd
+%% INSTANCE: det(ta,e1)
+%% INSTANCE: det(tb,e1)
+%% INSTANCE: det(tb,e2)
+%% INSTANCE: det(tc,e2)
+%% INSTANCE: fp(d1,a,b)
+%% INSTANCE: fp(d1,b,c)
+%% FOREACH: $D d1 d2
+%% FOREACH: $E e1 e2
+%% INSTANCE: -convergent($D,$E)
+formulas(goals).
+  all e (event(e) -> -convergent(d1,e) & -convergent(d2,e)).
+end_of_list.

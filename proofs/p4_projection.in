@@ -1,0 +1,32 @@
+%% ===================================================================
+%% Projection-based cases [14] (Section 5.3), as far as Proposition 4 needs.
+%%   dfe(o,e1,e2)   e2 directly follows e1 from the perspective of o
+%%   onpath1(o,e)   e lies on a directly-follows path from o's first to its
+%%                  last event using only o's edges:  e in D[o -> o \ (O\{o})]
+%%   onpathG(e)     e lies on a directly-follows path from i (the first event
+%%                  of o_s) to j using only edges of objects in G:
+%%                  e in D[o_s -> o_e \ (O \ G)]
+%%   G is the ~_{d0}-class of g.
+%% ===================================================================
+formulas(assumptions).
+  % A directly-follows edge for o requires o to participate in both events.
+  all o all e1 all e2 (dfe(o,e1,e2) -> participates(o,e1) & participates(o,e2)).
+
+  % Every event on a path is its start or incident to one of its edges.
+  all o all e (onpath1(o,e) ->
+     (e = first(o) & participates(o,first(o)))
+     | (exists e2 (dfe(o,e2,e) | dfe(o,e,e2)))).
+  all e (onpathG(e) ->
+     e = first(os)
+     | (exists o exists e2 (sim(d0,o,g) & (dfe(o,e2,e) | dfe(o,e,e2))))).
+
+  % (Trace) o's own edges link consecutive events of Tr(o), so the path from
+  % its first to its last event using them passes through all of Tr(o).
+  % This is a fact about finite linear orders, assumed rather than proved.
+  all o all e (participates(o,e) -> onpath1(o,e)).
+
+  % The setting of Proposition 4: G = [g]_{d0}, o_s in G, i = first(o_s).
+  ib(d0,g).
+  sim(d0,os,g).
+  participates(os,first(os)).
+end_of_list.

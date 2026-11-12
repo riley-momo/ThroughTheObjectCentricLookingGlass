@@ -1,0 +1,6 @@
+%% Theorem 3, (ii).  If D below D' and D diverges from D*, so does D'.
+%% [Proposition 1.]
+%% CITES: p1a_monotonicity_sim
+formulas(goals).
+  all d all d2 all ds ((leq(d,d2) & diverges(d,ds)) -> diverges(d2,ds)).
+end_of_list.

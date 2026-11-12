@@ -1,0 +1,29 @@
+%%%%%%%%%% c1b_no_divergence: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168544 was started by riley on aurora,
+Wed Nov 11 12:08:46 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.01 (+ 0.00) seconds.
+% Length of proof is 7.
+% Level of proof is 3.
+% Maximum clause weight is 3.000.
+% Given clauses 0.
+
+
+41 (all d all ds (leq(d,ds) -> -diverges(d,ds))) # label(non_clause).  [assumption].
+42 -diverges(dd,ds) # label(non_clause) # label(goal).  [goal].
+101 leq(dd,ds).  [assumption].
+102 -leq(x,y) | -diverges(x,y).  [clausify(41)].
+180 diverges(dd,ds).  [deny(42)].
+300 -diverges(dd,ds).  [resolve(102,a,101,a)].
+301 $F.  [copy(300),unit_del(a,180)].
+
+============================== end of proof ==========================

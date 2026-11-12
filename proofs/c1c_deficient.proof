@@ -1,0 +1,46 @@
+%%%%%%%%%% c1c_deficient: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168547 was started by riley on aurora,
+Wed Nov 11 12:08:46 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.02 (+ 0.00) seconds.
+% Length of proof is 24.
+% Level of proof is 6.
+% Maximum clause weight is 9.000.
+% Given clauses 201.
+
+
+34 (all x (participates(x,e2) -> x = b)) # label(non_clause).  [assumption].
+38 (all t (ibt(dd,t) <-> t = ta)) # label(non_clause).  [assumption].
+41 (all d all e (event(e) -> (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x))))))) # label(non_clause).  [assumption].
+42 deficient(dd,e2) # label(non_clause) # label(goal).  [goal].
+63 event(e2).  [assumption].
+65 -event(x) | deficient(y,x) | participates(f19(y,x),x).  [clausify(41)].
+66 -event(x) | deficient(y,x) | ibt(y,ty(f19(y,x))).  [clausify(41)].
+153 -participates(x,e2) | b = x.  [clausify(34)].
+154 ty(a) = ta.  [assumption].
+155 ta = ty(a).  [copy(154),flip(a)].
+156 ty(b) = tb.  [assumption].
+157 tb = ty(b).  [copy(156),flip(a)].
+158 ta != tb.  [assumption].
+159 ty(a) != ty(b).  [copy(158),rewrite([155(1),157(3)])].
+174 -ibt(dd,x) | ta = x.  [clausify(38)].
+175 -ibt(dd,x) | ty(a) = x.  [copy(174),rewrite([155(3)])].
+181 -deficient(dd,e2).  [deny(42)].
+209 deficient(x,e2) | participates(f19(x,e2),e2).  [resolve(65,a,63,a)].
+211 deficient(x,e2) | ibt(x,ty(f19(x,e2))).  [resolve(66,a,63,a)].
+355 participates(f19(dd,e2),e2).  [resolve(209,a,181,a)].
+360 ibt(dd,ty(f19(dd,e2))).  [resolve(211,a,181,a)].
+414 f19(dd,e2) = b.  [resolve(355,a,153,a),flip(a)].
+415 ibt(dd,ty(b)).  [back_rewrite(360),rewrite([414(4)])].
+421 $F.  [resolve(415,a,175,a),unit_del(a,159)].
+
+============================== end of proof ==========================

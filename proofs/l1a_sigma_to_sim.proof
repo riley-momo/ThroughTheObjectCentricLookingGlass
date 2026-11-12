@@ -1,0 +1,151 @@
+%%%%%%%%%% l1a_sigma_to_sim: main goal  [strategy: sos]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168342 was started by riley on aurora,
+Wed Nov 11 12:08:20 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.78 (+ 0.04) seconds.
+% Length of proof is 129.
+% Level of proof is 67.
+% Maximum clause weight is 37.000.
+% Given clauses 2591.
+
+
+26 (all d all x (ib(d,x) -> sim(d,x,x))) # label(non_clause).  [assumption].
+27 (all d all x all y (sim(d,x,y) -> sim(d,y,x))) # label(non_clause).  [assumption].
+28 (all d all x all y all z (sim(d,x,y) & sim(d,y,z) -> sim(d,x,z))) # label(non_clause).  [assumption].
+29 (all d all x all y (fp(d,x,y) -> sim(d,x,y))) # label(non_clause).  [assumption].
+34 (all d ((all x (ib(d,x) -> sim(d,x,x))) & (all x all y (sim(d,x,y) -> sim(d,y,x))) & (all x all y all z (sim(d,x,y) & sim(d,y,z) -> sim(d,x,z))) & (all x all y (fp(d,x,y) -> sim(d,x,y))) -> (all x all y (ib(d,x) & ib(d,y) & sg(d,x) = sg(d,y) -> sim(d,x,y))))) # label(non_clause).  [assumption].
+35 (all d all x all y (ib(d,x) & ib(d,y) & sg(d,x) = sg(d,y) -> sim(d,x,y))) # label(non_clause) # label(goal).  [goal].
+94 -ib(x,y) | sim(x,y,y).  [clausify(26)].
+95 -sim(x,y,z) | sim(x,z,y).  [clausify(27)].
+96 -sim(x,y,z) | -sim(x,z,u) | sim(x,y,u).  [clausify(28)].
+97 -fp(x,y,z) | sim(x,y,z).  [clausify(29)].
+134 ib(x,f19(x)) | sim(x,f20(x),f21(x)) | sim(x,f22(x),f23(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+135 ib(x,f19(x)) | sim(x,f20(x),f21(x)) | sim(x,f22(x),f23(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+136 ib(x,f19(x)) | sim(x,f20(x),f21(x)) | sim(x,f23(x),f24(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+137 ib(x,f19(x)) | sim(x,f20(x),f21(x)) | sim(x,f23(x),f24(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+138 ib(x,f19(x)) | sim(x,f20(x),f21(x)) | -sim(x,f22(x),f24(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+139 ib(x,f19(x)) | sim(x,f20(x),f21(x)) | -sim(x,f22(x),f24(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+140 ib(x,f19(x)) | -sim(x,f21(x),f20(x)) | sim(x,f22(x),f23(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+141 ib(x,f19(x)) | -sim(x,f21(x),f20(x)) | sim(x,f22(x),f23(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+142 ib(x,f19(x)) | -sim(x,f21(x),f20(x)) | sim(x,f23(x),f24(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+143 ib(x,f19(x)) | -sim(x,f21(x),f20(x)) | sim(x,f23(x),f24(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+144 ib(x,f19(x)) | -sim(x,f21(x),f20(x)) | -sim(x,f22(x),f24(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+145 ib(x,f19(x)) | -sim(x,f21(x),f20(x)) | -sim(x,f22(x),f24(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+146 -sim(x,f19(x),f19(x)) | sim(x,f20(x),f21(x)) | sim(x,f22(x),f23(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+147 -sim(x,f19(x),f19(x)) | sim(x,f20(x),f21(x)) | sim(x,f22(x),f23(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+148 -sim(x,f19(x),f19(x)) | sim(x,f20(x),f21(x)) | sim(x,f23(x),f24(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+149 -sim(x,f19(x),f19(x)) | sim(x,f20(x),f21(x)) | sim(x,f23(x),f24(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+150 -sim(x,f19(x),f19(x)) | sim(x,f20(x),f21(x)) | -sim(x,f22(x),f24(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+151 -sim(x,f19(x),f19(x)) | sim(x,f20(x),f21(x)) | -sim(x,f22(x),f24(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+152 -sim(x,f19(x),f19(x)) | -sim(x,f21(x),f20(x)) | sim(x,f22(x),f23(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+153 -sim(x,f19(x),f19(x)) | -sim(x,f21(x),f20(x)) | sim(x,f22(x),f23(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+154 -sim(x,f19(x),f19(x)) | -sim(x,f21(x),f20(x)) | sim(x,f23(x),f24(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+155 -sim(x,f19(x),f19(x)) | -sim(x,f21(x),f20(x)) | sim(x,f23(x),f24(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+156 -sim(x,f19(x),f19(x)) | -sim(x,f21(x),f20(x)) | -sim(x,f22(x),f24(x)) | fp(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+157 -sim(x,f19(x),f19(x)) | -sim(x,f21(x),f20(x)) | -sim(x,f22(x),f24(x)) | -sim(x,f25(x),f26(x)) | -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+158 ib(c1,c2).  [deny(35)].
+159 ib(c1,c3).  [deny(35)].
+160 sg(c1,c3) = sg(c1,c2).  [deny(35)].
+161 -sim(c1,c2,c3).  [deny(35)].
+163 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c2,x).  [resolve(158,a,136,e),flip(f)].
+165 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c2,x).  [resolve(158,a,134,e),flip(f)].
+182 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)).  [resolve(163,e,159,a),rewrite([160(28)]),xx(e),unit_del(e,161)].
+188 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)).  [resolve(165,e,159,a),rewrite([160(28)]),xx(e),unit_del(e,161)].
+189 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | sim(c1,f25(c1),f26(c1)).  [resolve(182,d,97,a)].
+227 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | sim(c1,f25(c1),f26(c1)).  [resolve(188,d,97,a)].
+240 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(189,d,137,d),merge(d),merge(e),merge(f)].
+408 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(227,d,135,d),merge(d),merge(e),merge(f)].
+610 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c2,x).  [resolve(240,d,158,a),flip(e)].
+1970 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c3,x).  [resolve(408,d,159,a),rewrite([160(23)]),flip(e)].
+3139 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)).  [resolve(610,d,159,a),rewrite([160(22)]),xx(d),unit_del(d,161)].
+3158 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | -sim(c1,x,f23(c1)) | sim(c1,x,f24(c1)).  [resolve(3139,c,96,b)].
+3882 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | sim(c1,c3,c2).  [resolve(1970,d,158,a),xx(d)].
+3885 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f24(c1)).  [resolve(3882,c,3158,c),merge(d),merge(e)].
+4000 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(3885,d,138,c),merge(d),merge(e)].
+4006 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | fp(c1,f25(c1),f26(c1)).  [factor(4000,c,h),rewrite([160(32)]),xx(g),unit_del(e,159),unit_del(f,158)].
+4031 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | sim(c1,f25(c1),f26(c1)).  [resolve(4006,d,97,a)].
+4282 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | -sim(c1,f22(c1),f24(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4031,d,139,d),merge(d),merge(e)].
+4288 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | -sim(c1,f22(c1),f24(c1)).  [factor(4282,c,h),rewrite([160(32)]),xx(g),unit_del(e,159),unit_del(f,158)].
+4312 ib(c1,f19(c1)) | sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2).  [resolve(4288,d,3885,d),merge(d),merge(e),merge(f)].
+4316 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f21(c1),f20(c1)).  [resolve(4312,b,95,a)].
+4454 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4316,c,142,b),merge(c)].
+4455 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4316,c,140,b),merge(c)].
+4459 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)).  [factor(4454,b,h),rewrite([160(32)]),xx(g),unit_del(e,159),unit_del(f,158)].
+4460 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)).  [factor(4455,b,h),rewrite([160(32)]),xx(g),unit_del(e,159),unit_del(f,158)].
+4473 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | sim(c1,f25(c1),f26(c1)).  [resolve(4459,d,97,a)].
+4497 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | sim(c1,f25(c1),f26(c1)).  [resolve(4460,d,97,a)].
+4633 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | -sim(c1,f21(c1),f20(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4473,d,143,d),merge(d),merge(f)].
+4639 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | -sim(c1,f21(c1),f20(c1)).  [factor(4633,b,h),rewrite([160(32)]),xx(g),unit_del(e,159),unit_del(f,158)].
+4641 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | -sim(c1,f21(c1),f20(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4497,d,141,d),merge(d),merge(f)].
+4647 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | -sim(c1,f21(c1),f20(c1)).  [factor(4641,b,h),rewrite([160(32)]),xx(g),unit_del(e,159),unit_del(f,158)].
+4651 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)).  [resolve(4639,d,4316,c),merge(d),merge(e)].
+4654 ib(c1,f19(c1)) | sim(c1,c3,c2) | -sim(c1,x,f23(c1)) | sim(c1,x,f24(c1)).  [resolve(4651,c,96,b)].
+4702 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)).  [resolve(4647,d,4316,c),merge(d),merge(e)].
+4721 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f24(c1)).  [resolve(4702,c,4654,c),merge(c),merge(d)].
+4772 ib(c1,f19(c1)) | sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4721,c,144,c),merge(c)].
+4777 ib(c1,f19(c1)) | sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)) | fp(c1,f25(c1),f26(c1)).  [factor(4772,b,h),rewrite([160(32)]),xx(g),unit_del(e,159),unit_del(f,158)].
+4788 ib(c1,f19(c1)) | sim(c1,c3,c2) | fp(c1,f25(c1),f26(c1)).  [resolve(4777,c,4316,c),merge(d),merge(e)].
+4789 ib(c1,f19(c1)) | sim(c1,c3,c2) | sim(c1,f25(c1),f26(c1)).  [resolve(4788,c,97,a)].
+4864 ib(c1,f19(c1)) | sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)) | -sim(c1,f22(c1),f24(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4789,c,145,d),merge(c)].
+4869 ib(c1,f19(c1)) | sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)) | -sim(c1,f22(c1),f24(c1)).  [factor(4864,b,h),rewrite([160(32)]),xx(g),unit_del(e,159),unit_del(f,158)].
+4968 ib(c1,f19(c1)) | sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)).  [resolve(4869,d,4721,c),merge(d),merge(e)].
+4969 ib(c1,f19(c1)) | sim(c1,c3,c2).  [resolve(4968,c,4316,c),merge(c),merge(d)].
+4975 ib(c1,f19(c1)).  [resolve(4969,b,95,a),unit_del(b,161)].
+4976 sim(c1,f19(c1),f19(c1)).  [resolve(4975,a,94,a)].
+4982 sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4976,a,148,a)].
+4983 sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(4976,a,146,a)].
+5353 sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c2,x).  [resolve(4982,d,158,a),flip(e)].
+5378 sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c2,x).  [resolve(4983,d,158,a),flip(e)].
+5613 sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)).  [resolve(5353,d,159,a),rewrite([160(24)]),xx(d),unit_del(d,161)].
+5663 sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)).  [resolve(5378,d,159,a),rewrite([160(24)]),xx(d),unit_del(d,161)].
+5742 sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | sim(c1,f25(c1),f26(c1)).  [resolve(5613,c,97,a)].
+5894 sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | sim(c1,f25(c1),f26(c1)).  [resolve(5663,c,97,a)].
+5987 sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(5742,c,149,d),merge(d),merge(e),unit_del(c,4976)].
+6208 sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(5894,c,147,d),merge(d),merge(e),unit_del(c,4976)].
+6874 sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c2,x).  [resolve(5987,c,158,a),flip(d)].
+7925 sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | -ib(c1,x) | sg(c1,c2) != sg(c1,x) | sim(c1,c3,x).  [resolve(6208,c,159,a),rewrite([160(19)]),flip(d)].
+8954 sim(c1,f20(c1),f21(c1)) | sim(c1,f23(c1),f24(c1)).  [resolve(6874,c,159,a),rewrite([160(18)]),xx(c),unit_del(c,161)].
+8956 sim(c1,f20(c1),f21(c1)) | -sim(c1,x,f23(c1)) | sim(c1,x,f24(c1)).  [resolve(8954,b,96,b)].
+8996 sim(c1,f20(c1),f21(c1)) | sim(c1,f22(c1),f23(c1)) | sim(c1,c3,c2).  [resolve(7925,c,158,a),xx(c)].
+8999 sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | sim(c1,f22(c1),f24(c1)).  [resolve(8996,b,8956,b),merge(c)].
+9127 sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(8999,c,150,c),merge(d),unit_del(c,4976)].
+9133 sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | fp(c1,f25(c1),f26(c1)).  [factor(9127,b,g),rewrite([160(28)]),xx(f),unit_del(d,159),unit_del(e,158)].
+9141 sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | sim(c1,f25(c1),f26(c1)).  [resolve(9133,c,97,a)].
+9497 sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | -sim(c1,f22(c1),f24(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(9141,c,151,d),merge(d),unit_del(c,4976)].
+9503 sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2) | -sim(c1,f22(c1),f24(c1)).  [factor(9497,b,g),rewrite([160(28)]),xx(f),unit_del(d,159),unit_del(e,158)].
+9507 sim(c1,f20(c1),f21(c1)) | sim(c1,c3,c2).  [resolve(9503,c,8999,c),merge(c),merge(d)].
+9521 sim(c1,c3,c2) | sim(c1,f21(c1),f20(c1)).  [resolve(9507,a,95,a)].
+9672 sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(9521,b,154,b),unit_del(b,4976)].
+9673 sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(9521,b,152,b),unit_del(b,4976)].
+9677 sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | fp(c1,f25(c1),f26(c1)).  [factor(9672,a,g),rewrite([160(28)]),xx(f),unit_del(d,159),unit_del(e,158)].
+9678 sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | fp(c1,f25(c1),f26(c1)).  [factor(9673,a,g),rewrite([160(28)]),xx(f),unit_del(d,159),unit_del(e,158)].
+9699 sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | sim(c1,f25(c1),f26(c1)).  [resolve(9677,c,97,a)].
+9736 sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | sim(c1,f25(c1),f26(c1)).  [resolve(9678,c,97,a)].
+9920 sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | -sim(c1,f21(c1),f20(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(9699,c,155,d),merge(e),unit_del(c,4976)].
+9926 sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)) | -sim(c1,f21(c1),f20(c1)).  [factor(9920,a,g),rewrite([160(28)]),xx(f),unit_del(d,159),unit_del(e,158)].
+9928 sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | -sim(c1,f21(c1),f20(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(9736,c,153,d),merge(e),unit_del(c,4976)].
+9934 sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)) | -sim(c1,f21(c1),f20(c1)).  [factor(9928,a,g),rewrite([160(28)]),xx(f),unit_del(d,159),unit_del(e,158)].
+9938 sim(c1,c3,c2) | sim(c1,f23(c1),f24(c1)).  [resolve(9926,c,9521,b),merge(c)].
+9940 sim(c1,c3,c2) | -sim(c1,x,f23(c1)) | sim(c1,x,f24(c1)).  [resolve(9938,b,96,b)].
+9987 sim(c1,c3,c2) | sim(c1,f22(c1),f23(c1)).  [resolve(9934,c,9521,b),merge(c)].
+9988 sim(c1,c3,c2) | sim(c1,f22(c1),f24(c1)).  [resolve(9987,b,9940,b),merge(b)].
+10053 sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)) | fp(c1,f25(c1),f26(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(9988,b,156,c),unit_del(b,4976)].
+10058 sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)) | fp(c1,f25(c1),f26(c1)).  [factor(10053,a,g),rewrite([160(28)]),xx(f),unit_del(d,159),unit_del(e,158)].
+10085 sim(c1,c3,c2) | fp(c1,f25(c1),f26(c1)).  [resolve(10058,b,9521,b),merge(c)].
+10086 sim(c1,c3,c2) | sim(c1,f25(c1),f26(c1)).  [resolve(10085,b,97,a)].
+10159 sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)) | -sim(c1,f22(c1),f24(c1)) | -ib(c1,x) | -ib(c1,y) | sg(c1,y) != sg(c1,x) | sim(c1,x,y).  [resolve(10086,b,157,d),unit_del(b,4976)].
+10164 sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)) | -sim(c1,f22(c1),f24(c1)).  [factor(10159,a,g),rewrite([160(28)]),xx(f),unit_del(d,159),unit_del(e,158)].
+10238 sim(c1,c3,c2) | -sim(c1,f21(c1),f20(c1)).  [resolve(10164,c,9988,b),merge(c)].
+10239 sim(c1,c3,c2).  [resolve(10238,b,9521,b),merge(b)].
+10252 $F.  [resolve(10239,a,95,a),unit_del(a,161)].
+
+============================== end of proof ==========================

@@ -1,0 +1,15 @@
+%% Lemma 1, first part, direction ->.  For o1,o2 in O_D:
+%%   sigma(o1) = sigma(o2)  ->  o1 ~_D o2.
+%% [sigma is the least assignment, so it identifies no more: Least_sg with
+%%  P(x,y) := sim(d,x,y).]
+formulas(assumptions).
+  % Least_sg[ sim(d,x,y) ]
+  all d (( (all x (ib(d,x) -> sim(d,x,x))) &
+           (all x all y (sim(d,x,y) -> sim(d,y,x))) &
+           (all x all y all z (sim(d,x,y) & sim(d,y,z) -> sim(d,x,z))) &
+           (all x all y (fp(d,x,y) -> sim(d,x,y))) )
+         -> (all x all y (ib(d,x) & ib(d,y) & sg(d,x) = sg(d,y) -> sim(d,x,y)))).
+end_of_list.
+formulas(goals).
+  all d all x all y ((ib(d,x) & ib(d,y) & sg(d,x) = sg(d,y)) -> sim(d,x,y)).
+end_of_list.

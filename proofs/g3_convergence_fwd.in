@@ -1,7 +1,0 @@
-%% Convergence, forward. Two identity-bearing objects generating
-%% different wholes place their shared event in both.  [From coverage.]
-formulas(goals).
-  all x all y all z
-    ((ib(x) & ib(y) & event(z) & participates(x,z) & participates(y,z)
-      & sg(x) != sg(y)) -> (part(z,sg(x)) & part(z,sg(y)))).
-end_of_list.

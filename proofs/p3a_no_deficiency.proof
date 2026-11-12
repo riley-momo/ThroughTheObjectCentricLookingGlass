@@ -1,0 +1,193 @@
+%%%%%%%%%% p3a_no_deficiency: -deficient(d1,e1)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168856 was started by riley on aurora,
+Wed Nov 11 12:09:29 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.02 (+ 0.00) seconds.
+% Length of proof is 17.
+% Level of proof is 5.
+% Maximum clause weight is 7.000.
+% Given clauses 164.
+
+
+34 (all e (event(e) <-> e = e1 | e = e2)) # label(non_clause).  [assumption].
+37 (all t (ibt(d1,t) <-> t = ta | t = tb | t = tc)) # label(non_clause).  [assumption].
+43 (all d all e (event(e) -> (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x))))))) # label(non_clause).  [assumption].
+44 -deficient(d1,e1) # label(non_clause) # label(goal).  [goal].
+60 event(x) | e1 != x.  [clausify(34)].
+68 -event(x) | -deficient(y,x) | -participates(z,x) | -ibt(y,ty(z)).  [clausify(43)].
+111 deficient(d1,e1).  [deny(44)].
+112 -deficient(x,y) | -participates(z,y) | -ibt(x,ty(z)) | e1 != y.  [resolve(68,a,60,a)].
+168 participates(b,e1).  [assumption].
+175 ty(b) = tb.  [assumption].
+176 tb = ty(b).  [copy(175),flip(a)].
+189 ibt(d1,x) | tb != x.  [clausify(37)].
+190 ibt(d1,x) | ty(b) != x.  [copy(189),rewrite([176(3)])].
+323 -participates(x,e1) | -ibt(d1,ty(x)) | e1 != e1.  [resolve(112,a,111,a)].
+324 -participates(x,e1) | -ibt(d1,ty(x)).  [copy(323),xx(c)].
+400 ibt(d1,ty(b)).  [resolve(190,b,176,a(flip)),rewrite([176(2)])].
+442 $F.  [resolve(324,a,168,a),unit_del(a,400)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3a_no_deficiency: -deficient(d1,e2)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168858 was started by riley on aurora,
+Wed Nov 11 12:09:29 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.01 (+ 0.00) seconds.
+% Length of proof is 16.
+% Level of proof is 4.
+% Maximum clause weight is 13.000.
+% Given clauses 204.
+
+
+34 (all e (event(e) <-> e = e1 | e = e2)) # label(non_clause).  [assumption].
+37 (all t (ibt(d1,t) <-> t = ta | t = tb | t = tc)) # label(non_clause).  [assumption].
+43 (all d all e (event(e) -> (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x))))))) # label(non_clause).  [assumption].
+44 -deficient(d1,e2) # label(non_clause) # label(goal).  [goal].
+67 event(x) | e2 != x.  [clausify(34)].
+68 -event(x) | -deficient(y,x) | -participates(z,x) | -ibt(y,ty(z)).  [clausify(43)].
+157 participates(c,e2).  [assumption].
+164 ty(c) = tc.  [assumption].
+165 tc = ty(c).  [copy(164),flip(a)].
+178 ibt(d1,x) | tc != x.  [clausify(37)].
+179 ibt(d1,x) | ty(c) != x.  [copy(178),rewrite([165(3)])].
+204 deficient(d1,e2).  [deny(44)].
+232 -deficient(x,y) | -participates(z,y) | -ibt(x,ty(z)) | e2 != y.  [resolve(68,a,67,a)].
+367 ibt(d1,ty(c)).  [resolve(179,b,165,a(flip)),rewrite([165(2)])].
+398 -participates(x,e2) | -ibt(d1,ty(x)).  [resolve(232,a,204,a),xx(c)].
+425 $F.  [resolve(398,a,157,a),unit_del(a,367)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3a_no_deficiency: -deficient(d2,e1)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168860 was started by riley on aurora,
+Wed Nov 11 12:09:29 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.02 (+ 0.00) seconds.
+% Length of proof is 16.
+% Level of proof is 4.
+% Maximum clause weight is 13.000.
+% Given clauses 205.
+
+
+34 (all e (event(e) <-> e = e1 | e = e2)) # label(non_clause).  [assumption].
+40 (all t (ibt(d2,t) <-> t = ta | t = tc)) # label(non_clause).  [assumption].
+43 (all d all e (event(e) -> (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x))))))) # label(non_clause).  [assumption].
+44 -deficient(d2,e1) # label(non_clause) # label(goal).  [goal].
+60 event(x) | e1 != x.  [clausify(34)].
+68 -event(x) | -deficient(y,x) | -participates(z,x) | -ibt(y,ty(z)).  [clausify(43)].
+154 participates(a,e1).  [assumption].
+160 ty(a) = ta.  [assumption].
+161 ta = ty(a).  [copy(160),flip(a)].
+196 ibt(d2,x) | ta != x.  [clausify(40)].
+197 ibt(d2,x) | ty(a) != x.  [copy(196),rewrite([161(3)])].
+205 deficient(d2,e1).  [deny(44)].
+232 -deficient(x,y) | -participates(z,y) | -ibt(x,ty(z)) | e1 != y.  [resolve(68,a,60,a)].
+373 ibt(d2,ty(a)).  [resolve(197,b,161,a(flip)),rewrite([161(2)])].
+398 -participates(x,e1) | -ibt(d2,ty(x)).  [resolve(232,a,205,a),xx(c)].
+428 $F.  [resolve(398,a,154,a),unit_del(a,373)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3a_no_deficiency: -deficient(d2,e2)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168862 was started by riley on aurora,
+Wed Nov 11 12:09:29 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.02 (+ 0.00) seconds.
+% Length of proof is 16.
+% Level of proof is 4.
+% Maximum clause weight is 13.000.
+% Given clauses 206.
+
+
+34 (all e (event(e) <-> e = e1 | e = e2)) # label(non_clause).  [assumption].
+40 (all t (ibt(d2,t) <-> t = ta | t = tc)) # label(non_clause).  [assumption].
+43 (all d all e (event(e) -> (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x))))))) # label(non_clause).  [assumption].
+44 -deficient(d2,e2) # label(non_clause) # label(goal).  [goal].
+67 event(x) | e2 != x.  [clausify(34)].
+68 -event(x) | -deficient(y,x) | -participates(z,x) | -ibt(y,ty(z)).  [clausify(43)].
+157 participates(c,e2).  [assumption].
+164 ty(c) = tc.  [assumption].
+165 tc = ty(c).  [copy(164),flip(a)].
+198 ibt(d2,x) | tc != x.  [clausify(40)].
+199 ibt(d2,x) | ty(c) != x.  [copy(198),rewrite([165(3)])].
+206 deficient(d2,e2).  [deny(44)].
+234 -deficient(x,y) | -participates(z,y) | -ibt(x,ty(z)) | e2 != y.  [resolve(68,a,67,a)].
+375 ibt(d2,ty(c)).  [resolve(199,b,165,a(flip)),rewrite([165(2)])].
+404 -participates(x,e2) | -ibt(d2,ty(x)).  [resolve(234,a,206,a),xx(c)].
+431 $F.  [resolve(404,a,157,a),unit_del(a,375)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3a_no_deficiency: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168864 was started by riley on aurora,
+Wed Nov 11 12:09:29 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.02 (+ 0.00) seconds.
+% Length of proof is 14.
+% Level of proof is 6.
+% Maximum clause weight is 6.000.
+% Given clauses 247.
+
+
+34 (all e (event(e) <-> e = e1 | e = e2)) # label(non_clause).  [assumption].
+44 (all e (event(e) -> -deficient(d1,e) & -deficient(d2,e))) # label(non_clause) # label(goal).  [goal].
+66 -event(x) | e1 = x | e2 = x.  [clausify(34)].
+71 event(c1).  [deny(44)].
+204 -deficient(d1,e1).  [assumption].
+205 -deficient(d1,e2).  [assumption].
+206 -deficient(d2,e1).  [assumption].
+207 -deficient(d2,e2).  [assumption].
+208 deficient(d1,c1) | deficient(d2,c1).  [deny(44)].
+247 e1 = c1 | e2 = c1.  [resolve(71,a,66,a)].
+248 c1 = e1 | c1 = e2.  [copy(247),flip(a),flip(b)].
+429 c1 = e1 | deficient(d1,c1).  [para(248(b,1),208(b,2)),unit_del(c,207)].
+525 c1 = e1.  [para(248(b,1),429(b,2)),merge(b),unit_del(b,205)].
+541 $F.  [back_rewrite(208),rewrite([525(2),525(5)]),unit_del(a,204),unit_del(b,206)].
+
+============================== end of proof ==========================

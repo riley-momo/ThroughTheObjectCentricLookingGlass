@@ -1,7 +1,0 @@
-%% Overlapping wholes are connected.
-%% [(Mono) twice, via reflexivity and symmetry of conn.]
-formulas(goals).
-  all x all y all z
-    ((ib(x) & ib(y) & event(z) & part(z,sg(x)) & part(z,sg(y)))
-        -> conn(sg(x),sg(y))).
-end_of_list.

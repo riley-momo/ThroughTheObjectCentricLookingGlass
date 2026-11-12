@@ -1,0 +1,35 @@
+%% Consistency check (Mace4): a finite model of axioms.in together with the
+%% Least instances used by the proofs, on a small log with real convergence:
+%% two containers c1, c2 with their own events e1, e2 and a shared event e3
+%% (like e9 in Table 2).  B = {Container}, no declared pairs.
+assign(domain_size, 9).
+assign(end_size, 11).
+
+formulas(assumptions).
+  all e (event(e) <-> e = e1 | e = e2 | e = e3).
+  all x (object(x) <-> x = c1 | x = c2).
+  all x all e (participates(x,e) <->
+     (x = c1 & e = e1) | (x = c1 & e = e3) | (x = c2 & e = e2) | (x = c2 & e = e3)).
+  ty(c1) = tc.  ty(c2) = tc.
+  all t (ibt(dd,t) <-> t = tc).
+  all t1 all t2 -decl(dd,t1,t2).
+  all t1 all t2 all a -decla(dd,t1,t2,a).
+  -nodet(dd).
+
+  % non-triviality: two distinct wholes, overlapping at e3
+  sg(dd,c1) != sg(dd,c2).
+  convergent(dd,e3).
+  e1 != e2. e1 != e3. e2 != e3. c1 != c2.
+
+  % Least instances used in the proofs (l1a_*)
+  all d (( (all x (ib(d,x) -> sg(d,x) = sg(d,x))) &
+           (all x all y (sg(d,x) = sg(d,y) -> sg(d,y) = sg(d,x))) &
+           (all x all y all z (sg(d,x) = sg(d,y) & sg(d,y) = sg(d,z) -> sg(d,x) = sg(d,z))) &
+           (all x all y (fp(d,x,y) -> sg(d,x) = sg(d,y))) )
+         -> (all x all y (sim(d,x,y) -> sg(d,x) = sg(d,y)))).
+  all d (( (all x (ib(d,x) -> sim(d,x,x))) &
+           (all x all y (sim(d,x,y) -> sim(d,y,x))) &
+           (all x all y all z (sim(d,x,y) & sim(d,y,z) -> sim(d,x,z))) &
+           (all x all y (fp(d,x,y) -> sim(d,x,y))) )
+         -> (all x all y (ib(d,x) & ib(d,y) & sg(d,x) = sg(d,y) -> sim(d,x,y)))).
+end_of_list.

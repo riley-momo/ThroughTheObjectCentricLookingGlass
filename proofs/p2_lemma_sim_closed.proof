@@ -1,0 +1,50 @@
+%%%%%%%%%% p2_lemma_sim_closed: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168604 was started by riley on aurora,
+Wed Nov 11 12:08:51 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.02 (+ 0.00) seconds.
+% Length of proof is 28.
+% Level of proof is 9.
+% Maximum clause weight is 10.000.
+% Given clauses 267.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+26 (all d all x (ib(d,x) -> sim(d,x,x))) # label(non_clause).  [assumption].
+29 (all d all x all y (fp(d,x,y) -> sim(d,x,y))) # label(non_clause).  [assumption].
+40 (all d (iscc(d) <-> (all t ibt(d,t)) & (all t1 all t2 decl(d,t1,t2)) & (all t1 all t2 all a decla(d,t1,t2,a)) & nodet(d))) # label(non_clause).  [assumption].
+41 (all d (iscc(d) -> (all x (object(x) -> ib(d,x))) & (all x all y (adj(x,y) <-> fp(d,x,y))))) # label(non_clause).  [assumption].
+42 (all d (iscc(d) -> (all x (object(x) -> sim(d,x,x))) & (all x all y (adj(x,y) -> sim(d,x,y))))) # label(non_clause) # label(goal).  [goal].
+72 -fp(x,y,z) | sim(x,y,z).  [clausify(29)].
+73 -iscc(x) | -adj(y,z) | fp(x,y,z).  [clausify(41)].
+127 object(c2) | adj(c3,c4).  [deny(42)].
+128 -sim(c1,c2,c2) | adj(c3,c4).  [deny(42)].
+137 -iscc(x) | -adj(y,z) | sim(x,y,z).  [resolve(73,c,72,a)].
+156 ib(x,y) | -object(y) | -ibt(x,ty(y)).  [clausify(17)].
+169 -ib(x,y) | sim(x,y,y).  [clausify(26)].
+177 -iscc(x) | ibt(x,y).  [clausify(40)].
+183 iscc(c1).  [deny(42)].
+184 object(c2) | -sim(c1,c3,c4).  [deny(42)].
+185 -sim(c1,c2,c2) | -sim(c1,c3,c4).  [deny(42)].
+314 -iscc(x) | sim(x,c3,c4) | object(c2).  [resolve(137,b,127,b)].
+315 -iscc(x) | sim(x,c3,c4) | -sim(c1,c2,c2).  [resolve(137,b,128,b)].
+379 ibt(c1,x).  [resolve(183,a,177,a)].
+444 sim(c1,c3,c4) | object(c2).  [resolve(314,a,183,a)].
+461 ib(c1,x) | -object(x).  [resolve(379,a,156,c)].
+520 object(c2).  [resolve(444,a,184,b),merge(b)].
+521 ib(c1,c2).  [resolve(520,a,461,b)].
+524 sim(c1,c2,c2).  [resolve(521,a,169,a)].
+525 -iscc(x) | sim(x,c3,c4).  [back_unit_del(315),unit_del(c,524)].
+537 -sim(c1,c3,c4).  [back_unit_del(185),unit_del(a,524)].
+660 $F.  [resolve(525,a,183,a),unit_del(a,537)].
+
+============================== end of proof ==========================

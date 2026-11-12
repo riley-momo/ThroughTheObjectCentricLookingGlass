@@ -1,0 +1,44 @@
+%%%%%%%%%% t2a_convergence_bwd: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168401 was started by riley on aurora,
+Wed Nov 11 12:08:27 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.67 (+ 0.03) seconds.
+% Length of proof is 22.
+% Level of proof is 6.
+% Maximum clause weight is 26.000.
+% Given clauses 2068.
+
+
+24 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (ib(d,o2) & sg(d,o2) = sg(d,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+32 (all d all e (convergent(d,e) <-> (exists x exists y (ib(d,x) & ib(d,y) & part(e,sg(d,x)) & part(e,sg(d,y)) & sg(d,x) != sg(d,y))))) # label(non_clause).  [assumption].
+34 (all d all x all y (ib(d,x) & ib(d,y) & sg(d,x) = sg(d,y) -> sim(d,x,y))) # label(non_clause).  [assumption].
+35 (all d all e all x all y (event(e) & ib(d,x) & ib(d,y) & participates(x,e) & participates(y,e) & -sim(d,x,y) -> convergent(d,e))) # label(non_clause) # label(goal).  [goal].
+72 event(c2).  [deny(35)].
+76 -ib(x,y) | -event(z) | part(z,sg(x,y)) | -ib(x,u) | sg(x,y) != sg(x,u) | -participates(u,z).  [clausify(24)].
+203 convergent(x,y) | -ib(x,z) | -ib(x,u) | -part(y,sg(x,z)) | -part(y,sg(x,u)) | sg(x,u) = sg(x,z).  [clausify(32)].
+204 -ib(x,y) | -ib(x,z) | sg(x,z) != sg(x,y) | sim(x,y,z).  [clausify(34)].
+205 ib(c1,c3).  [deny(35)].
+206 ib(c1,c4).  [deny(35)].
+207 participates(c3,c2).  [deny(35)].
+208 participates(c4,c2).  [deny(35)].
+209 -sim(c1,c3,c4).  [deny(35)].
+210 -convergent(c1,c2).  [deny(35)].
+231 -ib(x,y) | part(c2,sg(x,y)) | -ib(x,z) | sg(x,y) != sg(x,z) | -participates(z,c2).  [resolve(72,a,76,b)].
+1025 -ib(x,y) | part(c2,sg(x,y)) | -participates(y,c2).  [factor(231,a,c),xx(c)].
+2233 -ib(c1,x) | sg(c1,c3) != sg(c1,x) | sim(c1,c3,x).  [resolve(205,a,204,a),flip(b)].
+2258 part(c2,sg(c1,c4)).  [resolve(1025,a,206,a),unit_del(b,208)].
+2259 part(c2,sg(c1,c3)).  [resolve(1025,a,205,a),unit_del(b,207)].
+2314 -ib(c1,x) | -part(c2,sg(c1,x)) | sg(c1,c4) = sg(c1,x).  [resolve(2258,a,203,e),unit_del(a,210),unit_del(c,206)].
+2498 sg(c1,c4) != sg(c1,c3).  [resolve(2233,a,206,a),flip(a),unit_del(b,209)].
+3710 $F.  [resolve(2314,b,2259,a),unit_del(a,205),unit_del(b,2498)].
+
+============================== end of proof ==========================

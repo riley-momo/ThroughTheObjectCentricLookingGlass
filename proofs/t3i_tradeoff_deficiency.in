@@ -1,0 +1,6 @@
+%% Theorem 3 (Deficiency-divergence trade-off), (i).  If D below D', every
+%% event deficient under D' is deficient under D.   [Theorem 1.]
+%% CITES: t1a_deficiency
+formulas(goals).
+  all d all d2 all e ((leq(d,d2) & event(e) & deficient(d2,e)) -> deficient(d,e)).
+end_of_list.

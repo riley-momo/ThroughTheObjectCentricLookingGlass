@@ -1,0 +1,16 @@
+%% Proposition 2, proof step.  Under D_CC, Fuse^0 instances are exactly the
+%% co-participating pairs, so connectivity is contained in ~_{D_CC}.
+%% [Least_cc[sim(d)].]
+%% INCLUDE: connected_components.in
+%% CITES: p2_lemma_sim_closed
+formulas(assumptions).
+  % Least_cc[ sim(d,x,y) ]
+  all d (( (all x (object(x) -> sim(d,x,x))) &
+           (all x all y (sim(d,x,y) -> sim(d,y,x))) &
+           (all x all y all z (sim(d,x,y) & sim(d,y,z) -> sim(d,x,z))) &
+           (all x all y (adj(x,y) -> sim(d,x,y))) )
+         -> (all x all y (ccomp(x,y) -> sim(d,x,y)))).
+end_of_list.
+formulas(goals).
+  all d (iscc(d) -> (all x all y (ccomp(x,y) -> sim(d,x,y)))).
+end_of_list.

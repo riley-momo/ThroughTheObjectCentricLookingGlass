@@ -1,0 +1,55 @@
+%%%%%%%%%% l1a_sim_to_sigma: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168074 was started by riley on aurora,
+Wed Nov 11 12:07:48 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 1.01 (+ 0.02) seconds.
+% Length of proof is 33.
+% Level of proof is 9.
+% Maximum clause weight is 29.000.
+% Given clauses 2247.
+
+
+23 (all d all x all y (fp(d,x,y) -> sg(d,x) = sg(d,y))) # label(non_clause).  [assumption].
+34 (all d ((all x (ib(d,x) -> sg(d,x) = sg(d,x))) & (all x all y (sg(d,x) = sg(d,y) -> sg(d,y) = sg(d,x))) & (all x all y all z (sg(d,x) = sg(d,y) & sg(d,y) = sg(d,z) -> sg(d,x) = sg(d,z))) & (all x all y (fp(d,x,y) -> sg(d,x) = sg(d,y))) -> (all x all y (sim(d,x,y) -> sg(d,x) = sg(d,y))))) # label(non_clause).  [assumption].
+35 (all d all x all y (sim(d,x,y) -> sg(d,x) = sg(d,y))) # label(non_clause) # label(goal).  [goal].
+70 -fp(x,y,z) | sg(x,z) = sg(x,y).  [clausify(23)].
+75 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f23(x)) = sg(x,f22(x)) | fp(x,f25(x),f26(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [clausify(34)].
+76 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f24(x)) = sg(x,f23(x)) | fp(x,f25(x),f26(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [clausify(34)].
+77 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f24(x)) != sg(x,f22(x)) | fp(x,f25(x),f26(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [clausify(34)].
+224 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f23(x)) = sg(x,f22(x)) | sg(x,f26(x)) != sg(x,f25(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [clausify(34)].
+225 sg(x,f23(x)) = sg(x,f22(x)) | sg(x,f26(x)) != sg(x,f25(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [copy(224),xx(a)].
+226 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f24(x)) = sg(x,f23(x)) | sg(x,f26(x)) != sg(x,f25(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [clausify(34)].
+227 sg(x,f24(x)) = sg(x,f23(x)) | sg(x,f26(x)) != sg(x,f25(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [copy(226),xx(a)].
+228 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f24(x)) != sg(x,f22(x)) | sg(x,f26(x)) != sg(x,f25(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [clausify(34)].
+229 sg(x,f24(x)) != sg(x,f22(x)) | sg(x,f26(x)) != sg(x,f25(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y).  [copy(228),xx(a)].
+230 sim(c1,c2,c3).  [deny(35)].
+231 sg(c1,c3) != sg(c1,c2).  [deny(35)].
+279 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f23(x)) = sg(x,f22(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y) | sg(x,f26(x)) = sg(x,f25(x)).  [resolve(75,c,70,a)].
+280 sg(x,f23(x)) = sg(x,f22(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y) | sg(x,f26(x)) = sg(x,f25(x)).  [copy(279),xx(a)].
+293 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f24(x)) = sg(x,f23(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y) | sg(x,f26(x)) = sg(x,f25(x)).  [resolve(76,c,70,a)].
+294 sg(x,f24(x)) = sg(x,f23(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y) | sg(x,f26(x)) = sg(x,f25(x)).  [copy(293),xx(a)].
+307 sg(x,f19(x)) != sg(x,f19(x)) | sg(x,f24(x)) != sg(x,f22(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y) | sg(x,f26(x)) = sg(x,f25(x)).  [resolve(77,c,70,a)].
+308 sg(x,f24(x)) != sg(x,f22(x)) | -sim(x,y,z) | sg(x,z) = sg(x,y) | sg(x,f26(x)) = sg(x,f25(x)).  [copy(307),xx(a)].
+3169 sg(c1,f24(c1)) != sg(c1,f22(c1)) | sg(c1,f26(c1)) != sg(c1,f25(c1)).  [resolve(230,a,229,c),unit_del(c,231)].
+3170 sg(c1,f24(c1)) = sg(c1,f23(c1)) | sg(c1,f26(c1)) != sg(c1,f25(c1)).  [resolve(230,a,227,c),unit_del(c,231)].
+3171 sg(c1,f23(c1)) = sg(c1,f22(c1)) | sg(c1,f26(c1)) != sg(c1,f25(c1)).  [resolve(230,a,225,c),unit_del(c,231)].
+3182 sg(c1,f23(c1)) = sg(c1,f22(c1)) | sg(c1,f26(c1)) = sg(c1,f25(c1)).  [resolve(280,b,230,a),unit_del(b,231)].
+3189 sg(c1,f24(c1)) = sg(c1,f23(c1)) | sg(c1,f26(c1)) = sg(c1,f25(c1)).  [resolve(294,b,230,a),unit_del(b,231)].
+3196 sg(c1,f24(c1)) != sg(c1,f22(c1)) | sg(c1,f26(c1)) = sg(c1,f25(c1)).  [resolve(308,b,230,a),unit_del(b,231)].
+3528 sg(c1,f23(c1)) = sg(c1,f22(c1)).  [resolve(3182,b,3171,b),merge(b)].
+3580 sg(c1,f24(c1)) = sg(c1,f22(c1)) | sg(c1,f26(c1)) = sg(c1,f25(c1)).  [back_rewrite(3189),rewrite([3528(8)])].
+3586 sg(c1,f24(c1)) = sg(c1,f22(c1)) | sg(c1,f26(c1)) != sg(c1,f25(c1)).  [back_rewrite(3170),rewrite([3528(8)])].
+3718 sg(c1,f24(c1)) = sg(c1,f22(c1)).  [resolve(3586,b,3580,b),merge(b)].
+3736 sg(c1,f26(c1)) = sg(c1,f25(c1)).  [back_rewrite(3196),rewrite([3718(4)]),xx(a)].
+3742 $F.  [back_rewrite(3169),rewrite([3718(4),3736(13)]),xx(a),xx(b)].
+
+============================== end of proof ==========================

@@ -1,0 +1,6 @@
+%% Theorem 1 (Deficiency).  An event is deficient under D iff none of its
+%% participants has a type in B_D.   [(Sum(T)): coverage and its converse.]
+formulas(goals).
+  all d all e (event(e) ->
+     (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x)))))).
+end_of_list.

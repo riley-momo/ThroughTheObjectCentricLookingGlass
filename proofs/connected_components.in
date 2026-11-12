@@ -1,0 +1,21 @@
+%% ===================================================================
+%% The connected-components case notion [4] (Section 5.2), and D_CC.
+%%   adj(x,y)    objects x, y co-participate in some event
+%%   ccomp(x,y)  x, y lie in the same connected component: the least
+%%               equivalence on objects containing adj.  Leastness is the
+%%               schema Least_cc[P], instantiated in the goal files.
+%%   iscc(d)     d is (a copy of) D_CC: B = OT, Fuse^0 for every pair.
+%% ===================================================================
+formulas(assumptions).
+  all x all y (adj(x,y) <->
+     object(x) & object(y) & (exists e (participates(x,e) & participates(y,e)))).
+  all x all y (ccomp(x,y) -> object(x) & object(y)).
+  all x (object(x) -> ccomp(x,x)).
+  all x all y (ccomp(x,y) -> ccomp(y,x)).
+  all x all y all z (ccomp(x,y) & ccomp(y,z) -> ccomp(x,z)).
+  all x all y (adj(x,y) -> ccomp(x,y)).
+
+  all d (iscc(d) <->
+     (all t ibt(d,t)) & (all t1 all t2 decl(d,t1,t2)) &
+     (all t1 all t2 all a decla(d,t1,t2,a)) & nodet(d)).
+end_of_list.

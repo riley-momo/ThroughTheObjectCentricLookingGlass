@@ -1,0 +1,10 @@
+%% Proposition 3 (no unique case notion), minimal example.
+%% Neither D1 nor D2 has deficient events (Theorem 1).
+%% INCLUDE: example_p3.in
+%% CITES: t1a_deficiency
+%% FOREACH: $D d1 d2
+%% FOREACH: $E e1 e2
+%% INSTANCE: -deficient($D,$E)
+formulas(goals).
+  all e (event(e) -> -deficient(d1,e) & -deficient(d2,e)).
+end_of_list.

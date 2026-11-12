@@ -1,0 +1,10 @@
+%% Proposition 2 (i).  The wholes of D_CC are exactly the connected-component
+%% cases: an event is part of sigma(o) iff some object in o's connected
+%% component participates in it.   [Lemma 1, whose proof does not use
+%% determinacy, with ~_{D_CC} = connectivity.]
+%% INCLUDE: connected_components.in
+%% CITES: l1b_parts p2_sim_in_ccomp p2_ccomp_in_sim
+formulas(goals).
+  all d all o all e ((iscc(d) & object(o) & event(e)) ->
+     (part(e,sg(d,o)) <-> (exists o2 (ccomp(o2,o) & participates(o2,e))))).
+end_of_list.

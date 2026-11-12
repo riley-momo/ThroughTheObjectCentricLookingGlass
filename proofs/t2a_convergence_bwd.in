@@ -1,0 +1,8 @@
+%% Theorem 2 (Convergence), first part, direction <-.  Identity-bearing
+%% participants x, y with x not ~_D y make e convergent.   [Lemma 1.]
+%% CITES: l1a_sigma_to_sim
+formulas(goals).
+  all d all e all x all y
+     ((event(e) & ib(d,x) & ib(d,y) & participates(x,e) & participates(y,e)
+       & -sim(d,x,y)) -> convergent(d,e)).
+end_of_list.

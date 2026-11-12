@@ -1,0 +1,42 @@
+%%%%%%%%%% p2_lemma_fuse_adjacent: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168561 was started by riley on aurora,
+Wed Nov 11 12:08:46 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.69 (+ 0.03) seconds.
+% Length of proof is 20.
+% Level of proof is 5.
+% Maximum clause weight is 13.000.
+% Given clauses 1957.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+34 (all x all y (adj(x,y) <-> object(x) & object(y) & (exists e (participates(x,e) & participates(y,e))))) # label(non_clause).  [assumption].
+41 (all d all x all y (fp(d,x,y) -> adj(x,y))) # label(non_clause) # label(goal).  [goal].
+62 -fp(x,y,z) | ib(x,y).  [clausify(22)].
+63 -fp(x,y,z) | ib(x,z).  [clausify(22)].
+64 -fp(x,y,z) | participates(y,f6(x,y,z)).  [clausify(22)].
+65 -fp(x,y,z) | participates(z,f6(x,y,z)).  [clausify(22)].
+72 fp(c1,c2,c3).  [deny(41)].
+198 -ib(x,y) | object(y).  [clausify(17)].
+220 adj(x,y) | -object(x) | -object(y) | -participates(x,z) | -participates(y,z).  [clausify(34)].
+227 -adj(c2,c3).  [deny(41)].
+240 ib(c1,c2).  [resolve(72,a,62,a)].
+241 ib(c1,c3).  [resolve(72,a,63,a)].
+242 participates(c2,f6(c1,c2,c3)).  [resolve(72,a,64,a)].
+243 participates(c3,f6(c1,c2,c3)).  [resolve(72,a,65,a)].
+2451 object(c2).  [resolve(240,a,198,a)].
+2455 object(c3).  [resolve(241,a,198,a)].
+2458 adj(c2,x) | -object(x) | -participates(x,f6(c1,c2,c3)).  [resolve(242,a,220,d),unit_del(b,2451)].
+2619 $F.  [resolve(2458,c,243,a),unit_del(a,227),unit_del(b,2455)].
+
+============================== end of proof ==========================

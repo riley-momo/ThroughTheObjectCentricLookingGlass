@@ -1,0 +1,4 @@
+%% Proposition 1, proof step.  If D below D' then O_D is contained in O_D'.
+formulas(goals).
+  all d all d2 all x ((leq(d,d2) & ib(d,x)) -> ib(d2,x)).
+end_of_list.

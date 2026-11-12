@@ -1,0 +1,51 @@
+%%%%%%%%%% p3d_d2_identity: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168930 was started by riley on aurora,
+Wed Nov 11 12:09:31 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.21 (+ 0.02) seconds.
+% Length of proof is 29.
+% Level of proof is 9.
+% Maximum clause weight is 20.000.
+% Given clauses 1179.
+
+
+18 (all d all t1 all t2 all e (app(d,t1,t2,e) <-> decl(d,t1,t2) | (exists a (decla(d,t1,t2,a) & occurrence_of(e,a))))) # label(non_clause).  [assumption].
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+41 (all t1 all t2 -decl(d2,t1,t2)) # label(non_clause).  [assumption].
+42 (all t1 all t2 all p -decla(d2,t1,t2,p)) # label(non_clause).  [assumption].
+43 (all x (ib(d2,x) -> x = x)) & (all x all y (x = y -> y = x)) & (all x all y all z (x = y & y = z -> x = z)) & (all x all y (fp(d2,x,y) -> x = y)) -> (all x all y (sim(d2,x,y) -> x = y)) # label(non_clause).  [assumption].
+44 (all x all y (sim(d2,x,y) -> x = y)) # label(non_clause) # label(goal).  [goal].
+79 -fp(x,y,z) | app(x,ty(y),ty(z),f6(x,y,z)).  [clausify(22)].
+88 c1 != c1 | c5 = c4 | fp(d2,c7,c8) | -sim(d2,x,y) | y = x.  [clausify(43)].
+89 c1 != c1 | c6 = c5 | fp(d2,c7,c8) | -sim(d2,x,y) | y = x.  [clausify(43)].
+90 c1 != c1 | c6 != c4 | fp(d2,c7,c8) | -sim(d2,x,y) | y = x.  [clausify(43)].
+142 -app(x,y,z,u) | decl(x,y,z) | decla(x,y,z,f3(x,y,z,u)).  [clausify(18)].
+203 -decl(d2,x,y).  [clausify(41)].
+204 -decla(d2,x,y,z).  [clausify(42)].
+215 sim(d2,c9,c10).  [deny(44)].
+216 c10 != c9.  [deny(44)].
+312 c1 != c1 | c5 = c4 | -sim(d2,x,y) | y = x | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [resolve(88,c,79,a)].
+313 c5 = c4 | -sim(d2,x,y) | y = x | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [copy(312),xx(a)].
+330 c1 != c1 | c6 = c5 | -sim(d2,x,y) | y = x | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [resolve(89,c,79,a)].
+331 c6 = c5 | -sim(d2,x,y) | y = x | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [copy(330),xx(a)].
+348 c1 != c1 | c6 != c4 | -sim(d2,x,y) | y = x | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [resolve(90,c,79,a)].
+349 c6 != c4 | -sim(d2,x,y) | y = x | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [copy(348),xx(a)].
+543 c5 = c4 | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [resolve(313,b,215,a),unit_del(b,216)].
+552 c6 = c5 | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [resolve(331,b,215,a),unit_del(b,216)].
+561 c6 != c4 | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [resolve(349,b,215,a),unit_del(b,216)].
+1608 c5 = c4.  [resolve(543,b,142,a),unit_del(b,203),unit_del(c,204)].
+1674 c6 = c4 | app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [back_rewrite(552),rewrite([1608(2)])].
+5107 c6 = c4.  [resolve(1674,b,142,a),unit_del(b,203),unit_del(c,204)].
+5112 app(d2,ty(c7),ty(c8),f6(d2,c7,c8)).  [back_rewrite(561),rewrite([5107(1)]),xx(a)].
+5316 $F.  [resolve(5112,a,142,a),unit_del(a,203),unit_del(b,204)].
+
+============================== end of proof ==========================

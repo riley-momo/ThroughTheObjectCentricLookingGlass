@@ -1,0 +1,7 @@
+%% Theorem 1, second clause.  Deficiency depends only on which types are
+%% identity-bearing: theories with the same B have the same deficient events.
+%% CITES: t1a_deficiency
+formulas(goals).
+  all d all d2 ((all t (ibt(d,t) <-> ibt(d2,t))) ->
+     (all e (event(e) -> (deficient(d,e) <-> deficient(d2,e))))).
+end_of_list.

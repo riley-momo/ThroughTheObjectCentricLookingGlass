@@ -1,0 +1,70 @@
+%%%%%%%%%% t2b_convergence_sources: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168403 was started by riley on aurora,
+Wed Nov 11 12:08:27 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 1.03 (+ 0.04) seconds.
+% Length of proof is 48.
+% Level of proof is 10.
+% Maximum clause weight is 31.000.
+% Given clauses 2549.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+21 (all t all e (det(t,e) <-> (all x all y (ty(x) = t & participates(x,e) & ty(y) = t & participates(y,e) -> x = y)))) # label(non_clause).  [assumption].
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+26 (all d all x (ib(d,x) -> sim(d,x,x))) # label(non_clause).  [assumption].
+27 (all d all x all y (sim(d,x,y) -> sim(d,y,x))) # label(non_clause).  [assumption].
+29 (all d all x all y (fp(d,x,y) -> sim(d,x,y))) # label(non_clause).  [assumption].
+34 (all d all e (event(e) & convergent(d,e) -> (exists x exists y (ib(d,x) & ib(d,y) & participates(x,e) & participates(y,e) & -sim(d,x,y))))) # label(non_clause).  [assumption].
+35 (all d all e (event(e) & convergent(d,e) -> (exists t (ibt(d,t) & -det(t,e))) | (exists x exists y (ib(d,x) & ib(d,y) & participates(x,e) & participates(y,e) & ty(x) != ty(y) & -app(d,ty(x),ty(y),e))))) # label(non_clause) # label(goal).  [goal].
+69 fp(x,y,z) | -ib(x,y) | -ib(x,z) | -participates(y,u) | -participates(z,u) | -app(x,ty(y),ty(z),u) | -det(ty(y),u) | -det(ty(z),u).  [clausify(22)].
+71 -fp(x,y,z) | sim(x,y,z).  [clausify(29)].
+72 event(c2).  [deny(35)].
+77 -event(x) | -convergent(y,x) | ib(y,f19(y,x)).  [clausify(34)].
+78 -event(x) | -convergent(y,x) | ib(y,f20(y,x)).  [clausify(34)].
+79 -event(x) | -convergent(y,x) | participates(f19(y,x),x).  [clausify(34)].
+80 -event(x) | -convergent(y,x) | participates(f20(y,x),x).  [clausify(34)].
+81 -event(x) | -convergent(y,x) | -sim(y,f19(y,x),f20(y,x)).  [clausify(34)].
+187 -ib(x,y) | ibt(x,ty(y)).  [clausify(17)].
+192 -det(x,y) | ty(z) != x | -participates(z,y) | ty(u) != x | -participates(u,y) | u = z.  [clausify(21)].
+200 -ib(x,y) | sim(x,y,y).  [clausify(26)].
+201 -sim(x,y,z) | sim(x,z,y).  [clausify(27)].
+209 convergent(c1,c2).  [deny(35)].
+210 -ibt(c1,x) | det(x,c2).  [deny(35)].
+211 -ib(c1,x) | -ib(c1,y) | -participates(x,c2) | -participates(y,c2) | ty(y) = ty(x) | app(c1,ty(x),ty(y),c2).  [deny(35)].
+227 sim(x,y,z) | -ib(x,y) | -ib(x,z) | -participates(y,u) | -participates(z,u) | -app(x,ty(y),ty(z),u) | -det(ty(y),u) | -det(ty(z),u).  [resolve(71,a,69,a)].
+233 -convergent(x,c2) | ib(x,f19(x,c2)).  [resolve(72,a,77,a)].
+234 -convergent(x,c2) | ib(x,f20(x,c2)).  [resolve(72,a,78,a)].
+235 -convergent(x,c2) | participates(f19(x,c2),c2).  [resolve(72,a,79,a)].
+236 -convergent(x,c2) | participates(f20(x,c2),c2).  [resolve(72,a,80,a)].
+237 -convergent(x,c2) | -sim(x,f19(x,c2),f20(x,c2)).  [resolve(72,a,81,a)].
+2263 ib(c1,f19(c1,c2)).  [resolve(233,a,209,a)].
+2264 ib(c1,f20(c1,c2)).  [resolve(234,a,209,a)].
+2265 participates(f19(c1,c2),c2).  [resolve(235,a,209,a)].
+2266 participates(f20(c1,c2),c2).  [resolve(236,a,209,a)].
+2313 -ib(c1,x) | -participates(x,c2) | ty(f19(c1,c2)) = ty(x) | app(c1,ty(x),ty(f19(c1,c2)),c2).  [resolve(2263,a,211,b),unit_del(c,2265)].
+2315 sim(c1,f19(c1,c2),f19(c1,c2)).  [resolve(2263,a,200,a)].
+2317 ibt(c1,ty(f19(c1,c2))).  [resolve(2263,a,187,a)].
+2332 ibt(c1,ty(f20(c1,c2))).  [resolve(2264,a,187,a)].
+2373 det(ty(f19(c1,c2)),c2).  [resolve(2317,a,210,a)].
+2386 det(ty(f20(c1,c2)),c2).  [resolve(2332,a,210,a)].
+2391 ty(f19(c1,c2)) != ty(x) | -participates(x,c2) | ty(f19(c1,c2)) != ty(y) | -participates(y,c2) | y = x.  [resolve(2373,a,192,a),flip(a),flip(c)].
+3661 ty(f20(c1,c2)) = ty(f19(c1,c2)) | app(c1,ty(f20(c1,c2)),ty(f19(c1,c2)),c2).  [resolve(2313,a,2264,a),flip(b),unit_del(a,2266)].
+5173 ty(f19(c1,c2)) != ty(x) | -participates(x,c2) | f19(c1,c2) = x.  [resolve(2391,b,2265,a),flip(d),xx(a)].
+5194 ty(f20(c1,c2)) != ty(f19(c1,c2)) | f20(c1,c2) = f19(c1,c2).  [resolve(5173,b,2266,a),flip(a),flip(b)].
+6934 ty(f20(c1,c2)) = ty(f19(c1,c2)) | sim(c1,f20(c1,c2),f19(c1,c2)).  [resolve(3661,b,227,f),unit_del(c,2264),unit_del(d,2263),unit_del(e,2266),unit_del(f,2265),unit_del(g,2386),unit_del(h,2373)].
+6951 ty(f20(c1,c2)) = ty(f19(c1,c2)) | sim(c1,f19(c1,c2),f20(c1,c2)).  [resolve(6934,b,201,a)].
+6960 ty(f20(c1,c2)) = ty(f19(c1,c2)).  [resolve(6951,b,237,b),unit_del(b,209)].
+7025 f20(c1,c2) = f19(c1,c2).  [back_rewrite(5194),rewrite([6960(4)]),xx(a)].
+7026 $F.  [para(7025(a,1),237(b,3)),unit_del(a,209),unit_del(b,2315)].
+
+============================== end of proof ==========================

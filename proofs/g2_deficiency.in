@@ -1,8 +1,0 @@
-%% Deficiency (converse direction). Any event belonging to a complex
-%% occurrence has an identity-bearing participant. Hence the events
-%% belonging to no whole are exactly those whose participants are all
-%% resources.   [Proof: (Only) then (Sum(T)) left-to-right.]
-formulas(goals).
-  all x all y ((event(x) & cplx(y) & part(x,y))
-                 -> exists z (ib(z) & participates(z,x))).
-end_of_list.

@@ -1,0 +1,38 @@
+%%%%%%%%%% p1_lemma_objects: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168417 was started by riley on aurora,
+Wed Nov 11 12:08:29 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.01 (+ 0.00) seconds.
+% Length of proof is 16.
+% Level of proof is 5.
+% Maximum clause weight is 10.000.
+% Given clauses 151.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+30 (all d all d2 (leq(d,d2) <-> (all t (ibt(d,t) -> ibt(d2,t))) & (all t1 all t2 (decl(d,t1,t2) -> decl(d2,t1,t2))) & (all t1 all t2 all a (decla(d,t1,t2,a) -> decla(d2,t1,t2,a))) & (nodet(d) -> nodet(d2)))) # label(non_clause).  [assumption].
+34 (all d all d2 all x (leq(d,d2) & ib(d,x) -> ib(d2,x))) # label(non_clause) # label(goal).  [goal].
+37 -ib(x,y) | object(y).  [clausify(17)].
+38 ib(x,y) | -object(y) | -ibt(x,ty(y)).  [clausify(17)].
+83 -leq(x,y) | -ibt(x,z) | ibt(y,z).  [clausify(30)].
+102 leq(c1,c2).  [deny(34)].
+132 -ib(x,y) | ibt(x,ty(y)).  [clausify(17)].
+148 ib(c1,c3).  [deny(34)].
+149 -ib(c2,c3).  [deny(34)].
+151 ib(x,y) | -ibt(x,ty(y)) | -ib(z,y).  [resolve(38,b,37,b)].
+239 -ibt(c1,x) | ibt(c2,x).  [resolve(102,a,83,a)].
+282 ibt(c1,ty(c3)).  [resolve(148,a,132,a)].
+295 ibt(c2,ty(c3)).  [resolve(282,a,239,a)].
+304 -ib(x,c3).  [resolve(295,a,151,b),unit_del(a,149)].
+305 $F.  [resolve(304,a,148,a)].
+
+============================== end of proof ==========================

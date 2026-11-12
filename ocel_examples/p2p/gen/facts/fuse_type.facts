@@ -1,0 +1,9 @@
+goods_receipt	invoice_receipt
+goods_receipt	payment
+invoice_receipt	payment
+purchase_order	goods_receipt
+purchase_order	invoice_receipt
+purchase_order	payment
+purchase_requisition	material
+purchase_requisition	quotation
+quotation	purchase_order

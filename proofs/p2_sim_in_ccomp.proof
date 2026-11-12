@@ -1,0 +1,176 @@
+%%%%%%%%%% p2_sim_in_ccomp: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168567 was started by riley on aurora,
+Wed Nov 11 12:08:47 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 3.20 (+ 0.05) seconds.
+% Length of proof is 154.
+% Level of proof is 44.
+% Maximum clause weight is 27.000.
+% Given clauses 5673.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+36 (all x (object(x) -> ccomp(x,x))) # label(non_clause).  [assumption].
+37 (all x all y (ccomp(x,y) -> ccomp(y,x))) # label(non_clause).  [assumption].
+38 (all x all y all z (ccomp(x,y) & ccomp(y,z) -> ccomp(x,z))) # label(non_clause).  [assumption].
+39 (all x all y (adj(x,y) -> ccomp(x,y))) # label(non_clause).  [assumption].
+41 (all d all x all y (fp(d,x,y) -> adj(x,y))) # label(non_clause).  [assumption].
+42 (all d ((all x (ib(d,x) -> ccomp(x,x))) & (all x all y (ccomp(x,y) -> ccomp(y,x))) & (all x all y all z (ccomp(x,y) & ccomp(y,z) -> ccomp(x,z))) & (all x all y (fp(d,x,y) -> ccomp(x,y))) -> (all x all y (sim(d,x,y) -> ccomp(x,y))))) # label(non_clause).  [assumption].
+43 (all d all x all y (sim(d,x,y) -> ccomp(x,y))) # label(non_clause) # label(goal).  [goal].
+74 -fp(x,y,z) | adj(y,z).  [clausify(41)].
+75 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f29(x),f30(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+76 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f30(x),f31(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+77 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | -ccomp(f29(x),f31(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+78 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f29(x),f30(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+79 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f30(x),f31(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+80 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | -ccomp(f29(x),f31(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+81 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f29(x),f30(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+82 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f30(x),f31(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+83 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | -ccomp(f29(x),f31(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+84 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f29(x),f30(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+85 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f30(x),f31(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+86 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | -ccomp(f29(x),f31(x)) | fp(x,f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+138 -adj(x,y) | ccomp(x,y).  [clausify(39)].
+141 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f29(x),f30(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(75,d,74,a)].
+142 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f30(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(76,d,74,a)].
+143 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | -ccomp(f29(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(77,d,74,a)].
+144 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f29(x),f30(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(78,d,74,a)].
+145 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f30(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(79,d,74,a)].
+146 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | -ccomp(f29(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(80,d,74,a)].
+147 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f29(x),f30(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(81,d,74,a)].
+148 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f30(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(82,d,74,a)].
+149 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | -ccomp(f29(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(83,d,74,a)].
+150 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f29(x),f30(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(84,d,74,a)].
+151 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f30(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(85,d,74,a)].
+152 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | -ccomp(f29(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | adj(f32(x),f33(x)).  [resolve(86,d,74,a)].
+259 -ib(x,y) | object(y).  [clausify(17)].
+279 -object(x) | ccomp(x,x).  [clausify(36)].
+280 -ccomp(x,y) | ccomp(y,x).  [clausify(37)].
+281 -ccomp(x,y) | -ccomp(y,z) | ccomp(x,z).  [clausify(38)].
+282 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f29(x),f30(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+283 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f30(x),f31(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+284 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | -ccomp(f29(x),f31(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+285 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f29(x),f30(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+286 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f30(x),f31(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+287 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | -ccomp(f29(x),f31(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+288 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f29(x),f30(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+289 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f30(x),f31(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+290 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | -ccomp(f29(x),f31(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+291 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f29(x),f30(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+292 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f30(x),f31(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+293 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | -ccomp(f29(x),f31(x)) | -ccomp(f32(x),f33(x)) | -sim(x,y,z) | ccomp(y,z).  [clausify(42)].
+294 sim(c1,c2,c3).  [deny(43)].
+295 -ccomp(c2,c3).  [deny(43)].
+433 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f29(x),f30(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(141,f,138,a)].
+438 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f30(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(142,f,138,a)].
+443 ib(x,f26(x)) | ccomp(f27(x),f28(x)) | -ccomp(f29(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(143,f,138,a)].
+448 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f29(x),f30(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(144,f,138,a)].
+453 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f30(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(145,f,138,a)].
+458 ib(x,f26(x)) | -ccomp(f28(x),f27(x)) | -ccomp(f29(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(146,f,138,a)].
+463 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f29(x),f30(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(147,f,138,a)].
+468 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | ccomp(f30(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(148,f,138,a)].
+473 -ccomp(f26(x),f26(x)) | ccomp(f27(x),f28(x)) | -ccomp(f29(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(149,f,138,a)].
+478 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f29(x),f30(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(150,f,138,a)].
+483 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | ccomp(f30(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(151,f,138,a)].
+488 -ccomp(f26(x),f26(x)) | -ccomp(f28(x),f27(x)) | -ccomp(f29(x),f31(x)) | -sim(x,y,z) | ccomp(y,z) | ccomp(f32(x),f33(x)).  [resolve(152,f,138,a)].
+5144 -ccomp(f26(c1),f26(c1)) | -ccomp(f28(c1),f27(c1)) | -ccomp(f29(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,293,e),unit_del(e,295)].
+5145 -ccomp(f26(c1),f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f30(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,292,e),unit_del(e,295)].
+5146 -ccomp(f26(c1),f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f29(c1),f30(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,291,e),unit_del(e,295)].
+5147 -ccomp(f26(c1),f26(c1)) | ccomp(f27(c1),f28(c1)) | -ccomp(f29(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,290,e),unit_del(e,295)].
+5148 -ccomp(f26(c1),f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,289,e),unit_del(e,295)].
+5149 -ccomp(f26(c1),f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,288,e),unit_del(e,295)].
+5150 ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)) | -ccomp(f29(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,287,e),unit_del(e,295)].
+5151 ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f30(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,286,e),unit_del(e,295)].
+5152 ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f29(c1),f30(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,285,e),unit_del(e,295)].
+5153 ib(c1,f26(c1)) | ccomp(f27(c1),f28(c1)) | -ccomp(f29(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,284,e),unit_del(e,295)].
+5154 ib(c1,f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,283,e),unit_del(e,295)].
+5155 ib(c1,f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | -ccomp(f32(c1),f33(c1)).  [resolve(294,a,282,e),unit_del(e,295)].
+5273 ib(c1,f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(433,d,294,a),unit_del(d,295)].
+5278 ib(c1,f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(438,d,294,a),unit_del(d,295)].
+5283 ib(c1,f26(c1)) | ccomp(f27(c1),f28(c1)) | -ccomp(f29(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(443,d,294,a),unit_del(d,295)].
+5288 ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(448,d,294,a),unit_del(d,295)].
+5293 ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(453,d,294,a),unit_del(d,295)].
+5298 ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)) | -ccomp(f29(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(458,d,294,a),unit_del(d,295)].
+5303 -ccomp(f26(c1),f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(463,d,294,a),unit_del(d,295)].
+5308 -ccomp(f26(c1),f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(468,d,294,a),unit_del(d,295)].
+5313 -ccomp(f26(c1),f26(c1)) | ccomp(f27(c1),f28(c1)) | -ccomp(f29(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(473,d,294,a),unit_del(d,295)].
+5318 -ccomp(f26(c1),f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(478,d,294,a),unit_del(d,295)].
+5323 -ccomp(f26(c1),f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(483,d,294,a),unit_del(d,295)].
+5328 -ccomp(f26(c1),f26(c1)) | -ccomp(f28(c1),f27(c1)) | -ccomp(f29(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(488,d,294,a),unit_del(d,295)].
+6150 ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)) | object(f26(c1)).  [resolve(5273,a,259,a)].
+6151 ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | object(f26(c1)) | ib(c1,f26(c1)).  [resolve(6150,c,5155,d),merge(e),merge(f)].
+6159 ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | object(f26(c1)).  [resolve(6151,d,259,a),merge(d)].
+6161 ccomp(f27(c1),f28(c1)) | object(f26(c1)) | -ccomp(f30(c1),x) | ccomp(f29(c1),x).  [resolve(6159,b,281,a)].
+6345 ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)) | object(f26(c1)).  [resolve(5278,a,259,a)].
+6346 ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | object(f26(c1)) | ib(c1,f26(c1)).  [resolve(6345,c,5154,d),merge(e),merge(f)].
+6354 ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | object(f26(c1)).  [resolve(6346,d,259,a),merge(d)].
+6355 ccomp(f27(c1),f28(c1)) | object(f26(c1)) | ccomp(f29(c1),f31(c1)).  [resolve(6354,b,6161,c),merge(c),merge(d)].
+6657 ib(c1,f26(c1)) | ccomp(f27(c1),f28(c1)) | ccomp(f32(c1),f33(c1)) | object(f26(c1)).  [resolve(5283,c,6355,c),merge(d)].
+6662 ccomp(f27(c1),f28(c1)) | ccomp(f32(c1),f33(c1)) | object(f26(c1)).  [resolve(6657,a,259,a),merge(d)].
+6668 ccomp(f27(c1),f28(c1)) | object(f26(c1)) | ib(c1,f26(c1)) | -ccomp(f29(c1),f31(c1)).  [resolve(6662,b,5153,d),merge(d)].
+6679 ccomp(f27(c1),f28(c1)) | object(f26(c1)) | ib(c1,f26(c1)).  [resolve(6668,d,6355,c),merge(d),merge(e)].
+6684 ccomp(f27(c1),f28(c1)) | object(f26(c1)).  [resolve(6679,c,259,a),merge(c)].
+6692 object(f26(c1)) | ccomp(f28(c1),f27(c1)).  [resolve(6684,a,280,a)].
+6697 object(f26(c1)) | ib(c1,f26(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(6692,b,5288,b)].
+6726 ib(c1,f26(c1)) | ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)) | object(f26(c1)).  [resolve(5293,b,6692,b)].
+6739 object(f26(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(6697,b,259,a),merge(d)].
+6740 object(f26(c1)) | ccomp(f29(c1),f30(c1)) | ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)).  [resolve(6739,c,5152,d),merge(e)].
+6822 ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)) | object(f26(c1)).  [resolve(6726,a,259,a),merge(d)].
+6823 ccomp(f30(c1),f31(c1)) | object(f26(c1)) | ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)).  [resolve(6822,b,5151,d),merge(e)].
+6897 object(f26(c1)) | ccomp(f29(c1),f30(c1)) | ib(c1,f26(c1)).  [resolve(6740,d,6692,b),merge(d)].
+6902 object(f26(c1)) | ccomp(f29(c1),f30(c1)).  [resolve(6897,c,259,a),merge(c)].
+6904 object(f26(c1)) | -ccomp(f30(c1),x) | ccomp(f29(c1),x).  [resolve(6902,b,281,a)].
+6968 ccomp(f30(c1),f31(c1)) | object(f26(c1)) | ib(c1,f26(c1)).  [resolve(6823,d,6692,b),merge(d)].
+6973 ccomp(f30(c1),f31(c1)) | object(f26(c1)).  [resolve(6968,c,259,a),merge(c)].
+6974 object(f26(c1)) | ccomp(f29(c1),f31(c1)).  [resolve(6973,a,6904,b),merge(b)].
+6980 object(f26(c1)) | ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(6974,b,5298,c)].
+7177 object(f26(c1)) | ib(c1,f26(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(6980,c,6692,b),merge(d)].
+7182 object(f26(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(7177,b,259,a),merge(c)].
+7183 object(f26(c1)) | ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)) | -ccomp(f29(c1),f31(c1)).  [resolve(7182,b,5150,d)].
+7189 object(f26(c1)) | ib(c1,f26(c1)) | -ccomp(f28(c1),f27(c1)).  [resolve(7183,d,6974,b),merge(d)].
+7190 object(f26(c1)) | ib(c1,f26(c1)).  [resolve(7189,c,6692,b),merge(c)].
+7195 object(f26(c1)).  [resolve(7190,b,259,a),merge(b)].
+7196 ccomp(f26(c1),f26(c1)).  [resolve(7195,a,279,a)].
+7293 -ccomp(f28(c1),f27(c1)) | -ccomp(f29(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(5328),unit_del(a,7196)].
+7298 -ccomp(f28(c1),f27(c1)) | ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(5323),unit_del(a,7196)].
+7303 -ccomp(f28(c1),f27(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(5318),unit_del(a,7196)].
+7308 ccomp(f27(c1),f28(c1)) | -ccomp(f29(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(5313),unit_del(a,7196)].
+7313 ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(5308),unit_del(a,7196)].
+7318 ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(5303),unit_del(a,7196)].
+7365 ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(5149),unit_del(a,7196)].
+7366 ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(5148),unit_del(a,7196)].
+7367 ccomp(f27(c1),f28(c1)) | -ccomp(f29(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(5147),unit_del(a,7196)].
+7368 -ccomp(f28(c1),f27(c1)) | ccomp(f29(c1),f30(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(5146),unit_del(a,7196)].
+7369 -ccomp(f28(c1),f27(c1)) | ccomp(f30(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(5145),unit_del(a,7196)].
+7370 -ccomp(f28(c1),f27(c1)) | -ccomp(f29(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(5144),unit_del(a,7196)].
+7529 ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f30(c1)).  [resolve(7365,c,7318,c),merge(c),merge(d)].
+7531 ccomp(f27(c1),f28(c1)) | -ccomp(f30(c1),x) | ccomp(f29(c1),x).  [resolve(7529,b,281,a)].
+7837 ccomp(f27(c1),f28(c1)) | ccomp(f30(c1),f31(c1)).  [resolve(7366,c,7313,c),merge(c),merge(d)].
+7838 ccomp(f27(c1),f28(c1)) | ccomp(f29(c1),f31(c1)).  [resolve(7837,b,7531,b),merge(b)].
+7860 ccomp(f27(c1),f28(c1)) | ccomp(f32(c1),f33(c1)).  [resolve(7838,b,7308,b),merge(b)].
+8046 ccomp(f27(c1),f28(c1)) | -ccomp(f29(c1),f31(c1)).  [resolve(7367,c,7860,b),merge(c)].
+8047 ccomp(f27(c1),f28(c1)).  [resolve(8046,b,7838,b),merge(b)].
+8050 ccomp(f28(c1),f27(c1)).  [resolve(8047,a,280,a)].
+8055 -ccomp(f29(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(7370),unit_del(a,8050)].
+8056 ccomp(f30(c1),f31(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(7369),unit_del(a,8050)].
+8057 ccomp(f29(c1),f30(c1)) | -ccomp(f32(c1),f33(c1)).  [back_unit_del(7368),unit_del(a,8050)].
+8081 ccomp(f29(c1),f30(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(7303),unit_del(a,8050)].
+8084 ccomp(f30(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(7298),unit_del(a,8050)].
+8087 -ccomp(f29(c1),f31(c1)) | ccomp(f32(c1),f33(c1)).  [back_unit_del(7293),unit_del(a,8050)].
+8156 ccomp(f29(c1),f30(c1)).  [resolve(8081,b,8057,b),merge(b)].
+8158 -ccomp(f30(c1),x) | ccomp(f29(c1),x).  [resolve(8156,a,281,a)].
+8190 ccomp(f30(c1),f31(c1)).  [resolve(8084,b,8056,b),merge(b)].
+8215 ccomp(f29(c1),f31(c1)).  [resolve(8190,a,8158,a)].
+8236 ccomp(f32(c1),f33(c1)).  [back_unit_del(8087),unit_del(a,8215)].
+8246 $F.  [back_unit_del(8055),unit_del(a,8215),unit_del(b,8236)].
+
+============================== end of proof ==========================

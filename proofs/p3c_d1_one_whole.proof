@@ -1,0 +1,410 @@
+%%%%%%%%%% p3c_d1_one_whole: det(ta,e1)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168901 was started by riley on aurora,
+Wed Nov 11 12:09:30 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.21 (+ 0.02) seconds.
+% Length of proof is 27.
+% Level of proof is 8.
+% Maximum clause weight is 12.000.
+% Given clauses 1283.
+
+
+21 (all t all e (det(t,e) <-> (all x all y (ty(x) = t & participates(x,e) & ty(y) = t & participates(y,e) -> x = y)))) # label(non_clause).  [assumption].
+35 (all x (participates(x,e1) -> x = a | x = b)) # label(non_clause).  [assumption].
+44 det(ta,e1) # label(non_clause) # label(goal).  [goal].
+144 det(x,y) | ty(f4(x,y)) = x.  [clausify(21)].
+145 det(x,y) | participates(f4(x,y),y).  [clausify(21)].
+146 det(x,y) | ty(f5(x,y)) = x.  [clausify(21)].
+147 det(x,y) | participates(f5(x,y),y).  [clausify(21)].
+148 det(x,y) | f5(x,y) != f4(x,y).  [clausify(21)].
+158 -participates(x,e1) | a = x | b = x.  [clausify(35)].
+160 ty(a) = ta.  [assumption].
+161 ta = ty(a).  [copy(160),flip(a)].
+162 ty(b) = tb.  [assumption].
+163 tb = ty(b).  [copy(162),flip(a)].
+166 ta != tb.  [assumption].
+167 ty(a) != ty(b).  [copy(166),rewrite([161(1),163(3)])].
+203 -det(ta,e1).  [deny(44)].
+204 -det(ty(a),e1).  [copy(203),rewrite([161(1)])].
+374 participates(f5(ty(a),e1),e1).  [resolve(204,a,147,a)].
+375 ty(f5(ty(a),e1)) = ty(a).  [resolve(204,a,146,a)].
+376 participates(f4(ty(a),e1),e1).  [resolve(204,a,145,a)].
+377 ty(f4(ty(a),e1)) = ty(a).  [resolve(204,a,144,a)].
+497 f5(ty(a),e1) = a | f5(ty(a),e1) = b.  [resolve(374,a,158,a),flip(a),flip(b)].
+516 f4(ty(a),e1) = a | f4(ty(a),e1) = b.  [resolve(376,a,158,a),flip(a),flip(b)].
+3928 f5(ty(a),e1) = b | f4(ty(a),e1) != a.  [para(497(a,1),148(b,1)),flip(c),unit_del(b,204)].
+6214 f5(ty(a),e1) = b | f4(ty(a),e1) = b.  [resolve(3928,b,516,a)].
+6387 f4(ty(a),e1) = b.  [para(6214(a,1),375(a,1,1)),flip(b),unit_del(b,167)].
+6761 $F.  [back_rewrite(377),rewrite([6387(4)]),flip(a),unit_del(a,167)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3c_d1_one_whole: det(tb,e1)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168903 was started by riley on aurora,
+Wed Nov 11 12:09:30 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.10 (+ 0.01) seconds.
+% Length of proof is 27.
+% Level of proof is 8.
+% Maximum clause weight is 12.000.
+% Given clauses 736.
+
+
+21 (all t all e (det(t,e) <-> (all x all y (ty(x) = t & participates(x,e) & ty(y) = t & participates(y,e) -> x = y)))) # label(non_clause).  [assumption].
+35 (all x (participates(x,e1) -> x = a | x = b)) # label(non_clause).  [assumption].
+44 det(tb,e1) # label(non_clause) # label(goal).  [goal].
+144 det(x,y) | ty(f4(x,y)) = x.  [clausify(21)].
+145 det(x,y) | participates(f4(x,y),y).  [clausify(21)].
+146 det(x,y) | ty(f5(x,y)) = x.  [clausify(21)].
+147 det(x,y) | participates(f5(x,y),y).  [clausify(21)].
+148 det(x,y) | f5(x,y) != f4(x,y).  [clausify(21)].
+158 -participates(x,e1) | a = x | b = x.  [clausify(35)].
+160 ty(a) = ta.  [assumption].
+161 ta = ty(a).  [copy(160),flip(a)].
+162 ty(b) = tb.  [assumption].
+163 tb = ty(b).  [copy(162),flip(a)].
+166 ta != tb.  [assumption].
+167 ty(a) != ty(b).  [copy(166),rewrite([161(1),163(3)])].
+205 -det(tb,e1).  [deny(44)].
+206 -det(ty(b),e1).  [copy(205),rewrite([163(1)])].
+377 participates(f5(ty(b),e1),e1).  [resolve(206,a,147,a)].
+378 ty(f5(ty(b),e1)) = ty(b).  [resolve(206,a,146,a)].
+379 participates(f4(ty(b),e1),e1).  [resolve(206,a,145,a)].
+380 ty(f4(ty(b),e1)) = ty(b).  [resolve(206,a,144,a)].
+500 f5(ty(b),e1) = a | f5(ty(b),e1) = b.  [resolve(377,a,158,a),flip(a),flip(b)].
+519 f4(ty(b),e1) = a | f4(ty(b),e1) = b.  [resolve(379,a,158,a),flip(a),flip(b)].
+3847 f5(ty(b),e1) = b.  [para(500(a,1),378(a,1,1)),unit_del(b,167)].
+3850 f4(ty(b),e1) != b.  [para(3847(a,1),148(b,1)),flip(b),unit_del(a,206)].
+3855 f4(ty(b),e1) = a.  [back_unit_del(519),unit_del(b,3850)].
+3907 $F.  [back_rewrite(380),rewrite([3855(4)]),unit_del(a,167)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3c_d1_one_whole: det(tb,e2)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168905 was started by riley on aurora,
+Wed Nov 11 12:09:30 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.11 (+ 0.01) seconds.
+% Length of proof is 27.
+% Level of proof is 8.
+% Maximum clause weight is 12.000.
+% Given clauses 742.
+
+
+21 (all t all e (det(t,e) <-> (all x all y (ty(x) = t & participates(x,e) & ty(y) = t & participates(y,e) -> x = y)))) # label(non_clause).  [assumption].
+36 (all x (participates(x,e2) -> x = b | x = c)) # label(non_clause).  [assumption].
+44 det(tb,e2) # label(non_clause) # label(goal).  [goal].
+144 det(x,y) | ty(f4(x,y)) = x.  [clausify(21)].
+145 det(x,y) | participates(f4(x,y),y).  [clausify(21)].
+146 det(x,y) | ty(f5(x,y)) = x.  [clausify(21)].
+147 det(x,y) | participates(f5(x,y),y).  [clausify(21)].
+148 det(x,y) | f5(x,y) != f4(x,y).  [clausify(21)].
+159 -participates(x,e2) | b = x | c = x.  [clausify(36)].
+162 ty(b) = tb.  [assumption].
+163 tb = ty(b).  [copy(162),flip(a)].
+164 ty(c) = tc.  [assumption].
+165 tc = ty(c).  [copy(164),flip(a)].
+170 tb != tc.  [assumption].
+171 ty(c) != ty(b).  [copy(170),rewrite([163(1),165(3)]),flip(a)].
+207 -det(tb,e2).  [deny(44)].
+208 -det(ty(b),e2).  [copy(207),rewrite([163(1)])].
+380 participates(f5(ty(b),e2),e2).  [resolve(208,a,147,a)].
+381 ty(f5(ty(b),e2)) = ty(b).  [resolve(208,a,146,a)].
+382 participates(f4(ty(b),e2),e2).  [resolve(208,a,145,a)].
+383 ty(f4(ty(b),e2)) = ty(b).  [resolve(208,a,144,a)].
+501 f5(ty(b),e2) = b | f5(ty(b),e2) = c.  [resolve(380,a,159,a),flip(a),flip(b)].
+518 f4(ty(b),e2) = b | f4(ty(b),e2) = c.  [resolve(382,a,159,a),flip(a),flip(b)].
+3866 f5(ty(b),e2) = b.  [para(501(b,1),381(a,1,1)),unit_del(b,171)].
+3869 f4(ty(b),e2) != b.  [para(3866(a,1),148(b,1)),flip(b),unit_del(a,208)].
+3874 f4(ty(b),e2) = c.  [back_unit_del(518),unit_del(a,3869)].
+3926 $F.  [back_rewrite(383),rewrite([3874(4)]),unit_del(a,171)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3c_d1_one_whole: det(tc,e2)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168920 was started by riley on aurora,
+Wed Nov 11 12:09:31 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.22 (+ 0.02) seconds.
+% Length of proof is 27.
+% Level of proof is 8.
+% Maximum clause weight is 12.000.
+% Given clauses 1291.
+
+
+21 (all t all e (det(t,e) <-> (all x all y (ty(x) = t & participates(x,e) & ty(y) = t & participates(y,e) -> x = y)))) # label(non_clause).  [assumption].
+36 (all x (participates(x,e2) -> x = b | x = c)) # label(non_clause).  [assumption].
+44 det(tc,e2) # label(non_clause) # label(goal).  [goal].
+144 det(x,y) | ty(f4(x,y)) = x.  [clausify(21)].
+145 det(x,y) | participates(f4(x,y),y).  [clausify(21)].
+146 det(x,y) | ty(f5(x,y)) = x.  [clausify(21)].
+147 det(x,y) | participates(f5(x,y),y).  [clausify(21)].
+148 det(x,y) | f5(x,y) != f4(x,y).  [clausify(21)].
+159 -participates(x,e2) | b = x | c = x.  [clausify(36)].
+162 ty(b) = tb.  [assumption].
+163 tb = ty(b).  [copy(162),flip(a)].
+164 ty(c) = tc.  [assumption].
+165 tc = ty(c).  [copy(164),flip(a)].
+170 tb != tc.  [assumption].
+171 ty(c) != ty(b).  [copy(170),rewrite([163(1),165(3)]),flip(a)].
+209 -det(tc,e2).  [deny(44)].
+210 -det(ty(c),e2).  [copy(209),rewrite([165(1)])].
+383 participates(f5(ty(c),e2),e2).  [resolve(210,a,147,a)].
+384 ty(f5(ty(c),e2)) = ty(c).  [resolve(210,a,146,a)].
+385 participates(f4(ty(c),e2),e2).  [resolve(210,a,145,a)].
+386 ty(f4(ty(c),e2)) = ty(c).  [resolve(210,a,144,a)].
+504 f5(ty(c),e2) = b | f5(ty(c),e2) = c.  [resolve(383,a,159,a),flip(a),flip(b)].
+521 f4(ty(c),e2) = b | f4(ty(c),e2) = c.  [resolve(385,a,159,a),flip(a),flip(b)].
+3971 f5(ty(c),e2) = b | f4(ty(c),e2) != c.  [para(504(b,1),148(b,1)),flip(c),unit_del(b,210)].
+6297 f5(ty(c),e2) = b | f4(ty(c),e2) = b.  [resolve(3971,b,521,b)].
+6471 f4(ty(c),e2) = b.  [para(6297(a,1),384(a,1,1)),flip(b),unit_del(b,171)].
+6849 $F.  [back_rewrite(386),rewrite([6471(4)]),flip(a),unit_del(a,171)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3c_d1_one_whole: fp(d1,a,b)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168922 was started by riley on aurora,
+Wed Nov 11 12:09:31 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.03 (+ 0.00) seconds.
+% Length of proof is 39.
+% Level of proof is 7.
+% Maximum clause weight is 31.000.
+% Given clauses 300.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+18 (all d all t1 all t2 all e (app(d,t1,t2,e) <-> decl(d,t1,t2) | (exists a (decla(d,t1,t2,a) & occurrence_of(e,a))))) # label(non_clause).  [assumption].
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+37 (all t (ibt(d1,t) <-> t = ta | t = tb | t = tc)) # label(non_clause).  [assumption].
+38 (all t1 all t2 (decl(d1,t1,t2) <-> t1 = ta & t2 = tb | t1 = tb & t2 = tc)) # label(non_clause).  [assumption].
+44 fp(d1,a,b) # label(non_clause) # label(goal).  [goal].
+48 ib(x,y) | -object(y) | -ibt(x,ty(y)).  [clausify(17)].
+49 object(a).  [assumption].
+50 object(b).  [assumption].
+129 app(x,y,z,u) | -decl(x,y,z).  [clausify(18)].
+146 fp(x,y,z) | -ib(x,y) | -ib(x,z) | -participates(y,u) | -participates(z,u) | -app(x,ty(y),ty(z),u) | -det(ty(y),u) | -det(ty(z),u).  [clausify(22)].
+154 participates(a,e1).  [assumption].
+155 participates(b,e1).  [assumption].
+160 ty(a) = ta.  [assumption].
+161 ta = ty(a).  [copy(160),flip(a)].
+162 ty(b) = tb.  [assumption].
+163 tb = ty(b).  [copy(162),flip(a)].
+174 ibt(d1,x) | ta != x.  [clausify(37)].
+175 ibt(d1,x) | ty(a) != x.  [copy(174),rewrite([161(3)])].
+176 ibt(d1,x) | tb != x.  [clausify(37)].
+177 ibt(d1,x) | ty(b) != x.  [copy(176),rewrite([163(3)])].
+188 decl(d1,x,y) | ta != x | tb != y.  [clausify(38)].
+189 decl(d1,x,y) | ty(a) != x | ty(b) != y.  [copy(188),rewrite([161(3),163(6)])].
+203 det(ta,e1).  [assumption].
+204 det(ty(a),e1).  [copy(203),rewrite([161(1)])].
+205 det(tb,e1).  [assumption].
+206 det(ty(b),e1).  [copy(205),rewrite([163(1)])].
+211 -fp(d1,a,b).  [deny(44)].
+217 ib(x,a) | -ibt(x,ty(a)).  [resolve(49,a,48,b)].
+219 ib(x,b) | -ibt(x,ty(b)).  [resolve(50,a,48,b)].
+357 ibt(d1,ty(a)).  [resolve(175,b,161,a(flip)),rewrite([161(2)])].
+358 ibt(d1,ty(b)).  [resolve(177,b,163,a(flip)),rewrite([163(2)])].
+360 decl(d1,ty(a),x) | ty(b) != x.  [resolve(189,b,161,a(flip)),rewrite([161(2)])].
+418 ib(d1,a).  [resolve(357,a,217,b)].
+428 ib(d1,b).  [resolve(358,a,219,b)].
+822 decl(d1,ty(a),ty(b)).  [resolve(360,b,163,a(flip)),rewrite([163(4)])].
+831 app(d1,ty(a),ty(b),x).  [resolve(822,a,129,b)].
+935 -participates(a,x) | -participates(b,x) | -det(ty(a),x) | -det(ty(b),x).  [resolve(831,a,146,f),unit_del(a,211),unit_del(b,418),unit_del(c,428)].
+939 $F.  [resolve(935,c,204,a),unit_del(a,154),unit_del(b,155),unit_del(c,206)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3c_d1_one_whole: fp(d1,b,c)  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168924 was started by riley on aurora,
+Wed Nov 11 12:09:31 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.03 (+ 0.00) seconds.
+% Length of proof is 36.
+% Level of proof is 7.
+% Maximum clause weight is 31.000.
+% Given clauses 304.
+
+
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+18 (all d all t1 all t2 all e (app(d,t1,t2,e) <-> decl(d,t1,t2) | (exists a (decla(d,t1,t2,a) & occurrence_of(e,a))))) # label(non_clause).  [assumption].
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+37 (all t (ibt(d1,t) <-> t = ta | t = tb | t = tc)) # label(non_clause).  [assumption].
+38 (all t1 all t2 (decl(d1,t1,t2) <-> t1 = ta & t2 = tb | t1 = tb & t2 = tc)) # label(non_clause).  [assumption].
+44 fp(d1,b,c) # label(non_clause) # label(goal).  [goal].
+48 ib(x,y) | -object(y) | -ibt(x,ty(y)).  [clausify(17)].
+51 object(c).  [assumption].
+129 app(x,y,z,u) | -decl(x,y,z).  [clausify(18)].
+139 -fp(x,y,z) | ib(x,z).  [clausify(22)].
+146 fp(x,y,z) | -ib(x,y) | -ib(x,z) | -participates(y,u) | -participates(z,u) | -app(x,ty(y),ty(z),u) | -det(ty(y),u) | -det(ty(z),u).  [clausify(22)].
+156 participates(b,e2).  [assumption].
+157 participates(c,e2).  [assumption].
+162 ty(b) = tb.  [assumption].
+163 tb = ty(b).  [copy(162),flip(a)].
+164 ty(c) = tc.  [assumption].
+165 tc = ty(c).  [copy(164),flip(a)].
+178 ibt(d1,x) | tc != x.  [clausify(37)].
+179 ibt(d1,x) | ty(c) != x.  [copy(178),rewrite([165(3)])].
+190 decl(d1,x,y) | tb != x | tc != y.  [clausify(38)].
+191 decl(d1,x,y) | ty(b) != x | ty(c) != y.  [copy(190),rewrite([163(3),165(6)])].
+207 det(tb,e2).  [assumption].
+208 det(ty(b),e2).  [copy(207),rewrite([163(1)])].
+209 det(tc,e2).  [assumption].
+210 det(ty(c),e2).  [copy(209),rewrite([165(1)])].
+211 fp(d1,a,b).  [assumption].
+212 -fp(d1,b,c).  [deny(44)].
+222 ib(x,c) | -ibt(x,ty(c)).  [resolve(51,a,48,b)].
+360 ibt(d1,ty(c)).  [resolve(179,b,165,a(flip)),rewrite([165(2)])].
+363 decl(d1,ty(b),x) | ty(c) != x.  [resolve(191,b,163,a(flip)),rewrite([163(2)])].
+378 ib(d1,b).  [resolve(211,a,139,a)].
+442 ib(d1,c).  [resolve(360,a,222,b)].
+916 decl(d1,ty(b),ty(c)).  [resolve(363,b,165,a(flip)),rewrite([165(4)])].
+925 app(d1,ty(b),ty(c),x).  [resolve(916,a,129,b)].
+949 -participates(b,x) | -participates(c,x) | -det(ty(b),x) | -det(ty(c),x).  [resolve(925,a,146,f),unit_del(a,212),unit_del(b,378),unit_del(c,442)].
+958 $F.  [resolve(949,d,210,a),unit_del(a,156),unit_del(b,157),unit_del(c,208)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3c_d1_one_whole: part(e1,sg(d1,a))  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168926 was started by riley on aurora,
+Wed Nov 11 12:09:31 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.02 (+ 0.00) seconds.
+% Length of proof is 20.
+% Level of proof is 5.
+% Maximum clause weight is 24.000.
+% Given clauses 250.
+
+
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+23 (all d all x all y (fp(d,x,y) -> sg(d,x) = sg(d,y))) # label(non_clause).  [assumption].
+24 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (ib(d,o2) & sg(d,o2) = sg(d,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+34 (all e (event(e) <-> e = e1 | e = e2)) # label(non_clause).  [assumption].
+44 part(e1,sg(d1,a)) # label(non_clause) # label(goal).  [goal].
+60 event(x) | e1 != x.  [clausify(34)].
+65 -ib(x,y) | -event(z) | part(z,sg(x,y)) | -ib(x,u) | sg(x,y) != sg(x,u) | -participates(u,z).  [clausify(24)].
+79 -fp(x,y,z) | ib(x,z).  [clausify(22)].
+86 -fp(x,y,z) | sg(x,z) = sg(x,y).  [clausify(23)].
+88 fp(d1,a,b).  [assumption].
+157 participates(b,e1).  [assumption].
+213 -part(e1,sg(d1,a)).  [deny(44)].
+233 e1 != x | -ib(y,z) | part(x,sg(y,z)) | -ib(y,u) | sg(y,z) != sg(y,u) | -participates(u,x).  [resolve(60,a,65,b)].
+281 ib(d1,b).  [resolve(88,a,79,a)].
+289 sg(d1,b) = sg(d1,a).  [resolve(88,a,86,a)].
+290 sg(d1,a) = sg(d1,b).  [copy(289),flip(a)].
+379 -part(e1,sg(d1,b)).  [back_rewrite(213),rewrite([290(4)])].
+415 -ib(x,y) | part(e1,sg(x,y)) | -ib(x,b) | sg(x,b) != sg(x,y).  [resolve(233,f,157,a),flip(e),xx(a)].
+419 -ib(x,b) | part(e1,sg(x,b)).  [factor(415,a,c),xx(c)].
+688 $F.  [resolve(419,a,281,a),unit_del(a,379)].
+
+============================== end of proof ==========================
+
+%%%%%%%%%% p3c_d1_one_whole: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168928 was started by riley on aurora,
+Wed Nov 11 12:09:31 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.03 (+ 0.00) seconds.
+% Length of proof is 24.
+% Level of proof is 5.
+% Maximum clause weight is 24.000.
+% Given clauses 315.
+
+
+22 (all d all x all y (fp(d,x,y) <-> ib(d,x) & ib(d,y) & (exists e (participates(x,e) & participates(y,e) & app(d,ty(x),ty(y),e) & (nodet(d) | det(ty(x),e) & det(ty(y),e)))))) # label(non_clause).  [assumption].
+23 (all d all x all y (fp(d,x,y) -> sg(d,x) = sg(d,y))) # label(non_clause).  [assumption].
+24 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (ib(d,o2) & sg(d,o2) = sg(d,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+34 (all e (event(e) <-> e = e1 | e = e2)) # label(non_clause).  [assumption].
+44 part(e1,sg(d1,a)) & part(e2,sg(d1,a)) # label(non_clause) # label(goal).  [goal].
+65 -ib(x,y) | -event(z) | part(z,sg(x,y)) | -ib(x,u) | sg(x,y) != sg(x,u) | -participates(u,z).  [clausify(24)].
+67 event(x) | e2 != x.  [clausify(34)].
+79 -fp(x,y,z) | ib(x,z).  [clausify(22)].
+86 -fp(x,y,z) | sg(x,z) = sg(x,y).  [clausify(23)].
+88 fp(d1,a,b).  [assumption].
+89 fp(d1,b,c).  [assumption].
+159 participates(c,e2).  [assumption].
+213 part(e1,sg(d1,a)).  [assumption].
+214 -part(e1,sg(d1,a)) | -part(e2,sg(d1,a)).  [deny(44)].
+215 -part(e2,sg(d1,a)).  [copy(214),unit_del(a,213)].
+241 e2 != x | -ib(y,z) | part(x,sg(y,z)) | -ib(y,u) | sg(y,z) != sg(y,u) | -participates(u,x).  [resolve(67,a,65,b)].
+291 sg(d1,b) = sg(d1,a).  [resolve(88,a,86,a)].
+292 sg(d1,a) = sg(d1,b).  [copy(291),flip(a)].
+294 ib(d1,c).  [resolve(89,a,79,a)].
+302 sg(d1,c) = sg(d1,b).  [resolve(89,a,86,a)].
+381 -part(e2,sg(d1,b)).  [back_rewrite(215),rewrite([292(4)])].
+427 -ib(x,y) | part(e2,sg(x,y)) | -ib(x,c) | sg(x,c) != sg(x,y).  [resolve(241,f,159,a),flip(e),xx(a)].
+429 -ib(x,c) | part(e2,sg(x,c)).  [factor(427,a,c),xx(c)].
+1062 $F.  [resolve(429,a,294,a),rewrite([302(4)]),unit_del(a,381)].
+
+============================== end of proof ==========================

@@ -1,1 +1,5 @@
-ocel_examples/order_mgmt/mapped_log.duckdb
+ocel_examples/*/mapped_log.duckdb
+proofs/legacy/
+*.pdf
+*.tex
+__pycache__/

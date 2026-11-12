@@ -1,0 +1,5 @@
+%% Proposition 1, proof step.  If D below D', every (Fuse) instance of D is
+%% one of D', with unchanged determinacy conditions (det_T is per type).
+formulas(goals).
+  all d all d2 all x all y ((leq(d,d2) & fp(d,x,y)) -> fp(d2,x,y)).
+end_of_list.

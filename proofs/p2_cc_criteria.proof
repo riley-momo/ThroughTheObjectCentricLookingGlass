@@ -1,0 +1,112 @@
+%%%%%%%%%% p2_cc_criteria: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168836 was started by riley on aurora,
+Wed Nov 11 12:09:28 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.88 (+ 0.02) seconds.
+% Length of proof is 90.
+% Level of proof is 33.
+% Maximum clause weight is 21.000.
+% Given clauses 2335.
+
+
+1 (all x all e (participates(x,e) -> object(x) & occurrence(e))) # label(non_clause).  [assumption].
+17 (all d all x (ib(d,x) <-> object(x) & ibt(d,ty(x)))) # label(non_clause).  [assumption].
+24 (all d all o all e (ib(d,o) & event(e) -> (part(e,sg(d,o)) <-> (exists o2 (ib(d,o2) & sg(d,o2) = sg(d,o) & participates(o2,e)))))) # label(non_clause).  [assumption].
+34 (all x all y (adj(x,y) <-> object(x) & object(y) & (exists e (participates(x,e) & participates(y,e))))) # label(non_clause).  [assumption].
+37 (all x all y (ccomp(x,y) -> ccomp(y,x))) # label(non_clause).  [assumption].
+38 (all x all y all z (ccomp(x,y) & ccomp(y,z) -> ccomp(x,z))) # label(non_clause).  [assumption].
+39 (all x all y (adj(x,y) -> ccomp(x,y))) # label(non_clause).  [assumption].
+40 (all d (iscc(d) <-> (all t ibt(d,t)) & (all t1 all t2 decl(d,t1,t2)) & (all t1 all t2 all a decla(d,t1,t2,a)) & nodet(d))) # label(non_clause).  [assumption].
+41 (all d all e (event(e) -> (deficient(d,e) <-> -(exists x (participates(x,e) & ibt(d,ty(x))))))) # label(non_clause).  [assumption].
+42 (all d all e (event(e) & convergent(d,e) -> (exists x exists y (ib(d,x) & ib(d,y) & participates(x,e) & participates(y,e) & -sim(d,x,y))))) # label(non_clause).  [assumption].
+43 (all d (iscc(d) -> (all x all y (ccomp(x,y) -> sim(d,x,y))))) # label(non_clause).  [assumption].
+44 (all d all e (iscc(d) & event(e) -> -convergent(d,e) & (deficient(d,e) <-> -(exists x participates(x,e))))) # label(non_clause) # label(goal).  [goal].
+75 event(c2).  [deny(44)].
+78 -ib(x,y) | -event(z) | -part(z,sg(x,y)) | participates(f7(x,y,z),z).  [clausify(24)].
+79 -ib(x,y) | -event(z) | part(z,sg(x,y)) | -ib(x,u) | sg(x,y) != sg(x,u) | -participates(u,z).  [clausify(24)].
+80 -event(x) | -deficient(y,x) | -participates(z,x) | -ibt(y,ty(z)).  [clausify(41)].
+81 -event(x) | deficient(y,x) | participates(f26(y,x),x).  [clausify(41)].
+85 -event(x) | -convergent(y,x) | participates(f27(y,x),x).  [clausify(42)].
+86 -event(x) | -convergent(y,x) | participates(f28(y,x),x).  [clausify(42)].
+87 -event(x) | -convergent(y,x) | -sim(y,f27(y,x),f28(y,x)).  [clausify(42)].
+121 adj(x,y) | -object(x) | -object(y) | -participates(x,z) | -participates(y,z).  [clausify(34)].
+126 -adj(x,y) | ccomp(x,y).  [clausify(39)].
+128 -iscc(x) | ibt(x,y).  [clausify(40)].
+132 -iscc(x) | -ccomp(y,z) | sim(x,y,z).  [clausify(43)].
+133 iscc(c1).  [deny(44)].
+194 -participates(x,y) | object(x).  [clausify(1)].
+210 ib(x,y) | -object(y) | -ibt(x,ty(y)).  [clausify(17)].
+238 -ccomp(x,y) | ccomp(y,x).  [clausify(37)].
+239 -ccomp(x,y) | -ccomp(y,z) | ccomp(x,z).  [clausify(38)].
+240 convergent(c1,c2) | deficient(c1,c2) | -participates(x,c2).  [deny(44)].
+241 convergent(c1,c2) | -deficient(c1,c2) | participates(c3,c2).  [deny(44)].
+257 -ib(x,y) | -part(c2,sg(x,y)) | participates(f7(x,y,c2),c2).  [resolve(75,a,78,b)].
+258 -ib(x,y) | part(c2,sg(x,y)) | -ib(x,z) | sg(x,y) != sg(x,z) | -participates(z,c2).  [resolve(75,a,79,b)].
+259 -deficient(x,c2) | -participates(y,c2) | -ibt(x,ty(y)).  [resolve(75,a,80,a)].
+260 deficient(x,c2) | participates(f26(x,c2),c2).  [resolve(75,a,81,a)].
+264 -convergent(x,c2) | participates(f27(x,c2),c2).  [resolve(75,a,85,a)].
+265 -convergent(x,c2) | participates(f28(x,c2),c2).  [resolve(75,a,86,a)].
+266 -convergent(x,c2) | -sim(x,f27(x,c2),f28(x,c2)).  [resolve(75,a,87,a)].
+326 ccomp(x,y) | -object(x) | -object(y) | -participates(x,z) | -participates(y,z).  [resolve(126,a,121,a)].
+327 ibt(c1,x).  [resolve(133,a,128,a)].
+330 -ccomp(x,y) | sim(c1,x,y).  [resolve(133,a,132,a)].
+1175 -ib(x,y) | part(c2,sg(x,y)) | -participates(y,c2).  [factor(258,a,c),xx(c)].
+2484 participates(f26(x,c2),c2) | -participates(y,c2) | -ibt(x,ty(y)).  [resolve(260,a,259,a)].
+2485 participates(f26(c1,c2),c2) | convergent(c1,c2) | participates(c3,c2).  [resolve(260,a,241,b)].
+2495 ib(c1,x) | -object(x).  [resolve(327,a,210,c)].
+2606 participates(f26(c1,c2),c2) | participates(c3,c2) | participates(f28(c1,c2),c2).  [resolve(2485,b,265,a)].
+2934 participates(f26(c1,c2),c2) | participates(c3,c2) | participates(f26(x,c2),c2) | -ibt(x,ty(f28(c1,c2))).  [resolve(2606,c,2484,b)].
+2948 participates(f26(c1,c2),c2) | participates(c3,c2).  [factor(2934,a,c),unit_del(c,327)].
+2965 participates(c3,c2) | convergent(c1,c2) | deficient(c1,c2).  [resolve(2948,a,240,c)].
+3011 participates(c3,c2) | convergent(c1,c2).  [resolve(2965,c,241,b),merge(c),merge(d)].
+3020 participates(c3,c2) | participates(f28(c1,c2),c2).  [resolve(3011,b,265,a)].
+3021 participates(c3,c2) | participates(f27(c1,c2),c2).  [resolve(3011,b,264,a)].
+3041 participates(c3,c2) | ccomp(f28(c1,c2),x) | -object(f28(c1,c2)) | -object(x) | -participates(x,c2).  [resolve(3020,b,326,d)].
+3046 participates(c3,c2) | object(f28(c1,c2)).  [resolve(3020,b,194,a)].
+3064 object(f28(c1,c2)) | convergent(c1,c2) | deficient(c1,c2).  [resolve(3046,a,240,c)].
+3106 participates(c3,c2) | object(f27(c1,c2)).  [resolve(3021,b,194,a)].
+3124 object(f27(c1,c2)) | convergent(c1,c2) | deficient(c1,c2).  [resolve(3106,a,240,c)].
+3363 object(f28(c1,c2)) | convergent(c1,c2) | -participates(x,c2).  [resolve(3064,c,259,a),unit_del(d,327)].
+3385 object(f27(c1,c2)) | convergent(c1,c2) | -participates(x,c2).  [resolve(3124,c,259,a),unit_del(d,327)].
+3665 object(f28(c1,c2)) | convergent(c1,c2).  [resolve(3363,c,3046,a),merge(c)].
+3674 object(f28(c1,c2)) | participates(f28(c1,c2),c2).  [resolve(3665,b,265,a)].
+3691 object(f28(c1,c2)).  [resolve(3674,b,194,a),merge(b)].
+3703 participates(c3,c2) | ccomp(f28(c1,c2),x) | -object(x) | -participates(x,c2).  [back_unit_del(3041),unit_del(c,3691)].
+3764 object(f27(c1,c2)) | convergent(c1,c2).  [resolve(3385,c,3106,a),merge(c)].
+3772 object(f27(c1,c2)) | participates(f27(c1,c2),c2).  [resolve(3764,b,264,a)].
+3804 object(f27(c1,c2)).  [resolve(3772,b,194,a),merge(b)].
+5122 participates(c3,c2) | ccomp(f28(c1,c2),f27(c1,c2)).  [resolve(3703,d,3021,b),merge(d),unit_del(c,3804)].
+5127 participates(c3,c2) | ccomp(f27(c1,c2),f28(c1,c2)).  [resolve(5122,b,238,a)].
+5132 participates(c3,c2) | sim(c1,f27(c1,c2),f28(c1,c2)).  [resolve(5127,b,330,a)].
+5162 participates(c3,c2) | -convergent(c1,c2).  [resolve(5132,b,266,b)].
+5165 participates(c3,c2).  [resolve(5162,b,3011,b),merge(b)].
+5178 ccomp(c3,x) | -object(c3) | -object(x) | -participates(x,c2).  [resolve(5165,a,326,d)].
+5183 convergent(c1,c2) | deficient(c1,c2).  [resolve(5165,a,240,c)].
+5184 object(c3).  [resolve(5165,a,194,a)].
+5191 ccomp(c3,x) | -object(x) | -participates(x,c2).  [back_unit_del(5178),unit_del(b,5184)].
+5193 ib(c1,c3).  [resolve(5184,a,2495,b)].
+5216 part(c2,sg(c1,c3)).  [resolve(5193,a,1175,a),unit_del(b,5165)].
+5245 participates(f7(c1,c3,c2),c2).  [resolve(5216,a,257,b),unit_del(a,5193)].
+5280 convergent(c1,c2) | -participates(x,c2).  [resolve(5183,b,259,a),unit_del(c,327)].
+5328 convergent(c1,c2).  [resolve(5280,b,5245,a)].
+5333 participates(f28(c1,c2),c2).  [resolve(5328,a,265,a)].
+5334 participates(f27(c1,c2),c2).  [resolve(5328,a,264,a)].
+5524 ccomp(c3,f27(c1,c2)).  [resolve(5191,c,5334,a),unit_del(b,3804)].
+5525 ccomp(c3,f28(c1,c2)).  [resolve(5191,c,5333,a),unit_del(b,3691)].
+5529 -ccomp(x,c3) | ccomp(x,f27(c1,c2)).  [resolve(5524,a,239,b)].
+5535 ccomp(f28(c1,c2),c3).  [resolve(5525,a,238,a)].
+6081 ccomp(f28(c1,c2),f27(c1,c2)).  [resolve(5529,a,5535,a)].
+6109 ccomp(f27(c1,c2),f28(c1,c2)).  [resolve(6081,a,238,a)].
+6113 sim(c1,f27(c1,c2),f28(c1,c2)).  [resolve(6109,a,330,a)].
+6290 $F.  [resolve(6113,a,266,b),unit_del(a,5328)].
+
+============================== end of proof ==========================

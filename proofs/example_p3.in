@@ -1,0 +1,22 @@
+%% Minimal example for Proposition 3.  Objects a:A, b:B, c:C;
+%% e1 = {a,b},  e2 = {b,c}.
+%%   D1 (d1): B = {A,B,C}, TypeConn(A,B), TypeConn(B,C)   -> one whole
+%%   D2 (d2): B = {A,C}, no pairs                         -> two wholes
+formulas(assumptions).
+  all e (event(e) <-> e = e1 | e = e2).
+  object(a).  object(b).  object(c).
+  participates(a,e1).  participates(b,e1).  participates(b,e2).  participates(c,e2).
+  all x (participates(x,e1) -> x = a | x = b).  % closure, per event
+  all x (participates(x,e2) -> x = b | x = c).
+  ty(a) = ta.  ty(b) = tb.  ty(c) = tc.  ta != tb.  ta != tc.  tb != tc.
+
+  all t (ibt(d1,t) <-> t = ta | t = tb | t = tc).
+  all t1 all t2 (decl(d1,t1,t2) <-> (t1 = ta & t2 = tb) | (t1 = tb & t2 = tc)).
+  all t1 all t2 all p -decla(d1,t1,t2,p).
+  -nodet(d1).
+
+  all t (ibt(d2,t) <-> t = ta | t = tc).
+  all t1 all t2 -decl(d2,t1,t2).
+  all t1 all t2 all p -decla(d2,t1,t2,p).
+  -nodet(d2).
+end_of_list.

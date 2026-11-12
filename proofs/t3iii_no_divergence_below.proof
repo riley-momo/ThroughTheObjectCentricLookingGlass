@@ -1,0 +1,34 @@
+%%%%%%%%%% t3iii_no_divergence_below: main goal  [strategy: auto]
+============================== prooftrans ============================
+Prover9 (64) version 2009-11A, November 2009.
+Process 168540 was started by riley on aurora,
+Wed Nov 11 12:08:46 2026
+The command was "prover9".
+============================== end of head ===========================
+
+============================== end of input ==========================
+
+============================== PROOF =================================
+
+% -------- Comments from original proof --------
+% Proof 1 at 0.01 (+ 0.00) seconds.
+% Length of proof is 12.
+% Level of proof is 3.
+% Maximum clause weight is 8.000.
+% Given clauses 151.
+
+
+33 (all d all ds (diverges(d,ds) <-> (exists x exists y (ib(d,x) & ib(d,y) & ib(ds,x) & ib(ds,y) & sim(d,x,y) & -sim(ds,x,y))))) # label(non_clause).  [assumption].
+34 (all d all d2 (leq(d,d2) -> (all x all y (sim(d,x,y) -> sim(d2,x,y))))) # label(non_clause).  [assumption].
+35 (all d all ds (leq(d,ds) -> -diverges(d,ds))) # label(non_clause) # label(goal).  [goal].
+103 -leq(x,y) | -sim(x,z,u) | sim(y,z,u).  [clausify(34)].
+104 leq(c1,c2).  [deny(35)].
+119 -diverges(x,y) | sim(x,f17(x,y),f18(x,y)).  [clausify(33)].
+120 -diverges(x,y) | -sim(y,f17(x,y),f18(x,y)).  [clausify(33)].
+121 diverges(c1,c2).  [deny(35)].
+260 -sim(c1,x,y) | sim(c2,x,y).  [resolve(104,a,103,a)].
+278 sim(c1,f17(c1,c2),f18(c1,c2)).  [resolve(121,a,119,a)].
+279 -sim(c2,f17(c1,c2),f18(c1,c2)).  [resolve(121,a,120,a)].
+331 $F.  [resolve(278,a,260,a),unit_del(a,279)].
+
+============================== end of proof ==========================

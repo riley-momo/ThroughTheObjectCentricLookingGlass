@@ -1,0 +1,6 @@
+%% Proposition 2, proof step.  Every (Fuse) instance, with or without its
+%% determinacy conjuncts, relates co-participating objects.
+%% INCLUDE: connected_components.in
+formulas(goals).
+  all d all x all y (fp(d,x,y) -> adj(x,y)).
+end_of_list.

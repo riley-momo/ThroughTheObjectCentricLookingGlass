@@ -1,0 +1,10 @@
+%% Consequence of Theorems 1 and 2 (text after Proposition 2).  D_CC has no
+%% convergent events, and its deficient events are exactly those without
+%% participants.
+%% INCLUDE: connected_components.in
+%% CITES: t1a_deficiency t2a_convergence_fwd p2_ccomp_in_sim
+formulas(goals).
+  all d all e ((iscc(d) & event(e)) ->
+     (-convergent(d,e) &
+      (deficient(d,e) <-> -(exists x participates(x,e))))).
+end_of_list.

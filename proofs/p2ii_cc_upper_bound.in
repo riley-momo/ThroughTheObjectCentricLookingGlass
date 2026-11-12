@@ -1,0 +1,9 @@
+%% Proposition 2 (ii).  Every whole of every domain theory D is part of some
+%% connected-component case: each event of sigma_D(o) is part of
+%% sigma_{D_CC}(o).   [~_D refines connectivity.]
+%% INCLUDE: connected_components.in
+%% CITES: l1b_parts p2_sim_in_ccomp p2i_cc_parts
+formulas(goals).
+  all d all dc all o all e ((iscc(dc) & ib(d,o) & event(e) & part(e,sg(d,o)))
+                              -> part(e,sg(dc,o))).
+end_of_list.
