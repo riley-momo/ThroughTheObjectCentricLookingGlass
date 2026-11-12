@@ -1,10 +1,10 @@
 # Object-Centric Event Log Abstraction and Case Extraction Through Mereotoplogy
 
-Reference implementation of the theory of applied process mereotoplogy from *Through the Object-Centric Looking Glass: Case Notions as Mereotopological Sums*. Given an OCEL (object-centric event log) in DuckDB and a domain theory — which object types are identity-bearing (𝔅) and which pairs of them are connected — it compiles a fixed [Soufflé](https://souffle-lang.github.io/) Datalog program that computes the wholes σ(o) of the theory (Sections 4–5 of the paper) and evaluates the correctness criteria of Section 5.1 on them: which events are deficient, which are convergent, and why.
+Reference implementation of the theory of applied process mereotoplogy from *Through the Object-Centric Looking Glass: Case Notions as Mereotopological Sums*. Given an OCEL (object-centric event log) in DuckDB and a domain theory — which object types are identity-bearing (𝔅) and which pairs of them are connected — it compiles a fixed [Soufflé](https://souffle-lang.github.io/) Datalog program that computes the wholes σ(o) of the theory and evaluates the correctness criteria on them.
 
 ## The mereotopology, briefly
 
-Mereotopology is the study of *part* and *connection*. The paper reads both relations off the log directly:
+Mereotopology is the study of *part-whole* relationships and *connection*. The paper reads both relations off the log directly:
 
 - **Part** (`part`): an event is an atomic part of the whole it belongs
   to, the ordinary sense of "part of a whole" — reflexive (an event is part
@@ -80,11 +80,13 @@ Two claims carry extra assumptions, both stated in the files:
 - Prop. 1's "every whole of D is part of a whole of D′" is proved at the level of events (E[[o]_D] ⊆ E[[o]_D′], the paper's own proof). Deriving parthood between the wholes themselves would need strong supplementation, which is not among the axioms.
 - Prop. 4(i) assumes (Trace): the directly-follows path from an object's first event to its last, using only its own edges, passes through all of Tr(o). This is a fact about finite linear orders, not about the theory.
 
-## Requirements & Running
+## Requirements
 
-It is recommend to use the [devcontainer setup for the Ontology-Driven Process Analysis Library (OPAL)](https://github.com/Ontology-Benchmarks/OPAL-devcontainer/tree/main)
+- [Ontop](https://ontop-vkg.org/), for the virtual knowledge graph mapping of an OCEL log to ground facts.
+- [Soufflé](https://souffle-lang.github.io/), to evaluate the generated Datalog program.
+- Python 3 to run the scripts, with the `duckdb` package when reading a DuckDB log.
 
-This container contains everything needed to run the theory and mapping, including the virtual knowledge graph implementation, the datalog reasoner, and the base python environment and libraries. The web-based front-end is still a work-in-progress and is not necessary, usage through the CLI is described below. 
+To reproduce the proofs, you also need [Prover9 and Mace4](https://www.cs.unm.edu/~mccune/prover9/) (including `prooftrans`).
 
 
 ## Usage
@@ -97,7 +99,7 @@ python ocel_to_datalog.py LOG.duckdb --out DIR --identity TYPE [--identity TYPE 
 
 - `LOG.duckdb` — a DuckDB file containing a `log_e2o(eid, object_type,
   object_id)` table (the event-to-object relation of the log, as produced by
-  the OPAL mapping of the OCEL2 log) and, optionally, `log_events(eid,
+  the Ontop mapping of the OCEL 2.0 log) and, optionally, `log_events(eid,
   activity, …)`, which supplies activities and events with no participants.
   With `--format facts`, a `facts/` directory written by an earlier run instead.
 - `--out DIR` — output directory; `facts/` and (with `--run`) `output/` are
@@ -139,7 +141,7 @@ objects containing the (Fuse) pairs (a Soufflé `eqrel`), and σ by Lemma 1.
 
 ## Examples
 
-[ocel_examples/](ocel_examples/) holds one subfolder per sample log, each with one generated run. The source logs (`mapped_log.duckdb`, the OPAL mapping of each OCEL 2.0 log) are not included because of their size; the generated `facts/` hold everything the runs need:
+[ocel_examples/](ocel_examples/) holds one subfolder per sample log, each with one generated run. The source logs (`mapped_log.duckdb`, the Ontop mapping of each OCEL 2.0 log) are not included because of their size; the generated `facts/` hold everything the runs need:
 
 ```
 ocel_examples/<log>/
