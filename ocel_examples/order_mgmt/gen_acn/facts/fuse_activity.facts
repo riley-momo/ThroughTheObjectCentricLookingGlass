@@ -1,0 +1,6 @@
+items	orders	confirm order
+items	orders	pay order
+items	orders	place order
+items	packages	create package
+items	packages	package delivered
+items	packages	send package

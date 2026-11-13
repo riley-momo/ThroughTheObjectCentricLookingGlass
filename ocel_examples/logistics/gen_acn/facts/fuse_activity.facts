@@ -1,0 +1,10 @@
+container	handling_unit	Load Truck
+container	transport_document	Depart
+container	transport_document	Order Empty Containers
+container	transport_document	Reschedule Container
+container	vehicle	Depart
+container	vehicle	Load to Vehicle
+container	vehicle	Reschedule Container
+order	transport_document	Create Transport Document
+transport_document	vehicle	Book Vehicles
+transport_document	vehicle	Depart

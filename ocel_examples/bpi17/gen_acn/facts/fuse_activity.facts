@@ -1,0 +1,13 @@
+application	offer	Accepted_complete
+application	offer	Cancelled_complete
+application	offer	Created_complete
+application	offer	Refused_complete
+application	offer	Returned_complete
+application	offer	Sent (mail and online)_complete
+application	offer	Sent (online only)_complete
+application	workflow	Assess potential fraud_complete
+application	workflow	Call after offers_complete
+application	workflow	Call incomplete files_complete
+application	workflow	Complete application_complete
+application	workflow	Handle leads_complete
+application	workflow	Validate application_complete

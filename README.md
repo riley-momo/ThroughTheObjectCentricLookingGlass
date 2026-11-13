@@ -93,8 +93,9 @@ To reproduce the proofs, you also need [Prover9 and Mace4](https://www.cs.unm.ed
 
 ```
 python ocel_to_datalog.py LOG.duckdb --out DIR --identity TYPE [--identity TYPE ...] \
-    [--connect A:B[@ACTIVITY] ...] [--rename OLD:NEW ...] [--format duckdb|facts] \
+    [--connect A:B[@ACTIVITY] ...] [--fuse0] [--rename OLD:NEW ...] [--format duckdb|facts] \
     [--name NAME] [--run]
+python ocel_to_datalog.py LOG.duckdb --out DIR --cc [--rename OLD:NEW ...] [--name NAME] [--run]
 ```
 
 - `LOG.duckdb` — a DuckDB file containing a `log_e2o(eid, object_type,
@@ -109,6 +110,11 @@ python ocel_to_datalog.py LOG.duckdb --out DIR --identity TYPE [--identity TYPE 
 - `--connect A:B` — TypeConn(A, B), instantiating Fuse(A, B) when both are
   identity-bearing. `--connect A:B@ACTIVITY` is ActConn(A, B, a), instantiating
   the activity-restricted Fuse_a(A, B) (repeatable).
+- `--fuse0` — every declared instance drops its determinacy conjuncts (Fuse⁰),
+  so any shared event identifies its participants.
+- `--cc` — the connected-components theory 𝒟_CC (Section 5.2): every type
+  identity-bearing and Fuse⁰ for every pair of types, including each type with
+  itself; replaces `--identity`/`--connect`.
 - `--rename OLD:NEW` — rename an object type from the log before processing
   (repeatable).
 - `--name NAME` — base name for the generated `.dl` file; defaults to the
@@ -120,8 +126,10 @@ This writes `DIR/<name>.dl` (the Datalog program) and `DIR/facts/*.facts`
 (the log and the declarations encoded as Soufflé input relations). The Datalog
 rules are a fixed template (see `TEMPLATE` in
 [ocel_to_datalog.py](ocel_to_datalog.py)) following the schemata of Section 4:
-(Det), (Fuse)/(Fuse_a), ∼_D as the least equivalence on identity-bearing
-objects containing the (Fuse) pairs (a Soufflé `eqrel`), and σ by Lemma 1.
+(Det), (Fuse)/(Fuse_a)/(Fuse⁰), ∼_D as the least equivalence on identity-bearing
+objects containing the (Fuse) pairs (Datalog's least fixpoint; each class is
+named by its least member, found by propagating ordinals with subsumption), and
+σ by Lemma 1.
 
 ### Outputs
 
@@ -141,7 +149,7 @@ objects containing the (Fuse) pairs (a Soufflé `eqrel`), and σ by Lemma 1.
 
 ## Examples
 
-[ocel_examples/](ocel_examples/) holds one subfolder per sample log, each with one generated run. The source logs (`mapped_log.duckdb`, the Ontop mapping of each OCEL 2.0 log) are not included because of their size; the generated `facts/` hold everything the runs need:
+[ocel_examples/](ocel_examples/) holds one subfolder per sample log, each with four generated runs: its domain theory and three baselines. The source logs (`mapped_log.duckdb`, the Ontop mapping of each OCEL 2.0 log) are not included because of their size; the generated `facts/` hold everything the runs need:
 
 ```
 ocel_examples/<log>/
@@ -161,6 +169,50 @@ ocel_examples/<log>/
 | `order_mgmt/gen` | orders, items, packages | orders:items, items:packages | 10 606 | 21 008 | 0 | 9 667 (indeterminate items) |
 | `p2p/gen` | purchase_requisition, quotation, purchase_order, goods_receipt, invoice_receipt, payment, material | the 9 pairs that co-occur in the log | 2 550 | 14 671 | 0 | 1 090 (indeterminate material) |
 
+### Baselines
+
+Each log also has three baseline case notions, expressed as theories so that the same criteria apply:
+
+- **Flattening** (`gen_flat/`): one object type T is the case notion, i.e. 𝔅 = {T} with no pairs. Each object of T is a case. An event with several objects of T is copied into each of their cases (convergent), and an event with none is dropped (deficient).
+- **Connected components** (`gen_cc/`, `--cc`): two objects share a case whenever they share an event, directly or through a chain of shared events, and the case is all events of those objects. This is the limiting theory 𝒟_CC, just outside the schema family: every type identity-bearing and Fuse⁰(T₁, T₂) for all T₁, T₂ ∈ OT.
+- **Advanced case notion** (`gen_acn/`, [ocel_examples/acn_theory.py](ocel_examples/acn_theory.py)): a domain theory derived from the advanced case notion of van Detten et al. (ICPM 2024 Workshops). That notion calls a type T *diverging* on an activity a when two distinct a-events share an object of T (T is resource-like at a), and grows cases connected-components style without following objects through activities on which their type diverges. A simple translation: 𝔅 is the types it ever follows (those not diverging on some activity they occur in), and ActConn(T₁, T₂, a) is declared for 𝔅-types co-occurring in an a-event, at least one of them not diverging on a. Its choice of a start type by score is not carried over, and the derived Fuse_a instances keep (Det).
+
+| Log | Case notion | Wholes | Largest (events) | Deficient | Convergent | Overlap (exact) |
+|---|---|---:|---:|---:|---:|---:|
+| `bpi17` (23 561 events) | domain theory | 1 575 | 43 | 0 | 0 | 1.000 (1 575) |
+| | flattened on application | 1 575 | 43 | 0 | 0 | 1.000 (1 575) |
+| | connected components | 1 | 23 561 | 0 | 0 | 0.001 (0) |
+| | ACN-derived | 1 575 | 43 | 0 | 0 | 1.000 (1 575) |
+| `logistics` (35 372 events) | domain theory | 2 536 | 43 | 0 | 691 | 0.400 (37) |
+| | flattened on container | 1 999 | 14 | 12 343 | 691 | 0.260 (0) |
+| | connected components | 13 | 35 342 | 0 | 0 | 0.022 (12) |
+| | ACN-derived | 321 | 2 293 | 0 | 448 | 0.206 (18) |
+| `order_mgmt` (21 008 events) | domain theory | 10 606 | 16 | 0 | 9 667 | 0.618 (159) |
+| | flattened on orders | 2 000 | 7 | 14 442 | 0 | 0.240 (0) |
+| | connected components | 1 | 21 008 | 0 | 0 | 0.001 (0) |
+| | ACN-derived | 10 606 | 16 | 0 | 9 667 | 0.618 (159) |
+| `p2p` (14 671 events) | domain theory | 2 550 | 38 | 0 | 1 090 | 1.000 (927) |
+| | flattened on purchase_order | 1 598 | 9 | 6 267 | 537 | 0.385 (0) |
+| | connected components | 1 | 14 671 | 0 | 0 | 0.001 (0) |
+| | ACN-derived | 4 491 | 30 | 0 | 6 298 | 0.735 (0) |
+
+As Prop. 2 states, connected components has no convergent events and no deficient ones (every event here has a participant). It does so by merging almost the whole log into one case, because resources shared across the process (users, employees, trucks) connect everything. Flattening keeps cases small but drops every event without an object of its type. On `bpi17` it yields exactly the cases of the domain theory, since every event there involves its application.
+
+The ACN-derived theory recovers the domain theory exactly on `bpi17` and `order_mgmt` (the same 𝔅, the same type pairs, the same wholes). On `logistics` it also makes vehicles identity-bearing, because each vehicle departs only once and so does not diverge on "Depart". Vehicles carry many containers, so 414 of the 600 orders end up in shared wholes (up to 32 in one), which is divergence relative to the Fig. 1 theory. On `p2p` it treats invoice receipts and payments as resources and never connects purchase orders with goods receipts (both diverge on every activity they share), so 4 478 events are convergent through the missing PO–GR declaration (Thm. 2(ii)).
+
 `logistics/gen_order` adds handling units to the Fig. 1 theory. Without them, all 10 553 "Collect Goods" events, in which a handling unit is the only participant, are deficient (Thm. 1). Each handling unit's only other event, "Load Truck", has exactly one container and one handling unit, so Fuse(container, handling_unit) puts every handling unit into its container's whole. Deficiency drops to 0 with the same wholes and the same convergent events.
+
+#### Reference cases
+
+The domain theory is the analyst's own description, so each run is also scored against reference cases that no theory reads. For the three simulated logs these come from the simulation itself: the published OCEL 2.0 files record qualified object-to-object relations written by the simulator, which the theories never see (they read only event participation). [ocel_examples/reference_cases.py](ocel_examples/reference_cases.py) takes each root object (customer order, order, purchase requisition) with every object reachable through the composition relations (`TD for CO`, `CR for TD`, `CR contains HU`; `comprises`, `contains`; the requisition–quotation–order–receipt–invoice–payment chain with its materials), leaving out relations to shared resources (trucks, vehicles, customers, products, employees). For `bpi17` the reference cases are the original BPI Challenge 2017 cases, carried as Application objects. These reference cases are a proxy, not ground truth. They are available only because these logs are simulated (or, for `bpi17`, already had a single case notion), and real-world logs rarely record object-to-object relations that capture the intended cases. Even here they approximate one case notion: which object is the root and which relations count as composition are choices, and the log supports other case notions as well. The events of a reference case are those of its objects; they are stored in `ocel_examples/<log>/reference/case_event.tsv`. To rebuild them, download the published SQLite logs from Zenodo (logistics [10.5281/zenodo.8428084](https://doi.org/10.5281/zenodo.8428084), order_mgmt [10.5281/zenodo.8428112](https://doi.org/10.5281/zenodo.8428112), p2p [10.5281/zenodo.8412920](https://doi.org/10.5281/zenodo.8412920)) and run
+
+```bash
+python ocel_examples/reference_cases.py logistics --sqlite ContainerLogistics.sqlite
+python ocel_examples/reference_cases.py bpi17
+```
+
+[ocel_examples/evaluate.py](ocel_examples/evaluate.py) scores each run: for every reference case, the Jaccard index of its events with those of the best-matching occurrence, averaged over reference cases (*Overlap* above; 1 when every reference case is one occurrence, lower when cases are split or merged), with the number of reference cases matched exactly in parentheses.
+
+The domain theory reproduces every reference case on `bpi17` and `p2p`. On `logistics` and `order_mgmt` it splits them, and the cause is (Det): one transport document takes part with several containers in 564 of 591 "Order Empty Containers" events, and one order with several items in 1 841 of 2 000 "place order" events, so neither composition is fused (the composition-versus-synchronization limit of Remark 1). The 159 order_mgmt cases matched exactly are the single-item orders. Connected components merges every case and flattening keeps only one object's events, so both stay low throughout.
 
 To time the evaluation, run [ocel_examples/benchmark.py](ocel_examples/benchmark.py) (`souffle` must be on `PATH`). It reports, for each run, the mean ± sample standard deviation of the full `souffle` invocation (parse, load, evaluate, write) over 10 runs, after one discarded warm-up run (`-n`, `--warmup`).

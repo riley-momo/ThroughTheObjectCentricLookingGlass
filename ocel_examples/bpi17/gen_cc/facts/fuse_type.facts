@@ -1,0 +1,10 @@
+application	application
+application	offer
+application	resource
+application	workflow
+offer	offer
+offer	resource
+offer	workflow
+resource	resource
+resource	workflow
+workflow	workflow

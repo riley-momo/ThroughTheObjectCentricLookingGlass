@@ -1,0 +1,6 @@
+material	purchase_requisition	Approve Purchase Requisition
+material	purchase_requisition	Create Purchase Requisition
+material	purchase_requisition	Delegate Purchase Requisition Approval
+purchase_order	quotation	Approve Purchase Order
+purchase_order	quotation	Create Purchase Order
+purchase_requisition	quotation	Create Request for Quotation
